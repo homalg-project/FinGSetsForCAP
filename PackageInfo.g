@@ -15,10 +15,10 @@ Version := Maximum( [
                    ## this line prevents merge conflicts
                    "2017.05-26", ## Julia's version
                    ## this line prevents merge conflicts
-                   "2020.10-01", ## Fabian's version
+                   "2021.03-01", ## Fabian's version
                    ] ),
 
-Date := "16/10/2020",
+Date := "13/04/2021",
 License := "GPL-2.0-or-later",
 
 Persons := [
@@ -72,7 +72,7 @@ SourceRepository := rec(
     URL := "https://github.com/homalg-project/FinGSetsForCAP",
 ),
 IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
-PackageWWWHome  := "https://homalg-project.github.io/FinGSetsForCAP",
+PackageWWWHome  := "https://homalg-project.github.io/pkg/FinGSetsForCAP",
 PackageInfoURL  := "https://homalg-project.github.io/FinGSetsForCAP/PackageInfo.g",
 README_URL      := "https://homalg-project.github.io/FinGSetsForCAP/README.md",
 ArchiveURL      := Concatenation( "https://github.com/homalg-project/FinGSetsForCAP/releases/download/v", ~.Version, "/FinGSetsForCAP-", ~.Version ),
@@ -105,11 +105,11 @@ Dependencies := rec(
   GAP := ">= 4.9.1",
   NeededOtherPackages := [
                    [ "GAPDoc", ">= 1.5" ],
-                   [ "CAP", ">= 2019.04.03" ],
-                   [ "Toposes", ">= 2018.09.17" ],
+                   [ "CAP", ">= 2021.03-01" ],
+                   [ "Toposes", ">= 2021.03-01" ],
                    ],
   SuggestedOtherPackages := [
-                   [ "FinSetsForCAP", ">= 2018.09.17" ],
+                   [ "FinSetsForCAP", ">= 2021.03-01" ],
                    ],
   ExternalConditions := [ ],
 ),
