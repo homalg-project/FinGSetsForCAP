@@ -423,13 +423,13 @@ true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := SymmetricGroup( 0 );;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m := FinGSet( G, [ 8 ] );</span>
 &lt;An object in SkeletalFinGSets&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">i := InitialObject( m );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">i := InitialObject( CapCategory( m ) );</span>
 &lt;An object in SkeletalFinGSets&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">iota := UniversalMorphismFromInitialObject( m );</span>
 &lt;A morphism in SkeletalFinGSets&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">AsList( i );</span>
 [ 0 ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">t := TerminalObject( m );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">t := TerminalObject( CapCategory( m ) );</span>
 &lt;An object in SkeletalFinGSets&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">AsList( t );</span>
 [ 1 ]
@@ -712,7 +712,7 @@ Sym( [ 1 .. 3 ] )
 &lt;An identity morphism in SkeletalFinGSets&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">id_to_be = id;</span>
 true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">T := TerminalObject( M1 );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">T := TerminalObject( CapCategory( M1 ) );</span>
 &lt;An object in SkeletalFinGSets&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">pi1 := UniversalMorphismIntoTerminalObject( M1 );</span>
 &lt;A morphism in SkeletalFinGSets&gt;
