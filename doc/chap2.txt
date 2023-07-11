@@ -4,14 +4,21 @@
   
   [1X2.1 [33X[0;0YSkeletal GAP Categories[133X[101X
   
-  [1X2.1-1 IsSkeletalFinGSet[101X
+  [1X2.1-1 IsSkeletalFinGSetCategory[101X
+  
+  [33X[1;0Y[29X[2XIsSkeletalFinGSetCategory[102X( [3Xobject[103X ) [32X filter[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
+  
+  [33X[0;0YThe GAP category of the category of skeletal finite [23XG[123X-sets.[133X
+  
+  [1X2.1-2 IsSkeletalFinGSet[101X
   
   [33X[1;0Y[29X[2XIsSkeletalFinGSet[102X( [3Xobject[103X ) [32X filter[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
   
   [33X[0;0YThe GAP category of objects in the category of skeletal finite [23XG[123X-sets.[133X
   
-  [1X2.1-2 IsSkeletalFinGSetMap[101X
+  [1X2.1-3 IsSkeletalFinGSetMap[101X
   
   [33X[1;0Y[29X[2XIsSkeletalFinGSetMap[102X( [3Xobject[103X ) [32X filter[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X

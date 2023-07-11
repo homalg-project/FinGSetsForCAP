@@ -6,10 +6,10 @@
                [1X The elementary topos of (skeletal) finite G-sets [101X
   
   
-                                   2022.09-01
+                                   2023.07-01
   
   
-                               30 September 2022
+                                  11 July 2023
   
   
                                 Mohamed Barakat
@@ -53,8 +53,9 @@
   1 [33X[0;0YMathematical background[133X
   2 [33X[0;0YThe category of skeletal finite G-sets[133X
     2.1 [33X[0;0YSkeletal GAP Categories[133X
-      2.1-1 IsSkeletalFinGSet
-      2.1-2 IsSkeletalFinGSetMap
+      2.1-1 IsSkeletalFinGSetCategory
+      2.1-2 IsSkeletalFinGSet
+      2.1-3 IsSkeletalFinGSetMap
     2.2 [33X[0;0YSkeletal Attributes[133X
       2.2-1 AsList
       2.2-2 UnderlyingGroup

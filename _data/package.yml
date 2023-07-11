@@ -1,7 +1,7 @@
 name: FinGSetsForCAP
-version: "2022.09-01"
+version: "2023.07-01"
 license: "GPL-2.0-or-later"
-date: 2022-09-30
+date: 2023-07-11
 description: |
     The elementary topos of (skeletal) finite G-sets
 
@@ -21,7 +21,7 @@ maintainers:
     - name: Fabian Zickgraf
       url: https://github.com/zickgraf/
 
-GAP: ">= 4.11.1"
+GAP: ">= 4.12.1"
 
 needed-pkgs:
     - name: "GAPDoc"
@@ -45,11 +45,11 @@ packageinfo: https://homalg-project.github.io/FinGSetsForCAP/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2022.09-01/FinGSetsForCAP-2022.09-01.tar.gz
+      url: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2023.07-01/FinGSetsForCAP-2023.07-01.tar.gz
     - name: .zip
-      url: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2022.09-01/FinGSetsForCAP-2022.09-01.zip
+      url: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2023.07-01/FinGSetsForCAP-2023.07-01.zip
 
-pdf: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2022.09-01/FinGSetsForCAP-2022.09-01.pdf
+pdf: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2023.07-01/FinGSetsForCAP-2023.07-01-manual.pdf
 
 abstract: |
 
@@ -58,28 +58,28 @@ doc-html: doc/chap0.html
 doc-pdf: doc/manual.pdf
 citeas: |
     <p class='BibEntry'>
-    [<span class='BibKey'>BMZ22</span>]   <b class='BibAuthor'>Barakat, M., Mickisch, J. and Zickgraf, F.</b>,
+    [<span class='BibKey'>BMZ11</span>]   <b class='BibAuthor'>Barakat, M., Mickisch, J. and Zickgraf, F.</b>,
      <i class='BibTitle'>FinGSetsForCAP, The elementary topos of (skeletal) finite G-sets,
-             Version 2022.09-01</i>
-     (<span class='BibYear'>2022</span>)<br />
+             Version 2023.07-01</i>
+     (<span class='BibYear'>7-11</span>)<br />
     (<span class='BibNote'>GAP package</span>),
     <span class='BibHowpublished'><a href="https://homalg-project.github.io/pkg/FinGSetsForCAP">https://homalg-project.github.io/pkg/FinGSetsForCAP</a></span>.
     </p>
     
 
 bibtex: |
-    @misc{ FinGSetsForCAP2022.09-01,
+    @misc{ FinGSetsForCAP2023.07-01,
       author =           {Barakat, M. and Mickisch, J. and Zickgraf, F.},
       title =            {{FinGSetsForCAP},  The  elementary topos of (skeletal)
-                          finite G-sets, {V}ersion 2022.09-01},
-      month =            {Sep},
-      year =             {2022},
+                          finite G-sets, {V}ersion 2023.07-01},
+      month =            {3-},
+      year =             {7-11},
       note =             {GAP package},
       howpublished =     {\href
                           {https://homalg-project.github.io/pkg/FinGSetsForCAP}
                           {\texttt{https://homalg-project.github.io/}\discretionary
                           {}{}{}\texttt{pkg/}\discretionary
                           {}{}{}\texttt{FinGSetsForCAP}}},
-      printedkey =       {BMZ22}
+      printedkey =       {BMZ11}
     }
 
