@@ -8,9 +8,9 @@
   [2XFinGSet[102X, for IsGroup, IsList 2.3-1 
   [2XForgetfulFunctorSkeletalFinGSets[102X, for IsGroup 4.1-5 
   [2XHomSkeletalFinGSets[102X 4.1-4 
-  [2XIsSkeletalFinGSet[102X, for IsCapCategoryObject and IsCellOfSkeletalCategory 2.1-2 
+  [2XIsSkeletalFinGSet[102X, for IsCapCategoryObject 2.1-2 
   [2XIsSkeletalFinGSetCategory[102X, for IsCapCategory and IsSkeletalCategory 2.1-1 
-  [2XIsSkeletalFinGSetMap[102X, for IsCapCategoryMorphism and IsCellOfSkeletalCategory 2.1-3 
+  [2XIsSkeletalFinGSetMap[102X, for IsCapCategoryMorphism 2.1-3 
   [2XMapOfFinGSets[102X, for IsSkeletalFinGSet, IsList, IsSkeletalFinGSet 2.3-2 
   [2XPositionAndConjugatorOfStabilizer[102X 3.1-1 
   [2XReconstructGroup[102X 4.1-6 
