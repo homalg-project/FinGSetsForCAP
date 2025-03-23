@@ -7,6 +7,7 @@
 ReadPackage( "FinGSetsForCAP", "gap/Tools.gi" );
 
 ReadPackage( "FinGSetsForCAP", "gap/SkeletalFinGSetsForCAP.gi" );
+ReadPackage( "FinGSetsForCAP", "gap/SkeletalCategoryOfTransitiveGSets.gi" );
 
 if IsPackageMarkedForLoading( "FinSetsForCAP", ">= 2018.09.17" ) then
     ReadPackage( "FinGSetsForCAP", "gap/EndAsEqualizer.gi" );

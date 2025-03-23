@@ -10,6 +10,13 @@
 @Section Examples
 
 
+@Chapter The skeletal category of transitive G-sets
+
+@Section Attributes
+@Section Constructors
+@Section GAP Categories
+
+
 @Chapter Tools
 
 @Section Helper functions

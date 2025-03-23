@@ -9,18 +9,14 @@ gap> package_loading_info_level := InfoLevel( InfoPackageLoading );;
 gap> SetInfoLevel( InfoPackageLoading, PACKAGE_ERROR );;
 gap> LoadPackage( "Digraphs", false );
 true
-gap> LoadPackage( "FinSetsForCAP", false );
-true
-gap> LoadPackage( "FreydCategoriesForCAP", false );
+gap> LoadPackage( "Locales", false );
 true
 gap> LoadPackage( "FinGSetsForCAP", false );
 true
 gap> SetInfoLevel( InfoPackageLoading, PACKAGE_INFO );;
 gap> LoadPackage( "Digraphs" );
 true
-gap> LoadPackage( "FinSetsForCAP" );
-true
-gap> LoadPackage( "FreydCategoriesForCAP" );
+gap> LoadPackage( "Locales" );
 true
 gap> LoadPackage( "FinGSetsForCAP" );
 true

@@ -50,7 +50,7 @@ jobs:
           cp ./FinGSetsForCAP/dev/ci_gaprc /home/gap/.gap/gaprc
           git clone --depth 1 -vv https://github.com/homalg-project/homalg_project.git
           git clone --depth 1 -vv https://github.com/homalg-project/CAP_project.git
-          git clone --depth 1 -vv https://github.com/homalg-project/Toposes.git
+          git clone --depth 1 -vv https://github.com/homalg-project/CategoricalTowers.git
           git clone --depth 1 -vv https://github.com/homalg-project/FinSetsForCAP.git
       - name: Build documentation of packages which we might want to reference
         run: |
