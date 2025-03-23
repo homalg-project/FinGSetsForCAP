@@ -1,5 +1,5 @@
   
-  [1X4 [33X[0;0YReconstructing G from the category of skeletal finite G-sets[133X[101X
+  [1X4 [33X[0;0YReconstructing G from the skeletal category of finite G-sets[133X[101X
   
   
   [1X4.1 [33X[0;0YReconstruction Tools[133X[101X
@@ -35,11 +35,10 @@
   [33X[1;0Y[29X[2XReconstructGroup[102X( [3XC[103X, [3XHomC[103X, [3XForgetfulFunctor[103X, [3XGeneratingSet[103X, [3XEndImplementation[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya group[133X
   
-  [33X[0;0YThe  input  is  a  [5XCAP[105X  category  [10XC[110X  which  is equivalent to the category of
-  skeletal finite G-sets for some group [23XG[123X, a function [10XHomC[110X computing homs in [10XC[110X
-  (e.g.  [10XHomSkeletalFinGSets[110X), a generating set of [10XC[110X, and a function computing
-  ends  (e.g.  [10XEndAsEqualizer[110X or [10XEndByLifts[110X). The output is a group isomorphic
-  to [23XG[123X.[133X
+  [33X[0;0YThe  input  is a [5XCAP[105X category [10XC[110X which is equivalent to the skeletal category
+  of finite G-sets for some group [23XG[123X, a function [10XHomC[110X computing homs in [10XC[110X (e.g.
+  [10XHomSkeletalFinGSets[110X),  a  generating set of [10XC[110X, and a function computing ends
+  (e.g. [10XEndAsEqualizer[110X or [10XEndByLifts[110X). The output is a group isomorphic to [23XG[123X.[133X
   
   
   [1X4.2 [33X[0;0YExamples[133X[101X

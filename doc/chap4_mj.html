@@ -8,7 +8,7 @@
 <script type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
-<title>GAP (FinGSetsForCAP) - Chapter 4: Reconstructing G from the category of skeletal finite G-sets</title>
+<title>GAP (FinGSetsForCAP) - Chapter 4: Reconstructing G from the skeletal category of finite G-sets</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta name="generator" content="GAPDoc2HTML" />
 <link rel="stylesheet" type="text/css" href="manual.css" />
@@ -23,8 +23,8 @@
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap3_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap5_mj.html">[Next Chapter]</a>&nbsp;  </div>
 
 <p id="mathjaxlink" class="pcenter"><a href="chap4.html">[MathJax off]</a></p>
-<p><a id="X7CA37822851F223E" name="X7CA37822851F223E"></a></p>
-<div class="ChapSects"><a href="chap4_mj.html#X7CA37822851F223E">4 <span class="Heading">Reconstructing G from the category of skeletal finite G-sets</span></a>
+<p><a id="X8549A23485AF6E6D" name="X8549A23485AF6E6D"></a></p>
+<div class="ChapSects"><a href="chap4_mj.html#X8549A23485AF6E6D">4 <span class="Heading">Reconstructing G from the skeletal category of finite G-sets</span></a>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4_mj.html#X8668DA3A821526CE">4.1 <span class="Heading">Reconstruction Tools</span></a>
 </span>
 <div class="ContSSBlock">
@@ -45,7 +45,7 @@
 </div></div>
 </div>
 
-<h3>4 <span class="Heading">Reconstructing G from the category of skeletal finite G-sets</span></h3>
+<h3>4 <span class="Heading">Reconstructing G from the skeletal category of finite G-sets</span></h3>
 
 <p><a id="X8668DA3A821526CE" name="X8668DA3A821526CE"></a></p>
 
@@ -91,7 +91,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ReconstructGroup</code>( <var class="Arg">C</var>, <var class="Arg">HomC</var>, <var class="Arg">ForgetfulFunctor</var>, <var class="Arg">GeneratingSet</var>, <var class="Arg">EndImplementation</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a group</p>
 
-<p>The input is a <strong class="pkg">CAP</strong> category <code class="code">C</code> which is equivalent to the category of skeletal finite G-sets for some group <span class="SimpleMath">\(G\)</span>, a function <code class="code">HomC</code> computing homs in <code class="code">C</code> (e.g. <code class="code">HomSkeletalFinGSets</code>), a generating set of <code class="code">C</code>, and a function computing ends (e.g. <code class="code">EndAsEqualizer</code> or <code class="code">EndByLifts</code>). The output is a group isomorphic to <span class="SimpleMath">\(G\)</span>.</p>
+<p>The input is a <strong class="pkg">CAP</strong> category <code class="code">C</code> which is equivalent to the skeletal category of finite G-sets for some group <span class="SimpleMath">\(G\)</span>, a function <code class="code">HomC</code> computing homs in <code class="code">C</code> (e.g. <code class="code">HomSkeletalFinGSets</code>), a generating set of <code class="code">C</code>, and a function computing ends (e.g. <code class="code">EndAsEqualizer</code> or <code class="code">EndByLifts</code>). The output is a group isomorphic to <span class="SimpleMath">\(G\)</span>.</p>
 
 <p><a id="X7A489A5D79DA9E5C" name="X7A489A5D79DA9E5C"></a></p>
 

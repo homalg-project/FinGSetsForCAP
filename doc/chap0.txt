@@ -3,13 +3,13 @@
                                 [1X FinGSetsForCAP [101X
   
   
-               [1X The elementary topos of (skeletal) finite G-sets [101X
+               [1X The (skeletal) elementary topos of finite G-sets [101X
   
   
-                                   2025.03-01
+                                   2025.03-02
   
   
-                                 16 March 2025
+                                 23 March 2025
   
   
                                 Mohamed Barakat
@@ -51,7 +51,7 @@
   [1XContents (FinGSetsForCAP)[101X
   
   1 [33X[0;0YMathematical background[133X
-  2 [33X[0;0YThe category of skeletal finite G-sets[133X
+  2 [33X[0;0YThe skeletal category of finite G-sets[133X
     2.1 [33X[0;0YSkeletal GAP Categories[133X
       2.1-1 IsSkeletalFinGSetCategory
       2.1-2 IsSkeletalFinGSet
@@ -80,7 +80,7 @@
   3 [33X[0;0YTools[133X
     3.1 [33X[0;0YHelper functions[133X
       3.1-1 PositionAndConjugatorOfStabilizer
-  4 [33X[0;0YReconstructing G from the category of skeletal finite G-sets[133X
+  4 [33X[0;0YReconstructing G from the skeletal category of finite G-sets[133X
     4.1 [33X[0;0YReconstruction Tools[133X
       4.1-1 EndAsEqualizer
       4.1-2 EndByLifts
