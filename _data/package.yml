@@ -1,5 +1,5 @@
 name: FinGSetsForCAP
-version: "2025.03-02"
+version: "2025.03-03"
 license: "GPL-2.0-or-later"
 date: 2025-03-23
 description: |
@@ -21,7 +21,7 @@ maintainers:
     - name: Fabian Zickgraf
       url: https://github.com/zickgraf/
 
-GAP: ">= 4.12.1"
+GAP: ">= 4.13.0"
 
 needed-pkgs:
     - name: "GAPDoc"
@@ -45,11 +45,11 @@ packageinfo: https://homalg-project.github.io/FinGSetsForCAP/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2025.03-02/FinGSetsForCAP-2025.03-02.tar.gz
+      url: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2025.03-03/FinGSetsForCAP-2025.03-03.tar.gz
     - name: .zip
-      url: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2025.03-02/FinGSetsForCAP-2025.03-02.zip
+      url: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2025.03-03/FinGSetsForCAP-2025.03-03.zip
 
-pdf: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2025.03-02/FinGSetsForCAP-2025.03-02-manual.pdf
+pdf: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2025.03-03/FinGSetsForCAP-2025.03-03-manual.pdf
 
 abstract: |
 
@@ -60,7 +60,7 @@ citeas: |
     <p class='BibEntry'>
     [<span class='BibKey'>BMZ23</span>]   <b class='BibAuthor'>Barakat, M., Mickisch, J. and Zickgraf, F.</b>,
      <i class='BibTitle'>FinGSetsForCAP, The (skeletal) elementary topos of finite G-sets,
-             Version 2025.03-02</i>
+             Version 2025.03-03</i>
      (<span class='BibYear'>3-23</span>)<br />
     (<span class='BibNote'>GAP package</span>),
     <span class='BibHowpublished'><a href="https://homalg-project.github.io/pkg/FinGSetsForCAP">https://homalg-project.github.io/pkg/FinGSetsForCAP</a></span>.
@@ -72,7 +72,7 @@ bibtex: |
       author =           {Barakat, M. and Mickisch, J. and Zickgraf, F.},
       title =            {{FinGSetsForCAP},  {The (skeletal) elementary topos of
                           finite      G\texttt{\symbol{45}}sets},      {V}ersion
-                          2025.03\texttt{\symbol{45}}02},
+                          2025.03\texttt{\symbol{45}}03},
       month =            {5\texttt{\symbol{45}}},
       year =             {3\texttt{\symbol{45}}23},
       note =             {GAP package},

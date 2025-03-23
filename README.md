@@ -1,7 +1,7 @@
 <!-- BEGIN HEADER -->
 # FinGSetsForCAP&ensp;<sup><sup>[![View code][code-img]][code-url]</sup></sup>
 
-### The elementary topos of (skeletal) finite G-sets
+### The (skeletal) elementary topos of finite G-sets
 
 | Documentation | Latest Release | Build Status | Code Coverage |
 | ------------- | -------------- | ------------ | ------------- |
