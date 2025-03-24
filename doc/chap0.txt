@@ -6,10 +6,10 @@
                [1X The (skeletal) elementary topos of finite G-sets [101X
   
   
-                                   2025.03-03
+                                   2025.03-04
   
   
-                                 23 March 2025
+                                 24 March 2025
   
   
                                 Mohamed Barakat
@@ -52,18 +52,18 @@
   
   1 [33X[0;0YMathematical background[133X
   2 [33X[0;0YThe skeletal category of finite G-sets[133X
-    2.1 [33X[0;0YSkeletal GAP Categories[133X
-      2.1-1 IsSkeletalFinGSetCategory
-      2.1-2 IsSkeletalFinGSet
-      2.1-3 IsSkeletalFinGSetMap
-    2.2 [33X[0;0YSkeletal Attributes[133X
-      2.2-1 AsList
-      2.2-2 UnderlyingGroup
-    2.3 [33X[0;0YSkeletal Constructors[133X
-      2.3-1 FinGSet
-      2.3-2 MapOfFinGSets
-      2.3-3 SkeletalFinGSets
-    2.4 [33X[0;0YSkeletal Examples[133X
+    2.1 [33X[0;0YAttributes[133X
+      2.1-1 AsList
+      2.1-2 UnderlyingGroup
+    2.2 [33X[0;0YConstructors[133X
+      2.2-1 FinGSet
+      2.2-2 MapOfFinGSets
+      2.2-3 SkeletalFinGSets
+    2.3 [33X[0;0YGAP Categories[133X
+      2.3-1 IsSkeletalFinGSetCategory
+      2.3-2 IsSkeletalFinGSet
+      2.3-3 IsSkeletalFinGSetMap
+    2.4 [33X[0;0YExamples[133X
       2.4-1 [33X[0;0YSkeletal IsEqualForObjects[133X
       2.4-2 [33X[0;0YSkeletal PreCompose[133X
       2.4-3 [33X[0;0YSkeletal IdentityMorphism[133X

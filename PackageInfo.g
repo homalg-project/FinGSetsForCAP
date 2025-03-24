@@ -10,9 +10,9 @@ SetPackageInfo( rec(
 
 PackageName := "FinGSetsForCAP",
 Subtitle := "The (skeletal) elementary topos of finite G-sets",
-Version := "2025.03-03",
+Version := "2025.03-04",
 
-Date := "2025-03-23",
+Date := "2025-03-24",
 License := "GPL-2.0-or-later",
 
 Persons := [
