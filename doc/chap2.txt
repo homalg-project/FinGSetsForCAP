@@ -25,10 +25,10 @@
   [1X2.2-1 FinGSet[101X
   
   [33X[1;0Y[29X[2XFinGSet[102X( [3XG[103X, [3XL[103X ) [32X operation[133X
-  [6XReturns:[106X  [33X[0;10Ya [5XCAP[105X object[133X
+  [6XReturns:[106X  [33X[0;10Ya CAP object[133X
   
   [33X[0;0YConstruct  a skeletal finite [23XG[123X-set out of the group [3XG[103X and a list [3XL[103X, i.e., an
-  object in the [5XCAP[105X category [10XSkeletalFinGSets[110X.[133X
+  object in the CAP category [10XSkeletalFinGSets[110X.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );[127X[104X
@@ -61,10 +61,10 @@
   [1X2.2-2 MapOfFinGSets[101X
   
   [33X[1;0Y[29X[2XMapOfFinGSets[102X( [3Xs[103X, [3XG[103X, [3Xt[103X ) [32X operation[133X
-  [6XReturns:[106X  [33X[0;10Ya [5XCAP[105X morphism[133X
+  [6XReturns:[106X  [33X[0;10Ya CAP morphism[133X
   
   [33X[0;0YConstruct  a  map  [23X\phi  \colon[123X[3Xs[103X[23X\to[123X[3Xt[103X  of the skeletal finite [23XG[123X-sets [3Xs[103X and [3Xt[103X,
-  i.e.,  a morphism in the [5XCAP[105X category [10XSkeletalFinGSets[110X, where [3XG[103X is a list of
+  i.e.,  a morphism in the CAP category [10XSkeletalFinGSets[110X, where [3XG[103X is a list of
   lists describing the graph of [23X\phi[123X.[133X
   
   [4X[32X  Example  [32X[104X
