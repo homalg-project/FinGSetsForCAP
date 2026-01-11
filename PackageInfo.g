@@ -10,9 +10,9 @@ SetPackageInfo( rec(
 
 PackageName := "FinGSetsForCAP",
 Subtitle := "The (skeletal) elementary topos of finite G-sets",
-Version := "2025.12-01",
+Version := "2025.12-02",
 
-Date := "2025-12-23",
+Date := "2026-01-11",
 License := "GPL-2.0-or-later",
 
 Persons := [
@@ -99,10 +99,8 @@ Dependencies := rec(
   GAP := ">= 4.13.0",
   NeededOtherPackages := [
                    [ "GAPDoc", ">= 1.5" ],
-                   [ "CAP", ">= 2022.09-23" ],
-                   [ "Toposes", ">= 2021.03-01" ],
-                   ],
-  SuggestedOtherPackages := [
+                   [ "CAP", ">= 2025.03-02" ],
+                   [ "GroupsAsCategoriesForCAP", ">= 2025.11-03" ],
                    [ "FinSetsForCAP", ">= 2022.05-01" ],
                    ],
   ExternalConditions := [ ],

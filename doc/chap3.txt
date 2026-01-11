@@ -1,30 +1,236 @@
   
-  [1X3 [33X[0;0YTools[133X[101X
+  [1X3 [33X[0;0YThe skeletal category of transitive G-sets[133X[101X
   
   
-  [1X3.1 [33X[0;0YHelper functions[133X[101X
+  [1X3.1 [33X[0;0YAttributes[133X[101X
   
-  [1X3.1-1 PositionAndConjugatorOfStabilizer[101X
+  [1X3.1-1 UnderlyingGroup[101X
   
-  [33X[1;0Y[29X[2XPositionAndConjugatorOfStabilizer[102X( [3Xargs...[103X ) [32X function[133X
-  [6XReturns:[106X  [33X[0;10Ya  list  with  first  entry  an  integer  and second entry a group
-            element[133X
+  [33X[1;0Y[29X[2XUnderlyingGroup[102X( [3XC[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya group[133X
   
-  [33X[0;0YReturns   a   pair  [10X[  i,  g  ][110X  such  that  [10XConjugateSubgroup(  S,  g  )  =
-  RepresentativeTom(  ToM,  i  )[110X  where  [10XS  =  Stabilizer( [110X[3Xargs...[103X[10X )[110X and [10XToM =
-  TableOfMarks( [110X[3Xargs[103X[10X[1] )[110X. See [10XStabilizer[110X for a specification of [3Xargs[103X.[133X
+  [33X[0;0YThe group [23XG[123X underlying the skeletal category [3XC[103X of transitive [23XG[123X-set.[133X
+  
+  [1X3.1-2 UnderlyingGroupAsCategory[101X
+  
+  [33X[1;0Y[29X[2XUnderlyingGroupAsCategory[102X( [3XC[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya group[133X
+  
+  [33X[0;0YThe  group  [23XG[123X underlying the skeletal category [3XC[103X of transitive [23XG[123X-set, viewed
+  as a category on one object.[133X
+  
+  [1X3.1-3 UnderlyingTableOfMarks[101X
+  
+  [33X[1;0Y[29X[2XUnderlyingTableOfMarks[102X( [3XC[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya table of marks[133X
+  
+  [33X[0;0YThe  table  of  marks  of  the group [23XG[123X underlying the skeletal category [3XC[103X of
+  transitive [23XG[123X-set.[133X
+  
+  [1X3.1-4 NumberOfObjects[101X
+  
+  [33X[1;0Y[29X[2XNumberOfObjects[102X( [3XC[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya positive integer[133X
+  
+  [33X[0;0YThe number of objects of the skeletal category [3XC[103X of transitive [23XG[123X-set.[133X
+  
+  [1X3.1-5 CardinalitiesOfObjects[101X
+  
+  [33X[1;0Y[29X[2XCardinalitiesOfObjects[102X( [3XC[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya positive integer[133X
+  
+  [33X[0;0YThe  list  of  cardinalities  of  objects  of  the  skeletal  category  [3XC[103X of
+  transitive [23XG[123X-set.[133X
+  
+  [1X3.1-6 RepresentativesOfSubgroupsUpToConjugation[101X
+  
+  [33X[1;0Y[29X[2XRepresentativesOfSubgroupsUpToConjugation[102X( [3XC[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya positive integer[133X
+  
+  [33X[0;0YThe number of objects of the skeletal category [3XC[103X of transitive [23XG[123X-set.[133X
+  
+  [1X3.1-7 ObjectNumber[101X
+  
+  [33X[1;0Y[29X[2XObjectNumber[102X( [3XOmega[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya positive integer[133X
+  
+  [33X[0;0YThe  positive  integer  [23Xi[123X  such  that  the  transitive [23XG[123X-set [3XOmega[103X [23X\cong U_i
+  \backslash G[123X, i.e., [10XObjectNumber( TransitiveGSet( G, i ) ) = i[110X.[133X
+  
+  [1X3.1-8 UnderlyingGroupElement[101X
+  
+  [33X[1;0Y[29X[2XUnderlyingGroupElement[102X( [3Xphi[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya group element[133X
+  
+  [33X[0;0YThe group elements [23Xg \in G[123X defining the morphism [3Xphi[103X: [23X\cong U_s \backslash G
+  \to  U_t  \backslash G[123X satisfying [23Xg U_s g^{-1} \leq U_t[123X, or, equivalently, [23Xg
+  U_s \subseteq U_t g[123X.[133X
+  
+  [1X3.1-9 Cardinality[101X
+  
+  [33X[1;0Y[29X[2XCardinality[102X( [3XOmega[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya positive integer[133X
+  
+  [33X[0;0YThe cardinality of the transitive [23XG[123X-set [3XOmega[103X.[133X
+  
+  [1X3.1-10 Size[101X
+  
+  [33X[1;0Y[29X[2XSize[102X( [3XOmega[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya positive integer[133X
+  
+  [33X[0;0YThe cardinality of the transitive [23XG[123X-set [3XOmega[103X.[133X
+  
+  [1X3.1-11 CoequalizerMorphisms[101X
+  
+  [33X[1;0Y[29X[2XCoequalizerMorphisms[102X( [3XOmega[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya list of morphisms[133X
+  
+  [33X[0;0YThe  input is a transitive [23XG[123X-set [3XOmega[103X [23X\cong G / U_i[123X. The output is the list
+  of endomorphisms of the principal [23XG[123X-set [23XG / U_1[123X defined by the generators of
+  [23XU_i[123X. The coequalizers of these morphisms is the input object [3XOmega[103X [23X\cong G /
+  U_i[123X.[133X
+  
+  [1X3.1-12 EmbeddingOfUnderlyingGroupAsCategory[101X
+  
+  [33X[1;0Y[29X[2XEmbeddingOfUnderlyingGroupAsCategory[102X( [3XUC[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya CAP functor[133X
+  
+  [33X[0;0YThe   full  embedding  functor  from  the  group  [23XG[123X  underlying  the  finite
+  coequalizer completion [3XTG[103X into [3XTG[103X.[133X
+  
+  [1X3.1-13 ExtendFunctorToSkeletalCategoryOfTransitiveGSets[101X
+  
+  [33X[1;0Y[29X[2XExtendFunctorToSkeletalCategoryOfTransitiveGSets[102X( [3XUC[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya CAP functor[133X
+  
+  [33X[0;0YThe   full  embedding  functor  from  the  group  [23XG[123X  underlying  the  finite
+  coequalizer completion [3XTG[103X into [3XTG[103X.[133X
+  
+  
+  [1X3.2 [33X[0;0YConstructors[133X[101X
+  
+  [1X3.2-1 SkeletalCategoryOfTransitiveGSets[101X
+  
+  [33X[1;0Y[29X[2XSkeletalCategoryOfTransitiveGSets[102X( [3XG[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya category[133X
+  
+  [33X[0;0YThe argument is a group [23XG[123X. The output is the skeletal category of transitive
+  [23XG[123X-Sets.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XG := SymmetricGroup( 3 );;[127X[104X
-    [4X[25Xgap>[125X [27XToM := TableOfMarks( G );;[127X[104X
-    [4X[25Xgap>[125X [27XS := Stabilizer( G, 3 );[127X[104X
-    [4X[28XSym( [ 1 .. 2 ] )[128X[104X
-    [4X[25Xgap>[125X [27Xpos_and_conj := PositionAndConjugatorOfStabilizer( G, 3 );;[127X[104X
-    [4X[25Xgap>[125X [27Xpos := pos_and_conj[1];[127X[104X
-    [4X[28X2[128X[104X
-    [4X[25Xgap>[125X [27Xconj := pos_and_conj[2];[127X[104X
-    [4X[28X(1,3)[128X[104X
-    [4X[25Xgap>[125X [27XConjugateSubgroup( S, conj ) = RepresentativeTom( ToM, pos );[127X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "Locales", false );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );; StructureDescription( S3 );[127X[104X
+    [4X[28X"S3"[128X[104X
+    [4X[25Xgap>[125X [27XTS3 := SkeletalCategoryOfTransitiveGSets( S3 );[127X[104X
+    [4X[28XSkeletalCategoryOfTransitiveGSets( S3 ) with 4 objects[128X[104X
+    [4X[25Xgap>[125X [27XDisplay( TS3 );[127X[104X
+    [4X[28XA CAP category with name SkeletalCategoryOfTransitiveGSets( S3 ) \[128X[104X
+    [4X[28Xwith 4 objects:[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X24 primitive operations were used to derive 71 operations for this category \[128X[104X
+    [4X[28Xwhich algorithmically[128X[104X
+    [4X[28X* IsCategoryWithDecidableColifts[128X[104X
+    [4X[28X* IsCategoryWithDecidableLifts[128X[104X
+    [4X[28X* IsCategoryWithTerminalObject[128X[104X
+    [4X[28X* IsFiniteCategory[128X[104X
+    [4X[28X* IsCategoryWithCoequalizers[128X[104X
+    [4X[28X* IsEquippedWithHomomorphismStructure[128X[104X
+    [4X[28Xand not yet algorithmically[128X[104X
+    [4X[28X* IsFinitelyPresentedCategory[128X[104X
+    [4X[28Xand furthermore mathematically[128X[104X
+    [4X[28X* IsSkeletalCategory[128X[104X
+    [4X[25Xgap>[125X [27XOmega1 := TS3.1;[127X[104X
+    [4X[28XS3 / U_1[128X[104X
+    [4X[25Xgap>[125X [27XOmega2 := TS3.2;[127X[104X
+    [4X[28XS3 / U_2[128X[104X
+    [4X[25Xgap>[125X [27XOmega3 := TS3.3;[127X[104X
+    [4X[28XS3 / U_3[128X[104X
+    [4X[25Xgap>[125X [27XOmega4 := TS3.4;[127X[104X
+    [4X[28XS3 / U_4[128X[104X
+    [4X[25Xgap>[125X [27Xobjs := SetOfObjects( TS3 );[127X[104X
+    [4X[28X[ S3 / U_1, S3 / U_2, S3 / U_3, S3 / U_4 ][128X[104X
+    [4X[25Xgap>[125X [27XList( objs, Size );[127X[104X
+    [4X[28X[ 6, 3, 2, 1 ][128X[104X
+    [4X[25Xgap>[125X [27Xt := TerminalObject( TS3 );[127X[104X
+    [4X[28XS3 / U_4[128X[104X
+    [4X[25Xgap>[125X [27XObjectDatum( t );[127X[104X
+    [4X[28X4[128X[104X
+    [4X[25Xgap>[125X [27Xu := UniversalMorphismIntoTerminalObject( Omega2 );[127X[104X
+    [4X[28X(): S3 / U_2 -> S3 / U_4[128X[104X
+    [4X[25Xgap>[125X [27XMorphismDatum( u );[127X[104X
+    [4X[28X()[128X[104X
+    [4X[25Xgap>[125X [27Xmors := SetOfMorphisms( TS3 );[127X[104X
+    [4X[28X[ (): S3 / U_1 -> S3 / U_1, (2,3): S3 / U_1 -> S3 / U_1,\[128X[104X
+    [4X[28X (1,2): S3 / U_1 -> S3 / U_1, (1,2,3): S3 / U_1 -> S3 / U_1,\[128X[104X
+    [4X[28X (1,3,2): S3 / U_1 -> S3 / U_1, (1,3): S3 / U_1 -> S3 / U_1,\[128X[104X
+    [4X[28X (): S3 / U_1 -> S3 / U_2, (1,3): S3 / U_1 -> S3 / U_2,\[128X[104X
+    [4X[28X (1,2,3): S3 / U_1 -> S3 / U_2, (): S3 / U_2 -> S3 / U_2,\[128X[104X
+    [4X[28X (): S3 / U_1 -> S3 / U_3, (2,3): S3 / U_1 -> S3 / U_3,\[128X[104X
+    [4X[28X (): S3 / U_3 -> S3 / U_3, (2,3): S3 / U_3 -> S3 / U_3,\[128X[104X
+    [4X[28X (): S3 / U_1 -> S3 / U_4, (): S3 / U_2 -> S3 / U_4,\[128X[104X
+    [4X[28X (): S3 / U_3 -> S3 / U_4, (): S3 / U_4 -> S3 / U_4 ][128X[104X
+    [4X[25Xgap>[125X [27XForAll( mors, IsWellDefined );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XForAll( mors, IsEpimorphism );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XList( mors, IsEndomorphism );[127X[104X
+    [4X[28X[ true, true, true, true, true, true, false, false, false,\[128X[104X
+    [4X[28X true, false, false, true, true, false, false, false, true ][128X[104X
+    [4X[25Xgap>[125X [27XForAll( mors, mor -> IsMonomorphism( mor ) = IsEndomorphism( mor ) );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XForAll( mors, mor -> IsSplitMonomorphism( mor ) = IsEndomorphism( mor ) );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XForAll( mors, mor -> IsSplitEpimorphism( mor ) = IsEndomorphism( mor ) );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XForAll( mors, mor -> IsIsomorphism( mor ) = IsEndomorphism( mor ) );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xdigraph := DigraphOfPoset( PosetOfCategory( TS3 ) );[127X[104X
+    [4X[28X<immutable digraph with 4 vertices, 4 edges>[128X[104X
+    [4X[25Xgap>[125X [27XPrint( DotVertexLabelledDigraph( digraph ) );[127X[104X
+    [4X[28X//dot[128X[104X
+    [4X[28Xdigraph subobject_lattice{[128X[104X
+    [4X[28Xrankdir="BT"[128X[104X
+    [4X[28Xminlen=0[128X[104X
+    [4X[28Xnode [shape=circle width=0 height=0 fontsize=12 margin=0.01 \[128X[104X
+    [4X[28Xfontname="DejaVu Serif,serif"][128X[104X
+    [4X[28Xedge [arrowsize=0.5][128X[104X
+    [4X[28X1 [label="1"][128X[104X
+    [4X[28X2 [label="2"][128X[104X
+    [4X[28X3 [label="3"][128X[104X
+    [4X[28X4 [label="4"][128X[104X
+    [4X[28X1 -> 2[128X[104X
+    [4X[28X1 -> 3[128X[104X
+    [4X[28X2 -> 4[128X[104X
+    [4X[28X3 -> 4[128X[104X
+    [4X[28X}[128X[104X
+    [4X[25Xgap>[125X [27XForAll( objs, o -> o = Coequalizer( Omega1, CoequalizerMorphisms( o ) ) );[127X[104X
     [4X[28Xtrue[128X[104X
   [4X[32X[104X
+  
+  
+  [1X3.3 [33X[0;0YGAP Categories[133X[101X
+  
+  [1X3.3-1 IsSkeletalCategoryOfTransitiveGSets[101X
+  
+  [33X[1;0Y[29X[2XIsSkeletalCategoryOfTransitiveGSets[102X( [3Xobject[103X ) [32X filter[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
+  
+  [33X[0;0YThe GAP category of the skeletal category of transitive [23XG[123X-sets.[133X
+  
+  [1X3.3-2 IsObjectInSkeletalCategoryOfTransitiveGSets[101X
+  
+  [33X[1;0Y[29X[2XIsObjectInSkeletalCategoryOfTransitiveGSets[102X( [3Xobject[103X ) [32X filter[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
+  
+  [33X[0;0YThe GAP category of objects in the skeletal category of transitive [23XG[123X-sets.[133X
+  
+  [1X3.3-3 IsMorphismInSkeletalCategoryOfTransitiveGSets[101X
+  
+  [33X[1;0Y[29X[2XIsMorphismInSkeletalCategoryOfTransitiveGSets[102X( [3Xobject[103X ) [32X filter[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
+  
+  [33X[0;0YThe GAP category of morphisms in the skeletal category of transitive [23XG[123X-sets.[133X
   

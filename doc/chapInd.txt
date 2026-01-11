@@ -3,20 +3,37 @@
   [1XIndex[101X
   
   [2XAsList[102X, for IsSkeletalFinGSet 2.1-1 
-  [2XEndAsEqualizer[102X 4.1-1 
-  [2XEndByLifts[102X 4.1-2 
+  [2XCardinalitiesOfObjects[102X, for IsSkeletalCategoryOfTransitiveGSets 3.1-5 
+  [2XCardinality[102X, for IsObjectInSkeletalCategoryOfTransitiveGSets 3.1-9 
+  [2XCoequalizerMorphisms[102X, for IsObjectInSkeletalCategoryOfTransitiveGSets 3.1-11 
+  [2XEmbeddingOfUnderlyingGroupAsCategory[102X, for IsSkeletalCategoryOfTransitiveGSets 3.1-12 
+  [2XEndAsEqualizer[102X 5.1-1 
+  [2XEndByLifts[102X 5.1-2 
+  [2XExtendFunctorToSkeletalCategoryOfTransitiveGSets[102X, for IsCapFunctor 3.1-13 
   [2XFinGSet[102X, for IsGroup, IsList 2.2-1 
-  [2XForgetfulFunctorSkeletalFinGSets[102X, for IsGroup 4.1-5 
-  [2XHomSkeletalFinGSets[102X 4.1-4 
+  [2XForgetfulFunctorSkeletalFinGSets[102X, for IsGroup 5.1-5 
+  [2XHomSkeletalFinGSets[102X 5.1-4 
+  [2XIsMorphismInSkeletalCategoryOfTransitiveGSets[102X, for IsCapCategoryMorphism 3.3-3 
+  [2XIsObjectInSkeletalCategoryOfTransitiveGSets[102X, for IsCapCategoryObject 3.3-2 
+  [2XIsSkeletalCategoryOfTransitiveGSets[102X, for IsCapCategory and IsSkeletalCategory 3.3-1 
   [2XIsSkeletalFinGSet[102X, for IsCapCategoryObject 2.3-2 
   [2XIsSkeletalFinGSetCategory[102X, for IsCapCategory and IsSkeletalCategory 2.3-1 
   [2XIsSkeletalFinGSetMap[102X, for IsCapCategoryMorphism 2.3-3 
   [2XMapOfFinGSets[102X, for IsSkeletalFinGSet, IsList, IsSkeletalFinGSet 2.2-2 
-  [2XPositionAndConjugatorOfStabilizer[102X 3.1-1 
-  [2XReconstructGroup[102X 4.1-6 
-  [2XReconstructTableOfMarks[102X 4.1-3 
+  [2XNumberOfObjects[102X, for IsSkeletalCategoryOfTransitiveGSets 3.1-4 
+  [2XObjectNumber[102X, for IsObjectInSkeletalCategoryOfTransitiveGSets 3.1-7 
+  [2XPositionAndConjugatorOfStabilizer[102X 4.1-1 
+  [2XReconstructGroup[102X 5.1-6 
+  [2XReconstructTableOfMarks[102X 5.1-3 
+  [2XRepresentativesOfSubgroupsUpToConjugation[102X, for IsSkeletalCategoryOfTransitiveGSets 3.1-6 
+  [2XSize[102X, for IsObjectInSkeletalCategoryOfTransitiveGSets 3.1-10 
+  [2XSkeletalCategoryOfTransitiveGSets[102X, for IsGroupAsCategory 3.2-1 
   [2XSkeletalFinGSets[102X, for IsGroup 2.2-3 
-  [2XUnderlyingGroup[102X, for IsSkeletalFinGSet 2.1-2 
+  [2XUnderlyingGroup[102X, for IsSkeletalCategoryOfTransitiveGSets 3.1-1 
+      for IsSkeletalFinGSet 2.1-2 
+  [2XUnderlyingGroupAsCategory[102X, for IsSkeletalCategoryOfTransitiveGSets 3.1-2 
+  [2XUnderlyingGroupElement[102X, for IsMorphismInSkeletalCategoryOfTransitiveGSets 3.1-8 
+  [2XUnderlyingTableOfMarks[102X, for IsSkeletalCategoryOfTransitiveGSets 3.1-3 
   
   
   -------------------------------------------------------

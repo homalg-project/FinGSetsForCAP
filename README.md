@@ -20,7 +20,7 @@ To obtain current versions of all dependencies, `git clone` (or `git pull` to up
 |--- | ---------- | ------- |
 | 1. | [**homalg_project**](https://github.com/homalg-project/homalg_project#readme) | https://github.com/homalg-project/homalg_project.git |
 | 2. | [**CAP_project**](https://github.com/homalg-project/CAP_project#readme) | https://github.com/homalg-project/CAP_project.git |
-| 3. | [**Toposes**](https://github.com/homalg-project/Toposes#readme) | https://github.com/homalg-project/Toposes.git |
+| 3. | [**CategoricalTowers**](https://github.com/homalg-project/CategoricalTowers#readme) | https://github.com/homalg-project/CategoricalTowers.git |
 | 4. | [**FinSetsForCAP**](https://github.com/homalg-project/FinSetsForCAP#readme) | https://github.com/homalg-project/FinSetsForCAP.git |
 
 [html-img]: https://img.shields.io/badge/🔗%20HTML-stable-blue.svg

@@ -6,10 +6,10 @@
                [1X The (skeletal) elementary topos of finite G-sets [101X
   
   
-                                   2025.12-01
+                                   2025.12-02
   
   
-                                23 December 2025
+                                11 January 2026
   
   
                                 Mohamed Barakat
@@ -77,21 +77,42 @@
       2.4-11 [33X[0;0YSkeletal Pullback[133X
       2.4-12 [33X[0;0YSkeletal Coequalizer[133X
       2.4-13 [33X[0;0YSkeletal Pushout[133X
-  3 [33X[0;0YTools[133X
-    3.1 [33X[0;0YHelper functions[133X
-      3.1-1 PositionAndConjugatorOfStabilizer
-  4 [33X[0;0YReconstructing G from the skeletal category of finite G-sets[133X
-    4.1 [33X[0;0YReconstruction Tools[133X
-      4.1-1 EndAsEqualizer
-      4.1-2 EndByLifts
-      4.1-3 ReconstructTableOfMarks
-      4.1-4 HomSkeletalFinGSets
-      4.1-5 ForgetfulFunctorSkeletalFinGSets
-      4.1-6 ReconstructGroup
-    4.2 [33X[0;0YExamples[133X
-      4.2-1 [33X[0;0YReconstructing the Table of Marks[133X
-      4.2-2 [33X[0;0YReconstructing the Group[133X
-  5 [33X[0;0YBibliography[133X
+  3 [33X[0;0YThe skeletal category of transitive G-sets[133X
+    3.1 [33X[0;0YAttributes[133X
+      3.1-1 UnderlyingGroup
+      3.1-2 UnderlyingGroupAsCategory
+      3.1-3 UnderlyingTableOfMarks
+      3.1-4 NumberOfObjects
+      3.1-5 CardinalitiesOfObjects
+      3.1-6 RepresentativesOfSubgroupsUpToConjugation
+      3.1-7 ObjectNumber
+      3.1-8 UnderlyingGroupElement
+      3.1-9 Cardinality
+      3.1-10 Size
+      3.1-11 CoequalizerMorphisms
+      3.1-12 EmbeddingOfUnderlyingGroupAsCategory
+      3.1-13 ExtendFunctorToSkeletalCategoryOfTransitiveGSets
+    3.2 [33X[0;0YConstructors[133X
+      3.2-1 SkeletalCategoryOfTransitiveGSets
+    3.3 [33X[0;0YGAP Categories[133X
+      3.3-1 IsSkeletalCategoryOfTransitiveGSets
+      3.3-2 IsObjectInSkeletalCategoryOfTransitiveGSets
+      3.3-3 IsMorphismInSkeletalCategoryOfTransitiveGSets
+  4 [33X[0;0YTools[133X
+    4.1 [33X[0;0YHelper functions[133X
+      4.1-1 PositionAndConjugatorOfStabilizer
+  5 [33X[0;0YReconstructing G from the skeletal category of finite G-sets[133X
+    5.1 [33X[0;0YReconstruction Tools[133X
+      5.1-1 EndAsEqualizer
+      5.1-2 EndByLifts
+      5.1-3 ReconstructTableOfMarks
+      5.1-4 HomSkeletalFinGSets
+      5.1-5 ForgetfulFunctorSkeletalFinGSets
+      5.1-6 ReconstructGroup
+    5.2 [33X[0;0YExamples[133X
+      5.2-1 [33X[0;0YReconstructing the Table of Marks[133X
+      5.2-2 [33X[0;0YReconstructing the Group[133X
+  6 [33X[0;0YBibliography[133X
   
   
   [32X
