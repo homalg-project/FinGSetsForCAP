@@ -240,10 +240,10 @@ S3 / U_4
 ()
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mors := SetOfMorphisms( TS3 );</span>
 [ (): S3 / U_1 -&gt; S3 / U_1, (2,3): S3 / U_1 -&gt; S3 / U_1,\
- (1,2): S3 / U_1 -&gt; S3 / U_1, (1,2,3): S3 / U_1 -&gt; S3 / U_1,\
- (1,3,2): S3 / U_1 -&gt; S3 / U_1, (1,3): S3 / U_1 -&gt; S3 / U_1,\
+ (1,2): S3 / U_1 -&gt; S3 / U_1, (1,3,2): S3 / U_1 -&gt; S3 / U_1,\
+ (1,2,3): S3 / U_1 -&gt; S3 / U_1, (1,3): S3 / U_1 -&gt; S3 / U_1,\
  (): S3 / U_1 -&gt; S3 / U_2, (1,3): S3 / U_1 -&gt; S3 / U_2,\
- (1,2,3): S3 / U_1 -&gt; S3 / U_2, (): S3 / U_2 -&gt; S3 / U_2,\
+ (1,3,2): S3 / U_1 -&gt; S3 / U_2, (): S3 / U_2 -&gt; S3 / U_2,\
  (): S3 / U_1 -&gt; S3 / U_3, (2,3): S3 / U_1 -&gt; S3 / U_3,\
  (): S3 / U_3 -&gt; S3 / U_3, (2,3): S3 / U_3 -&gt; S3 / U_3,\
  (): S3 / U_1 -&gt; S3 / U_4, (): S3 / U_2 -&gt; S3 / U_4,\
@@ -262,6 +262,20 @@ true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ForAll( mors, mor -&gt; IsSplitEpimorphism( mor ) = IsEndomorphism( mor ) );</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ForAll( mors, mor -&gt; IsIsomorphism( mor ) = IsEndomorphism( mor ) );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">phi := MorphismConstructor( Omega1, (1,2), Omega1 );</span>
+(1,2): S3 / U_1 -&gt; S3 / U_1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">phi = mors[3];</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">psi := MorphismConstructor( Omega1, (2,3), Omega1 );</span>
+(2,3): S3 / U_1 -&gt; S3 / U_1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">psi = mors[2];</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">dp := MorphismDatum( PreCompose( phi, psi ) );</span>
+(1,3,2)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">pd := MorphismDatum( phi ) * MorphismDatum( psi );</span>
+(1,3,2)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">dp = pd;</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">digraph := DigraphOfPoset( PosetOfCategory( TS3 ) );</span>
 &lt;immutable digraph with 4 vertices, 4 edges&gt;
