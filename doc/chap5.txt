@@ -1,5 +1,5 @@
   
-  [1X5 [33X[0;0YReconstructing G from the skeletal category of finite G-sets[133X[101X
+  [1X5 [33X[0;0YReconstructing G from the skeletal category of finite right $G$-sets[133X[101X
   
   
   [1X5.1 [33X[0;0YReconstruction Tools[133X[101X
@@ -36,134 +36,11 @@
   [6XReturns:[106X  [33X[0;10Ya group[133X
   
   [33X[0;0YThe  input  is a CAP category [10XC[110X which is equivalent to the skeletal category
-  of finite G-sets for some group [23XG[123X, a function [10XHomC[110X computing homs in [10XC[110X (e.g.
-  [10XHomSkeletalFinGSets[110X),  a  generating set of [10XC[110X, and a function computing ends
-  (e.g. [10XEndAsEqualizer[110X or [10XEndByLifts[110X). The output is a group isomorphic to [23XG[123X.[133X
+  of finite right [23XG[123X-sets for some group [23XG[123X, a function [10XHomC[110X computing homs in [10XC[110X
+  (e.g.  [10XHomSkeletalFinGSets[110X), a generating set of [10XC[110X, and a function computing
+  ends  (e.g.  [10XEndAsEqualizer[110X or [10XEndByLifts[110X). The output is a group isomorphic
+  to [23XG[123X.[133X
   
   
   [1X5.2 [33X[0;0YExamples[133X[101X
-  
-  
-  [1X5.2-1 [33X[0;0YReconstructing the Table of Marks[133X[101X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XG := CyclicGroup( 210 );;[127X[104X
-    [4X[25Xgap>[125X [27XToM := MatTom( TableOfMarks( G ) );[127X[104X
-    [4X[28X[ [ 210, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [128X[104X
-    [4X[28X  [ 105, 105, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [128X[104X
-    [4X[28X  [ 70, 0, 70, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [128X[104X
-    [4X[28X  [ 42, 0, 0, 42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [128X[104X
-    [4X[28X  [ 35, 35, 35, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [128X[104X
-    [4X[28X  [ 30, 0, 0, 0, 0, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [128X[104X
-    [4X[28X  [ 21, 21, 0, 21, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [128X[104X
-    [4X[28X  [ 15, 15, 0, 0, 0, 15, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0 ], [128X[104X
-    [4X[28X  [ 14, 0, 14, 14, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0 ], [128X[104X
-    [4X[28X  [ 10, 0, 10, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0 ], [128X[104X
-    [4X[28X  [ 7, 7, 7, 7, 7, 0, 7, 0, 7, 0, 7, 0, 0, 0, 0, 0 ], [128X[104X
-    [4X[28X  [ 6, 0, 0, 6, 0, 6, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0 ], [128X[104X
-    [4X[28X  [ 5, 5, 5, 0, 5, 5, 0, 5, 0, 5, 0, 0, 5, 0, 0, 0 ], [128X[104X
-    [4X[28X  [ 3, 3, 0, 3, 0, 3, 3, 3, 0, 0, 0, 3, 0, 3, 0, 0 ], [128X[104X
-    [4X[28X  [ 2, 0, 2, 2, 0, 2, 0, 0, 2, 2, 0, 2, 0, 0, 2, 0 ], [128X[104X
-    [4X[28X  [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] ][128X[104X
-    [4X[25Xgap>[125X [27Xk := Size( ToM );[127X[104X
-    [4X[28X16[128X[104X
-    [4X[25Xgap>[125X [27Xminimal_generating_set := [ ];;[127X[104X
-    [4X[25Xgap>[125X [27Xfor i in [ 1 .. k ] do[127X[104X
-    [4X[25X>[125X [27X    M := ListWithIdenticalEntries( k, 0 )[127X[104X
-    [4X[25X>[125X [27X    ; M[ i ] := 1; Add( minimal_generating_set, FinGSet( G, M ) ); od;[127X[104X
-    [4X[25Xgap>[125X [27XDecompose := function( Omega, minimal_generating_set )[127X[104X
-    [4X[25X>[125X [27X    return List( [ 1 .. k ], i ->[127X[104X
-    [4X[25X>[125X [27X        AsList( Omega )[Position( AsList( minimal_generating_set[i] ), 1 )][127X[104X
-    [4X[25X>[125X [27X    ); end;;[127X[104X
-    [4X[28X#@if IsPackageMarkedForLoading( "FinSetsForCAP", ">= 2018.09.17" )[128X[104X
-    [4X[25Xgap>[125X [27Xcomputed_ToM := ReconstructTableOfMarks([127X[104X
-    [4X[25X>[125X [27X    SkeletalFinGSets( G ),[127X[104X
-    [4X[25X>[125X [27X    minimal_generating_set,[127X[104X
-    [4X[25X>[125X [27X    Decompose[127X[104X
-    [4X[25X>[125X [27X);;[127X[104X
-    [4X[25Xgap>[125X [27Xcomputed_ToM = ToM;[127X[104X
-    [4X[28Xtrue[128X[104X
-    [4X[28X#@fi[128X[104X
-  [4X[32X[104X
-  
-  
-  [1X5.2-2 [33X[0;0YReconstructing the Group[133X[101X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XG_1 := CyclicGroup( 5 );;[127X[104X
-    [4X[25Xgap>[125X [27XG_2 := SmallGroup( 20, 5 );;[127X[104X
-    [4X[28X#@if IsPackageMarkedForLoading( "FinSetsForCAP", ">= 2018.09.17" )[128X[104X
-    [4X[25Xgap>[125X [27XCapCategorySwitchLogicOff( FinSets );[127X[104X
-    [4X[25Xgap>[125X [27XDeactivateCachingOfCategory( FinSets );[127X[104X
-    [4X[25Xgap>[125X [27XDisableSanityChecks( FinSets );[127X[104X
-    [4X[25Xgap>[125X [27XDeactivateCachingOfCategory( SkeletalFinSets );[127X[104X
-    [4X[25Xgap>[125X [27XCapCategorySwitchLogicOff( SkeletalFinSets );[127X[104X
-    [4X[25Xgap>[125X [27XDisableSanityChecks( SkeletalFinSets );[127X[104X
-    [4X[28X#@fi[128X[104X
-    [4X[25Xgap>[125X [27XCapCategorySwitchLogicOff( SkeletalFinGSets( G_1 ) );[127X[104X
-    [4X[25Xgap>[125X [27XDeactivateCachingOfCategory( SkeletalFinGSets( G_1 ) );[127X[104X
-    [4X[25Xgap>[125X [27XDisableSanityChecks( SkeletalFinGSets( G_1 ) );[127X[104X
-    [4X[25Xgap>[125X [27XCapCategorySwitchLogicOff( SkeletalFinGSets( G_2 ) );[127X[104X
-    [4X[25Xgap>[125X [27XDeactivateCachingOfCategory( SkeletalFinGSets( G_2 ) );[127X[104X
-    [4X[25Xgap>[125X [27XDisableSanityChecks( SkeletalFinGSets( G_2 ) );[127X[104X
-    [4X[25Xgap>[125X [27XDeactivateToDoList();[127X[104X
-    [4X[25Xgap>[125X [27XToM_1 := MatTom( TableOfMarks( G_1 ) );[127X[104X
-    [4X[28X[ [ 5, 0 ], [ 1, 1 ] ][128X[104X
-    [4X[25Xgap>[125X [27Xk_1 := Size( ToM_1 );[127X[104X
-    [4X[28X2[128X[104X
-    [4X[25Xgap>[125X [27Xgenerating_set_1 := [ ];;[127X[104X
-    [4X[25Xgap>[125X [27Xfor i in [ 1 .. k_1 ] do[127X[104X
-    [4X[25X>[125X [27X    M := ListWithIdenticalEntries( k_1, 0 )[127X[104X
-    [4X[25X>[125X [27X    ; M[i] := 1; Add( generating_set_1, FinGSet( G_1, M ) ); od;[127X[104X
-    [4X[25Xgap>[125X [27XToM_2 := MatTom( TableOfMarks( G_2 ) );[127X[104X
-    [4X[28X[ [ 20, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [128X[104X
-    [4X[28X  [ 10, 10, 0, 0, 0, 0, 0, 0, 0, 0 ], [128X[104X
-    [4X[28X  [ 10, 0, 10, 0, 0, 0, 0, 0, 0, 0 ], [128X[104X
-    [4X[28X  [ 10, 0, 0, 10, 0, 0, 0, 0, 0, 0 ], [128X[104X
-    [4X[28X  [ 5, 5, 5, 5, 5, 0, 0, 0, 0, 0 ], [128X[104X
-    [4X[28X  [ 4, 0, 0, 0, 0, 4, 0, 0, 0, 0 ], [128X[104X
-    [4X[28X  [ 2, 2, 0, 0, 0, 2, 2, 0, 0, 0 ], [128X[104X
-    [4X[28X  [ 2, 0, 2, 0, 0, 2, 0, 2, 0, 0 ], [128X[104X
-    [4X[28X  [ 2, 0, 0, 2, 0, 2, 0, 0, 2, 0 ], [128X[104X
-    [4X[28X  [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] ][128X[104X
-    [4X[25Xgap>[125X [27Xk_2 := Size( ToM_2 );[127X[104X
-    [4X[28X10[128X[104X
-    [4X[25Xgap>[125X [27Xgenerating_set_2 := [ ];;[127X[104X
-    [4X[25Xgap>[125X [27Xfor i in [ 1 .. k_2 ] do[127X[104X
-    [4X[25X>[125X [27X    M := ListWithIdenticalEntries( k_2, 0 )[127X[104X
-    [4X[25X>[125X [27X    ; M[i] := 1; Add( generating_set_2, FinGSet( G_2, M ) ); od;[127X[104X
-    [4X[25Xgap>[125X [27XSetInfoLevel( InfoWarning, 0 );[127X[104X
-    [4X[28X#@if IsPackageMarkedForLoading( "FinSetsForCAP", ">= 2018.09.17" )[128X[104X
-    [4X[25Xgap>[125X [27Xcomputed_group := ReconstructGroup([127X[104X
-    [4X[25X>[125X [27X    SkeletalFinGSets( G_1 ),[127X[104X
-    [4X[25X>[125X [27X    HomSkeletalFinGSets,[127X[104X
-    [4X[25X>[125X [27X    ForgetfulFunctorSkeletalFinGSets( G_1 ),[127X[104X
-    [4X[25X>[125X [27X    generating_set_1,[127X[104X
-    [4X[25X>[125X [27X    EndAsEqualizer[127X[104X
-    [4X[25X>[125X [27X);;[127X[104X
-    [4X[25Xgap>[125X [27XIsFinite( computed_group );;[127X[104X
-    [4X[25Xgap>[125X [27XIsomorphismGroups( computed_group, G_1 ) <> fail;[127X[104X
-    [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27Xcomputed_group := ReconstructGroup([127X[104X
-    [4X[25X>[125X [27X    SkeletalFinGSets( G_1 ),[127X[104X
-    [4X[25X>[125X [27X    HomSkeletalFinGSets,[127X[104X
-    [4X[25X>[125X [27X    ForgetfulFunctorSkeletalFinGSets( G_1 ),[127X[104X
-    [4X[25X>[125X [27X    generating_set_1,[127X[104X
-    [4X[25X>[125X [27X    EndByLifts[127X[104X
-    [4X[25X>[125X [27X);;[127X[104X
-    [4X[25Xgap>[125X [27XIsFinite( computed_group );;[127X[104X
-    [4X[25Xgap>[125X [27XIsomorphismGroups( computed_group, G_1 ) <> fail;[127X[104X
-    [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27Xcomputed_group := ReconstructGroup([127X[104X
-    [4X[25X>[125X [27X    SkeletalFinGSets( G_2 ),[127X[104X
-    [4X[25X>[125X [27X    HomSkeletalFinGSets,[127X[104X
-    [4X[25X>[125X [27X    ForgetfulFunctorSkeletalFinGSets( G_2 ),[127X[104X
-    [4X[25X>[125X [27X    generating_set_2,[127X[104X
-    [4X[25X>[125X [27X    EndByLifts[127X[104X
-    [4X[25X>[125X [27X);;[127X[104X
-    [4X[25Xgap>[125X [27XIsFinite( computed_group );;[127X[104X
-    [4X[25Xgap>[125X [27XIsomorphismGroups( computed_group, G_2 ) <> fail;[127X[104X
-    [4X[28Xtrue[128X[104X
-    [4X[28X#@fi[128X[104X
-  [4X[32X[104X
   

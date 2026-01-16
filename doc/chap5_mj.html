@@ -8,7 +8,7 @@
 <script type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
-<title>GAP (FinGSetsForCAP) - Chapter 5: Reconstructing G from the skeletal category of finite G-sets</title>
+<title>GAP (FinGSetsForCAP) - Chapter 5: Reconstructing G from the skeletal category of finite right $G$-sets</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta name="generator" content="GAPDoc2HTML" />
 <link rel="stylesheet" type="text/css" href="manual.css" />
@@ -18,13 +18,13 @@
 <body class="chap5"  onload="jscontent()">
 
 
-<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chap7_mj.html">7</a>  <a href="chapInd_mj.html">Ind</a>  </div>
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap4_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap6_mj.html">[Next Chapter]</a>&nbsp;  </div>
 
 <p id="mathjaxlink" class="pcenter"><a href="chap5.html">[MathJax off]</a></p>
-<p><a id="X8549A23485AF6E6D" name="X8549A23485AF6E6D"></a></p>
-<div class="ChapSects"><a href="chap5_mj.html#X8549A23485AF6E6D">5 <span class="Heading">Reconstructing G from the skeletal category of finite G-sets</span></a>
+<p><a id="X825C5894820FCD36" name="X825C5894820FCD36"></a></p>
+<div class="ChapSects"><a href="chap5_mj.html#X825C5894820FCD36">5 <span class="Heading">Reconstructing G from the skeletal category of finite right $G$-sets</span></a>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5_mj.html#X8668DA3A821526CE">5.1 <span class="Heading">Reconstruction Tools</span></a>
 </span>
 <div class="ContSSBlock">
@@ -37,15 +37,10 @@
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5_mj.html#X7A489A5D79DA9E5C">5.2 <span class="Heading">Examples</span></a>
 </span>
-<div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5_mj.html#X7E6B07A57EEFCBC1">5.2-1 <span class="Heading">Reconstructing the Table of Marks</span></a>
-</span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5_mj.html#X7C79D0F686F66A70">5.2-2 <span class="Heading">Reconstructing the Group</span></a>
-</span>
-</div></div>
+</div>
 </div>
 
-<h3>5 <span class="Heading">Reconstructing G from the skeletal category of finite G-sets</span></h3>
+<h3>5 <span class="Heading">Reconstructing G from the skeletal category of finite right $G$-sets</span></h3>
 
 <p><a id="X8668DA3A821526CE" name="X8668DA3A821526CE"></a></p>
 
@@ -91,145 +86,17 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ReconstructGroup</code>( <var class="Arg">C</var>, <var class="Arg">HomC</var>, <var class="Arg">ForgetfulFunctor</var>, <var class="Arg">GeneratingSet</var>, <var class="Arg">EndImplementation</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a group</p>
 
-<p>The input is a CAP category <code class="code">C</code> which is equivalent to the skeletal category of finite G-sets for some group <span class="SimpleMath">\(G\)</span>, a function <code class="code">HomC</code> computing homs in <code class="code">C</code> (e.g. <code class="code">HomSkeletalFinGSets</code>), a generating set of <code class="code">C</code>, and a function computing ends (e.g. <code class="code">EndAsEqualizer</code> or <code class="code">EndByLifts</code>). The output is a group isomorphic to <span class="SimpleMath">\(G\)</span>.</p>
+<p>The input is a CAP category <code class="code">C</code> which is equivalent to the skeletal category of finite right <span class="SimpleMath">\(G\)</span>-sets for some group <span class="SimpleMath">\(G\)</span>, a function <code class="code">HomC</code> computing homs in <code class="code">C</code> (e.g. <code class="code">HomSkeletalFinGSets</code>), a generating set of <code class="code">C</code>, and a function computing ends (e.g. <code class="code">EndAsEqualizer</code> or <code class="code">EndByLifts</code>). The output is a group isomorphic to <span class="SimpleMath">\(G\)</span>.</p>
 
 <p><a id="X7A489A5D79DA9E5C" name="X7A489A5D79DA9E5C"></a></p>
 
 <h4>5.2 <span class="Heading">Examples</span></h4>
 
-<p><a id="X7E6B07A57EEFCBC1" name="X7E6B07A57EEFCBC1"></a></p>
-
-<h5>5.2-1 <span class="Heading">Reconstructing the Table of Marks</span></h5>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := CyclicGroup( 210 );;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ToM := MatTom( TableOfMarks( G ) );</span>
-[ [ 210, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
-  [ 105, 105, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
-  [ 70, 0, 70, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
-  [ 42, 0, 0, 42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
-  [ 35, 35, 35, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
-  [ 30, 0, 0, 0, 0, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
-  [ 21, 21, 0, 21, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
-  [ 15, 15, 0, 0, 0, 15, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0 ], 
-  [ 14, 0, 14, 14, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0 ], 
-  [ 10, 0, 10, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0 ], 
-  [ 7, 7, 7, 7, 7, 0, 7, 0, 7, 0, 7, 0, 0, 0, 0, 0 ], 
-  [ 6, 0, 0, 6, 0, 6, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0 ], 
-  [ 5, 5, 5, 0, 5, 5, 0, 5, 0, 5, 0, 0, 5, 0, 0, 0 ], 
-  [ 3, 3, 0, 3, 0, 3, 3, 3, 0, 0, 0, 3, 0, 3, 0, 0 ], 
-  [ 2, 0, 2, 2, 0, 2, 0, 0, 2, 2, 0, 2, 0, 0, 2, 0 ], 
-  [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">k := Size( ToM );</span>
-16
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">minimal_generating_set := [ ];;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">for i in [ 1 .. k ] do</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    M := ListWithIdenticalEntries( k, 0 )</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    ; M[ i ] := 1; Add( minimal_generating_set, FinGSet( G, M ) ); od;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Decompose := function( Omega, minimal_generating_set )</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    return List( [ 1 .. k ], i -&gt;</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">        AsList( Omega )[Position( AsList( minimal_generating_set[i] ), 1 )]</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    ); end;;</span>
-#@if IsPackageMarkedForLoading( "FinSetsForCAP", "&gt;= 2018.09.17" )
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">computed_ToM := ReconstructTableOfMarks(</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    SkeletalFinGSets( G ),</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    minimal_generating_set,</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    Decompose</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">);;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">computed_ToM = ToM;</span>
-true
-#@fi
-</pre></div>
-
-<p><a id="X7C79D0F686F66A70" name="X7C79D0F686F66A70"></a></p>
-
-<h5>5.2-2 <span class="Heading">Reconstructing the Group</span></h5>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G_1 := CyclicGroup( 5 );;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G_2 := SmallGroup( 20, 5 );;</span>
-#@if IsPackageMarkedForLoading( "FinSetsForCAP", "&gt;= 2018.09.17" )
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CapCategorySwitchLogicOff( FinSets );</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DeactivateCachingOfCategory( FinSets );</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DisableSanityChecks( FinSets );</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DeactivateCachingOfCategory( SkeletalFinSets );</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CapCategorySwitchLogicOff( SkeletalFinSets );</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DisableSanityChecks( SkeletalFinSets );</span>
-#@fi
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CapCategorySwitchLogicOff( SkeletalFinGSets( G_1 ) );</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DeactivateCachingOfCategory( SkeletalFinGSets( G_1 ) );</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DisableSanityChecks( SkeletalFinGSets( G_1 ) );</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CapCategorySwitchLogicOff( SkeletalFinGSets( G_2 ) );</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DeactivateCachingOfCategory( SkeletalFinGSets( G_2 ) );</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DisableSanityChecks( SkeletalFinGSets( G_2 ) );</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DeactivateToDoList();</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ToM_1 := MatTom( TableOfMarks( G_1 ) );</span>
-[ [ 5, 0 ], [ 1, 1 ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">k_1 := Size( ToM_1 );</span>
-2
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">generating_set_1 := [ ];;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">for i in [ 1 .. k_1 ] do</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    M := ListWithIdenticalEntries( k_1, 0 )</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    ; M[i] := 1; Add( generating_set_1, FinGSet( G_1, M ) ); od;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ToM_2 := MatTom( TableOfMarks( G_2 ) );</span>
-[ [ 20, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
-  [ 10, 10, 0, 0, 0, 0, 0, 0, 0, 0 ], 
-  [ 10, 0, 10, 0, 0, 0, 0, 0, 0, 0 ], 
-  [ 10, 0, 0, 10, 0, 0, 0, 0, 0, 0 ], 
-  [ 5, 5, 5, 5, 5, 0, 0, 0, 0, 0 ], 
-  [ 4, 0, 0, 0, 0, 4, 0, 0, 0, 0 ], 
-  [ 2, 2, 0, 0, 0, 2, 2, 0, 0, 0 ], 
-  [ 2, 0, 2, 0, 0, 2, 0, 2, 0, 0 ], 
-  [ 2, 0, 0, 2, 0, 2, 0, 0, 2, 0 ], 
-  [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">k_2 := Size( ToM_2 );</span>
-10
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">generating_set_2 := [ ];;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">for i in [ 1 .. k_2 ] do</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    M := ListWithIdenticalEntries( k_2, 0 )</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    ; M[i] := 1; Add( generating_set_2, FinGSet( G_2, M ) ); od;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetInfoLevel( InfoWarning, 0 );</span>
-#@if IsPackageMarkedForLoading( "FinSetsForCAP", "&gt;= 2018.09.17" )
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">computed_group := ReconstructGroup(</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    SkeletalFinGSets( G_1 ),</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    HomSkeletalFinGSets,</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    ForgetfulFunctorSkeletalFinGSets( G_1 ),</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    generating_set_1,</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    EndAsEqualizer</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">);;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsFinite( computed_group );;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsomorphismGroups( computed_group, G_1 ) &lt;&gt; fail;</span>
-true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">computed_group := ReconstructGroup(</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    SkeletalFinGSets( G_1 ),</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    HomSkeletalFinGSets,</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    ForgetfulFunctorSkeletalFinGSets( G_1 ),</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    generating_set_1,</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    EndByLifts</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">);;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsFinite( computed_group );;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsomorphismGroups( computed_group, G_1 ) &lt;&gt; fail;</span>
-true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">computed_group := ReconstructGroup(</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    SkeletalFinGSets( G_2 ),</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    HomSkeletalFinGSets,</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    ForgetfulFunctorSkeletalFinGSets( G_2 ),</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    generating_set_2,</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    EndByLifts</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">);;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsFinite( computed_group );;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsomorphismGroups( computed_group, G_2 ) &lt;&gt; fail;</span>
-true
-#@fi
-</pre></div>
-
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap4_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap6_mj.html">[Next Chapter]</a>&nbsp;  </div>
 
 
-<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chap7_mj.html">7</a>  <a href="chapInd_mj.html">Ind</a>  </div>
 
 <hr />
 <p class="foot">generated by <a href="https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>

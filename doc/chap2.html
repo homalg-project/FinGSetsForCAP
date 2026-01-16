@@ -5,7 +5,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<title>GAP (FinGSetsForCAP) - Chapter 2: The skeletal category of finite G-sets</title>
+<title>GAP (FinGSetsForCAP) - Chapter 2: The skeletal category of finite right $G$-sets</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta name="generator" content="GAPDoc2HTML" />
 <link rel="stylesheet" type="text/css" href="manual.css" />
@@ -15,13 +15,13 @@
 <body class="chap2"  onload="jscontent()">
 
 
-<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chap6.html">6</a>  <a href="chapInd.html">Ind</a>  </div>
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chap6.html">6</a>  <a href="chap7.html">7</a>  <a href="chapInd.html">Ind</a>  </div>
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap3.html">[Next Chapter]</a>&nbsp;  </div>
 
 <p id="mathjaxlink" class="pcenter"><a href="chap2_mj.html">[MathJax on]</a></p>
-<p><a id="X823F59E97C4C0A64" name="X823F59E97C4C0A64"></a></p>
-<div class="ChapSects"><a href="chap2.html#X823F59E97C4C0A64">2 <span class="Heading">The skeletal category of finite G-sets</span></a>
+<p><a id="X8007FCC97F41E9F3" name="X8007FCC97F41E9F3"></a></p>
+<div class="ChapSects"><a href="chap2.html#X8007FCC97F41E9F3">2 <span class="Heading">The skeletal category of finite right $G$-sets</span></a>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X7C701DBF7BAE649A">2.1 <span class="Heading">Attributes</span></a>
 </span>
 <div class="ContSSBlock">
@@ -35,46 +35,46 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X87A4B9967E9C25B1">2.2-2 MapOfFinGSets</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7D5778117FAD4A27">2.2-3 SkeletalFinGSets</a></span>
 </div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X7D03633A7D98026B">2.3 <span class="Heading">GAP Categories</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X7A489A5D79DA9E5C">2.3 <span class="Heading">Examples</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X84CCAF7A7B893E4D">2.3-1 IsSkeletalFinGSetCategory</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X83601C6480582BCB">2.3-2 IsSkeletalFinGSet</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7ABFECF782A1F6FC">2.3-3 IsSkeletalFinGSetMap</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7932C4A6858E1212">2.3-1 <span class="Heading">Skeletal IsEqualForObjects</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X86100A35872E3E9F">2.3-2 <span class="Heading">Skeletal PreCompose</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X863395C783B40EF1">2.3-3 <span class="Heading">Skeletal IdentityMorphism</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X8671AA4181FFF519">2.3-4 <span class="Heading">Skeletal Initial and Terminal Objects</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7C6BD799789DDBA3">2.3-5 <span class="Heading">Skeletal LiftAlongMonomorphism</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7EFD6EAD798E6AD4">2.3-6 <span class="Heading">Skeletal ColiftAlongEpimorphism</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X85D4C3CA80D98F0E">2.3-7 <span class="Heading">Skeletal Product</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7ADD1E46831BEED2">2.3-8 <span class="Heading">Skeletal Coproduct</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7CA82F40876ABC87">2.3-9 <span class="Heading">Skeletal Image</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X8612F06E7F683F4C">2.3-10 <span class="Heading">Skeletal Equalizer</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7CAD01387C12A9E8">2.3-11 <span class="Heading">Skeletal Pullback</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X83BC64A980FE2B98">2.3-12 <span class="Heading">Skeletal Coequalizer</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7A2A65A58651651A">2.3-13 <span class="Heading">Skeletal Pushout</span></a>
+</span>
 </div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X7A489A5D79DA9E5C">2.4 <span class="Heading">Examples</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X7D03633A7D98026B">2.4 <span class="Heading">GAP categories</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7932C4A6858E1212">2.4-1 <span class="Heading">Skeletal IsEqualForObjects</span></a>
-</span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X86100A35872E3E9F">2.4-2 <span class="Heading">Skeletal PreCompose</span></a>
-</span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X863395C783B40EF1">2.4-3 <span class="Heading">Skeletal IdentityMorphism</span></a>
-</span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X8671AA4181FFF519">2.4-4 <span class="Heading">Skeletal Initial and Terminal Objects</span></a>
-</span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7C6BD799789DDBA3">2.4-5 <span class="Heading">Skeletal LiftAlongMonomorphism</span></a>
-</span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7EFD6EAD798E6AD4">2.4-6 <span class="Heading">Skeletal ColiftAlongEpimorphism</span></a>
-</span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X85D4C3CA80D98F0E">2.4-7 <span class="Heading">Skeletal Product</span></a>
-</span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7ADD1E46831BEED2">2.4-8 <span class="Heading">Skeletal Coproduct</span></a>
-</span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7CA82F40876ABC87">2.4-9 <span class="Heading">Skeletal Image</span></a>
-</span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X8612F06E7F683F4C">2.4-10 <span class="Heading">Skeletal Equalizer</span></a>
-</span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7CAD01387C12A9E8">2.4-11 <span class="Heading">Skeletal Pullback</span></a>
-</span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X83BC64A980FE2B98">2.4-12 <span class="Heading">Skeletal Coequalizer</span></a>
-</span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7A2A65A58651651A">2.4-13 <span class="Heading">Skeletal Pushout</span></a>
-</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X84CCAF7A7B893E4D">2.4-1 IsSkeletalFinGSetCategory</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X83601C6480582BCB">2.4-2 IsSkeletalFinGSet</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7ABFECF782A1F6FC">2.4-3 IsSkeletalFinGSetMap</a></span>
 </div></div>
 </div>
 
-<h3>2 <span class="Heading">The skeletal category of finite G-sets</span></h3>
+<h3>2 <span class="Heading">The skeletal category of finite right $G$-sets</span></h3>
 
 <p><a id="X7C701DBF7BAE649A" name="X7C701DBF7BAE649A"></a></p>
 
@@ -147,7 +147,7 @@ false
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MapOfFinGSets</code>( <var class="Arg">s</var>, <var class="Arg">G</var>, <var class="Arg">t</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: a CAP morphism</p>
 
-<p>Construct a map <span class="Math">\phi \colon</span><var class="Arg">s</var><span class="Math">\to</span><var class="Arg">t</var> of the skeletal finite <span class="Math">G</span>-sets <var class="Arg">s</var> and <var class="Arg">t</var>, i.e., a morphism in the CAP category <code class="code">SkeletalFinGSets</code>, where <var class="Arg">G</var> is a list of lists describing the graph of <span class="Math">\phi</span>.</p>
+<p>Construct a map <span class="Math">\phi \colon</span><var class="Arg">s</var><span class="Math">\to</span><var class="Arg">t</var> of the skeletal finite right <span class="Math">G</span>-sets <var class="Arg">s</var> and <var class="Arg">t</var>, i.e., a morphism in the CAP category <code class="code">SkeletalFinGSets</code>, where <var class="Arg">G</var> is a list of lists describing the graph of <span class="Math">\phi</span>.</p>
 
 
 <div class="example"><pre>
@@ -242,46 +242,15 @@ false
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SkeletalFinGSets</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a category</p>
 
-<p>The argument is a group <span class="Math">G</span>. The output is the skeletal category of finite <span class="Math">G</span>-Sets.</p>
-
-<p><a id="X7D03633A7D98026B" name="X7D03633A7D98026B"></a></p>
-
-<h4>2.3 <span class="Heading">GAP Categories</span></h4>
-
-<p><a id="X84CCAF7A7B893E4D" name="X84CCAF7A7B893E4D"></a></p>
-
-<h5>2.3-1 IsSkeletalFinGSetCategory</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsSkeletalFinGSetCategory</code>( <var class="Arg">object</var> )</td><td class="tdright">(&nbsp;filter&nbsp;)</td></tr></table></div>
-<p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code></p>
-
-<p>The GAP category of the skeletal category of finite <span class="Math">G</span>-sets.</p>
-
-<p><a id="X83601C6480582BCB" name="X83601C6480582BCB"></a></p>
-
-<h5>2.3-2 IsSkeletalFinGSet</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsSkeletalFinGSet</code>( <var class="Arg">object</var> )</td><td class="tdright">(&nbsp;filter&nbsp;)</td></tr></table></div>
-<p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code></p>
-
-<p>The GAP category of objects in the skeletal category of finite <span class="Math">G</span>-sets.</p>
-
-<p><a id="X7ABFECF782A1F6FC" name="X7ABFECF782A1F6FC"></a></p>
-
-<h5>2.3-3 IsSkeletalFinGSetMap</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsSkeletalFinGSetMap</code>( <var class="Arg">object</var> )</td><td class="tdright">(&nbsp;filter&nbsp;)</td></tr></table></div>
-<p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code></p>
-
-<p>The GAP category of morphisms in the skeletal category of finite <span class="Math">G</span>-sets.</p>
+<p>The argument is a group <span class="Math">G</span>. The output is the skeletal category of finite right <span class="Math">G</span>-sets.</p>
 
 <p><a id="X7A489A5D79DA9E5C" name="X7A489A5D79DA9E5C"></a></p>
 
-<h4>2.4 <span class="Heading">Examples</span></h4>
+<h4>2.3 <span class="Heading">Examples</span></h4>
 
 <p><a id="X7932C4A6858E1212" name="X7932C4A6858E1212"></a></p>
 
-<h5>2.4-1 <span class="Heading">Skeletal IsEqualForObjects</span></h5>
+<h5>2.3-1 <span class="Heading">Skeletal IsEqualForObjects</span></h5>
 
 
 <div class="example"><pre>
@@ -305,7 +274,7 @@ bject in SkeletalFinGSets" do not belong to the same CAP category
 
 <p><a id="X86100A35872E3E9F" name="X86100A35872E3E9F"></a></p>
 
-<h5>2.4-2 <span class="Heading">Skeletal PreCompose</span></h5>
+<h5>2.3-2 <span class="Heading">Skeletal PreCompose</span></h5>
 
 
 <div class="example"><pre>
@@ -389,7 +358,7 @@ true
 
 <p><a id="X863395C783B40EF1" name="X863395C783B40EF1"></a></p>
 
-<h5>2.4-3 <span class="Heading">Skeletal IdentityMorphism</span></h5>
+<h5>2.3-3 <span class="Heading">Skeletal IdentityMorphism</span></h5>
 
 
 <div class="example"><pre>
@@ -412,7 +381,7 @@ true
 
 <p><a id="X8671AA4181FFF519" name="X8671AA4181FFF519"></a></p>
 
-<h5>2.4-4 <span class="Heading">Skeletal Initial and Terminal Objects</span></h5>
+<h5>2.3-4 <span class="Heading">Skeletal Initial and Terminal Objects</span></h5>
 
 
 <div class="example"><pre>
@@ -458,7 +427,7 @@ true
 
 <p><a id="X7C6BD799789DDBA3" name="X7C6BD799789DDBA3"></a></p>
 
-<h5>2.4-5 <span class="Heading">Skeletal LiftAlongMonomorphism</span></h5>
+<h5>2.3-5 <span class="Heading">Skeletal LiftAlongMonomorphism</span></h5>
 
 
 <div class="example"><pre>
@@ -491,7 +460,7 @@ true
 
 <p><a id="X7EFD6EAD798E6AD4" name="X7EFD6EAD798E6AD4"></a></p>
 
-<h5>2.4-6 <span class="Heading">Skeletal ColiftAlongEpimorphism</span></h5>
+<h5>2.3-6 <span class="Heading">Skeletal ColiftAlongEpimorphism</span></h5>
 
 
 <div class="example"><pre>
@@ -525,7 +494,7 @@ true
 
 <p><a id="X85D4C3CA80D98F0E" name="X85D4C3CA80D98F0E"></a></p>
 
-<h5>2.4-7 <span class="Heading">Skeletal Product</span></h5>
+<h5>2.3-7 <span class="Heading">Skeletal Product</span></h5>
 
 
 <div class="example"><pre>
@@ -690,7 +659,7 @@ true
 
 <p><a id="X7ADD1E46831BEED2" name="X7ADD1E46831BEED2"></a></p>
 
-<h5>2.4-8 <span class="Heading">Skeletal Coproduct</span></h5>
+<h5>2.3-8 <span class="Heading">Skeletal Coproduct</span></h5>
 
 
 <div class="example"><pre>
@@ -770,7 +739,7 @@ true
 
 <p><a id="X7CA82F40876ABC87" name="X7CA82F40876ABC87"></a></p>
 
-<h5>2.4-9 <span class="Heading">Skeletal Image</span></h5>
+<h5>2.3-9 <span class="Heading">Skeletal Image</span></h5>
 
 
 <div class="example"><pre>
@@ -853,7 +822,7 @@ true
 
 <p><a id="X8612F06E7F683F4C" name="X8612F06E7F683F4C"></a></p>
 
-<h5>2.4-10 <span class="Heading">Skeletal Equalizer</span></h5>
+<h5>2.3-10 <span class="Heading">Skeletal Equalizer</span></h5>
 
 
 <div class="example"><pre>
@@ -957,7 +926,7 @@ true
 
 <p><a id="X7CAD01387C12A9E8" name="X7CAD01387C12A9E8"></a></p>
 
-<h5>2.4-11 <span class="Heading">Skeletal Pullback</span></h5>
+<h5>2.3-11 <span class="Heading">Skeletal Pullback</span></h5>
 
 
 <div class="example"><pre>
@@ -1041,7 +1010,7 @@ true
 
 <p><a id="X83BC64A980FE2B98" name="X83BC64A980FE2B98"></a></p>
 
-<h5>2.4-12 <span class="Heading">Skeletal Coequalizer</span></h5>
+<h5>2.3-12 <span class="Heading">Skeletal Coequalizer</span></h5>
 
 
 <div class="example"><pre>
@@ -1293,7 +1262,7 @@ true
 
 <p><a id="X7A2A65A58651651A" name="X7A2A65A58651651A"></a></p>
 
-<h5>2.4-13 <span class="Heading">Skeletal Pushout</span></h5>
+<h5>2.3-13 <span class="Heading">Skeletal Pushout</span></h5>
 
 
 <div class="example"><pre>
@@ -1372,11 +1341,42 @@ true
 true
 </pre></div>
 
+<p><a id="X7D03633A7D98026B" name="X7D03633A7D98026B"></a></p>
+
+<h4>2.4 <span class="Heading">GAP categories</span></h4>
+
+<p><a id="X84CCAF7A7B893E4D" name="X84CCAF7A7B893E4D"></a></p>
+
+<h5>2.4-1 IsSkeletalFinGSetCategory</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsSkeletalFinGSetCategory</code>( <var class="Arg">object</var> )</td><td class="tdright">(&nbsp;filter&nbsp;)</td></tr></table></div>
+<p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code></p>
+
+<p>The GAP category of the skeletal category of finite right <span class="Math">G</span>-sets.</p>
+
+<p><a id="X83601C6480582BCB" name="X83601C6480582BCB"></a></p>
+
+<h5>2.4-2 IsSkeletalFinGSet</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsSkeletalFinGSet</code>( <var class="Arg">object</var> )</td><td class="tdright">(&nbsp;filter&nbsp;)</td></tr></table></div>
+<p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code></p>
+
+<p>The GAP category of objects in the skeletal category of finite right <span class="Math">G</span>-sets.</p>
+
+<p><a id="X7ABFECF782A1F6FC" name="X7ABFECF782A1F6FC"></a></p>
+
+<h5>2.4-3 IsSkeletalFinGSetMap</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsSkeletalFinGSetMap</code>( <var class="Arg">object</var> )</td><td class="tdright">(&nbsp;filter&nbsp;)</td></tr></table></div>
+<p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code></p>
+
+<p>The GAP category of morphisms in the skeletal category of finite right <span class="Math">G</span>-sets.</p>
+
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap3.html">[Next Chapter]</a>&nbsp;  </div>
 
 
-<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chap6.html">6</a>  <a href="chapInd.html">Ind</a>  </div>
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chap6.html">6</a>  <a href="chap7.html">7</a>  <a href="chapInd.html">Ind</a>  </div>
 
 <hr />
 <p class="foot">generated by <a href="https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>

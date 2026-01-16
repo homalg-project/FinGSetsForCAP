@@ -8,7 +8,7 @@
 <script type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
-<title>GAP (FinGSetsForCAP) - Chapter 3: The skeletal category of transitive G-sets</title>
+<title>GAP (FinGSetsForCAP) - Chapter 3: The skeletal category of transitive left $G$-sets</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta name="generator" content="GAPDoc2HTML" />
 <link rel="stylesheet" type="text/css" href="manual.css" />
@@ -18,114 +18,117 @@
 <body class="chap3"  onload="jscontent()">
 
 
-<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chap7_mj.html">7</a>  <a href="chapInd_mj.html">Ind</a>  </div>
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap4_mj.html">[Next Chapter]</a>&nbsp;  </div>
 
 <p id="mathjaxlink" class="pcenter"><a href="chap3.html">[MathJax off]</a></p>
-<p><a id="X7F722D9D7A2A8736" name="X7F722D9D7A2A8736"></a></p>
-<div class="ChapSects"><a href="chap3_mj.html#X7F722D9D7A2A8736">3 <span class="Heading">The skeletal category of transitive G-sets</span></a>
+<p><a id="X83E1961A80595F76" name="X83E1961A80595F76"></a></p>
+<div class="ChapSects"><a href="chap3_mj.html#X83E1961A80595F76">3 <span class="Heading">The skeletal category of transitive left $G$-sets</span></a>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3_mj.html#X7C701DBF7BAE649A">3.1 <span class="Heading">Attributes</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7E68AD277CFE2006">3.1-1 UnderlyingGroup</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X81BDBA42812DE363">3.1-2 UnderlyingGroupAsCategory</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X86DBC52681F2B187">3.1-3 UnderlyingTableOfMarks</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7B3922B281C0B368">3.1-4 NumberOfObjects</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7EEF329B7B9562A9">3.1-5 CardinalitiesOfObjects</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X81B57CFF847FAA9A">3.1-6 RepresentativesOfSubgroupsUpToConjugation</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X8761F63F82940F09">3.1-7 ObjectNumber</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X8596FCC67CECB01B">3.1-8 UnderlyingGroupElement</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7D5E6B1982727733">3.1-9 Cardinality</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X84E076D3834B81FF">3.1-10 Size</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7E6C6AA17B452CAA">3.1-11 CoequalizerMorphisms</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X8762C5DC7F0BCE90">3.1-12 EmbeddingOfUnderlyingGroupAsCategory</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X817D34C37BDD2CA9">3.1-13 ExtendFunctorToSkeletalCategoryOfTransitiveGSets</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X844F76127925388D">3.1-1 UnderlyingGroup</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X8682B1FD7E11BBAE">3.1-2 UnderlyingGroupAsCategory</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7E67291D7DB7A634">3.1-3 UnderlyingTableOfMarks</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7BE40B41841BABE3">3.1-4 NumberOfObjects</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7BEB971787D0751A">3.1-5 CardinalitiesOfObjects</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7F276B5A7C4E86E3">3.1-6 RepresentativesOfSubgroupsUpToConjugation</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7910BAE27AD33E07">3.1-7 ObjectNumber</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X79A5E66487CFB363">3.1-8 UnderlyingGroupElement</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X80488D857EA76422">3.1-9 Cardinality</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X81FA25DB808C283D">3.1-10 Size</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7F69D389840AC089">3.1-11 CoequalizerMorphisms</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X86CBF7C27A955A81">3.1-12 EmbeddingOfUnderlyingGroupAsCategory</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X8282DB87834DFF0A">3.1-13 ExtendFunctorToSkeletalCategoryOfTransitiveLeftGSets</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3_mj.html#X86EC0F0A78ECBC10">3.2 <span class="Heading">Constructors</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7AC0BD2878104261">3.2-1 SkeletalCategoryOfTransitiveGSets</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7ED42E4578F775FC">3.2-1 SkeletalCategoryOfTransitiveLeftGSets</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3_mj.html#X7D03633A7D98026B">3.3 <span class="Heading">GAP Categories</span></a>
 </span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3_mj.html#X7D03633A7D98026B">3.4 <span class="Heading">GAP categories</span></a>
+</span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X839FEF5F853A6718">3.3-1 IsSkeletalCategoryOfTransitiveGSets</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7DE9BA858411BBC8">3.3-2 IsObjectInSkeletalCategoryOfTransitiveGSets</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X8579720B7AEF707A">3.3-3 IsMorphismInSkeletalCategoryOfTransitiveGSets</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X86DDE0848452FA43">3.4-1 IsSkeletalCategoryOfTransitiveLeftGSets</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X8256C5C383E0EED1">3.4-2 IsObjectInSkeletalCategoryOfTransitiveLeftGSets</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X87BD2C88787DD2BE">3.4-3 IsMorphismInSkeletalCategoryOfTransitiveLeftGSets</a></span>
 </div></div>
 </div>
 
-<h3>3 <span class="Heading">The skeletal category of transitive G-sets</span></h3>
+<h3>3 <span class="Heading">The skeletal category of transitive left $G$-sets</span></h3>
 
 <p><a id="X7C701DBF7BAE649A" name="X7C701DBF7BAE649A"></a></p>
 
 <h4>3.1 <span class="Heading">Attributes</span></h4>
 
-<p><a id="X7E68AD277CFE2006" name="X7E68AD277CFE2006"></a></p>
+<p><a id="X844F76127925388D" name="X844F76127925388D"></a></p>
 
 <h5>3.1-1 UnderlyingGroup</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; UnderlyingGroup</code>( <var class="Arg">C</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a group</p>
 
-<p>The group <span class="SimpleMath">\(G\)</span> underlying the skeletal category <var class="Arg">C</var> of transitive <span class="SimpleMath">\(G\)</span>-set.</p>
+<p>The group <span class="SimpleMath">\(G\)</span> underlying the skeletal category <var class="Arg">C</var> of transitive left <span class="SimpleMath">\(G\)</span>-set.</p>
 
-<p><a id="X81BDBA42812DE363" name="X81BDBA42812DE363"></a></p>
+<p><a id="X8682B1FD7E11BBAE" name="X8682B1FD7E11BBAE"></a></p>
 
 <h5>3.1-2 UnderlyingGroupAsCategory</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; UnderlyingGroupAsCategory</code>( <var class="Arg">C</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a group</p>
 
-<p>The group <span class="SimpleMath">\(G\)</span> underlying the skeletal category <var class="Arg">C</var> of transitive <span class="SimpleMath">\(G\)</span>-set, viewed as a category on one object.</p>
+<p>The group <span class="SimpleMath">\(G\)</span> underlying the skeletal category <var class="Arg">C</var> of transitive left <span class="SimpleMath">\(G\)</span>-set, viewed as a category on one object.</p>
 
-<p><a id="X86DBC52681F2B187" name="X86DBC52681F2B187"></a></p>
+<p><a id="X7E67291D7DB7A634" name="X7E67291D7DB7A634"></a></p>
 
 <h5>3.1-3 UnderlyingTableOfMarks</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; UnderlyingTableOfMarks</code>( <var class="Arg">C</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a table of marks</p>
 
-<p>The table of marks of the group <span class="SimpleMath">\(G\)</span> underlying the skeletal category <var class="Arg">C</var> of transitive <span class="SimpleMath">\(G\)</span>-set.</p>
+<p>The table of marks of the group <span class="SimpleMath">\(G\)</span> underlying the skeletal category <var class="Arg">C</var> of transitive left <span class="SimpleMath">\(G\)</span>-set.</p>
 
-<p><a id="X7B3922B281C0B368" name="X7B3922B281C0B368"></a></p>
+<p><a id="X7BE40B41841BABE3" name="X7BE40B41841BABE3"></a></p>
 
 <h5>3.1-4 NumberOfObjects</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; NumberOfObjects</code>( <var class="Arg">C</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a positive integer</p>
 
-<p>The number of objects of the skeletal category <var class="Arg">C</var> of transitive <span class="SimpleMath">\(G\)</span>-set.</p>
+<p>The number of objects of the skeletal category <var class="Arg">C</var> of transitive left <span class="SimpleMath">\(G\)</span>-set.</p>
 
-<p><a id="X7EEF329B7B9562A9" name="X7EEF329B7B9562A9"></a></p>
+<p><a id="X7BEB971787D0751A" name="X7BEB971787D0751A"></a></p>
 
 <h5>3.1-5 CardinalitiesOfObjects</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CardinalitiesOfObjects</code>( <var class="Arg">C</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a positive integer</p>
 
-<p>The list of cardinalities of objects of the skeletal category <var class="Arg">C</var> of transitive <span class="SimpleMath">\(G\)</span>-set.</p>
+<p>The list of cardinalities of objects of the skeletal category <var class="Arg">C</var> of transitive left <span class="SimpleMath">\(G\)</span>-set.</p>
 
-<p><a id="X81B57CFF847FAA9A" name="X81B57CFF847FAA9A"></a></p>
+<p><a id="X7F276B5A7C4E86E3" name="X7F276B5A7C4E86E3"></a></p>
 
 <h5>3.1-6 RepresentativesOfSubgroupsUpToConjugation</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RepresentativesOfSubgroupsUpToConjugation</code>( <var class="Arg">C</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a positive integer</p>
 
-<p>The number of objects of the skeletal category <var class="Arg">C</var> of transitive <span class="SimpleMath">\(G\)</span>-set.</p>
+<p>The number of objects of the skeletal category <var class="Arg">C</var> of transitive left <span class="SimpleMath">\(G\)</span>-set.</p>
 
-<p><a id="X8761F63F82940F09" name="X8761F63F82940F09"></a></p>
+<p><a id="X7910BAE27AD33E07" name="X7910BAE27AD33E07"></a></p>
 
 <h5>3.1-7 ObjectNumber</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ObjectNumber</code>( <var class="Arg">Omega</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a positive integer</p>
 
-<p>The positive integer <span class="SimpleMath">\(i\)</span> such that the transitive <span class="SimpleMath">\(G\)</span>-set <var class="Arg">Omega</var> <span class="SimpleMath">\(\cong U_i \backslash G\)</span>, i.e., <code class="code">ObjectNumber( TransitiveGSet( G, i ) ) = i</code>.</p>
+<p>The positive integer <span class="SimpleMath">\(i\)</span> such that the transitive left <span class="SimpleMath">\(G\)</span>-set <var class="Arg">Omega</var> <span class="SimpleMath">\(\cong U_i \backslash G\)</span>, i.e., <code class="code">ObjectNumber( TransitiveGSet( G, i ) ) = i</code>.</p>
 
-<p><a id="X8596FCC67CECB01B" name="X8596FCC67CECB01B"></a></p>
+<p><a id="X79A5E66487CFB363" name="X79A5E66487CFB363"></a></p>
 
 <h5>3.1-8 UnderlyingGroupElement</h5>
 
@@ -134,34 +137,34 @@
 
 <p>The group elements <span class="SimpleMath">\(g \in G\)</span> defining the morphism <var class="Arg">phi</var>: <span class="SimpleMath">\(\cong U_s \backslash G \to U_t \backslash G\)</span> satisfying <span class="SimpleMath">\(g U_s g^{-1} \leq U_t\)</span>, or, equivalently, <span class="SimpleMath">\(g U_s \subseteq U_t g\)</span>.</p>
 
-<p><a id="X7D5E6B1982727733" name="X7D5E6B1982727733"></a></p>
+<p><a id="X80488D857EA76422" name="X80488D857EA76422"></a></p>
 
 <h5>3.1-9 Cardinality</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Cardinality</code>( <var class="Arg">Omega</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a positive integer</p>
 
-<p>The cardinality of the transitive <span class="SimpleMath">\(G\)</span>-set <var class="Arg">Omega</var>.</p>
+<p>The cardinality of the transitive left <span class="SimpleMath">\(G\)</span>-set <var class="Arg">Omega</var>.</p>
 
-<p><a id="X84E076D3834B81FF" name="X84E076D3834B81FF"></a></p>
+<p><a id="X81FA25DB808C283D" name="X81FA25DB808C283D"></a></p>
 
 <h5>3.1-10 Size</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Size</code>( <var class="Arg">Omega</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a positive integer</p>
 
-<p>The cardinality of the transitive <span class="SimpleMath">\(G\)</span>-set <var class="Arg">Omega</var>.</p>
+<p>The cardinality of the transitive left <span class="SimpleMath">\(G\)</span>-set <var class="Arg">Omega</var>.</p>
 
-<p><a id="X7E6C6AA17B452CAA" name="X7E6C6AA17B452CAA"></a></p>
+<p><a id="X7F69D389840AC089" name="X7F69D389840AC089"></a></p>
 
 <h5>3.1-11 CoequalizerMorphisms</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CoequalizerMorphisms</code>( <var class="Arg">Omega</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a list of morphisms</p>
 
-<p>The input is a transitive <span class="SimpleMath">\(G\)</span>-set <var class="Arg">Omega</var> <span class="SimpleMath">\(\cong G / U_i\)</span>. The output is the list of endomorphisms of the principal <span class="SimpleMath">\(G\)</span>-set <span class="SimpleMath">\(G / U_1\)</span> defined by the generators of <span class="SimpleMath">\(U_i\)</span>. The coequalizers of these morphisms is the input object <var class="Arg">Omega</var> <span class="SimpleMath">\(\cong G / U_i\)</span>.</p>
+<p>The input is a transitive left <span class="SimpleMath">\(G\)</span>-set <var class="Arg">Omega</var> <span class="SimpleMath">\(\cong G / U_i\)</span>. The output is the list of endomorphisms of the principal <span class="SimpleMath">\(G\)</span>-set <span class="SimpleMath">\(G / U_1\)</span> defined by the generators of <span class="SimpleMath">\(U_i\)</span>. The coequalizers of these morphisms is the input object <var class="Arg">Omega</var> <span class="SimpleMath">\(\cong G / U_i\)</span>.</p>
 
-<p><a id="X8762C5DC7F0BCE90" name="X8762C5DC7F0BCE90"></a></p>
+<p><a id="X86CBF7C27A955A81" name="X86CBF7C27A955A81"></a></p>
 
 <h5>3.1-12 EmbeddingOfUnderlyingGroupAsCategory</h5>
 
@@ -170,11 +173,11 @@
 
 <p>The full embedding functor from the group <span class="SimpleMath">\(G\)</span> underlying the finite coequalizer completion <var class="Arg">TG</var> into <var class="Arg">TG</var>.</p>
 
-<p><a id="X817D34C37BDD2CA9" name="X817D34C37BDD2CA9"></a></p>
+<p><a id="X8282DB87834DFF0A" name="X8282DB87834DFF0A"></a></p>
 
-<h5>3.1-13 ExtendFunctorToSkeletalCategoryOfTransitiveGSets</h5>
+<h5>3.1-13 ExtendFunctorToSkeletalCategoryOfTransitiveLeftGSets</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ExtendFunctorToSkeletalCategoryOfTransitiveGSets</code>( <var class="Arg">UC</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ExtendFunctorToSkeletalCategoryOfTransitiveLeftGSets</code>( <var class="Arg">UC</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a CAP functor</p>
 
 <p>The full embedding functor from the group <span class="SimpleMath">\(G\)</span> underlying the finite coequalizer completion <var class="Arg">TG</var> into <var class="Arg">TG</var>.</p>
@@ -183,11 +186,11 @@
 
 <h4>3.2 <span class="Heading">Constructors</span></h4>
 
-<p><a id="X7AC0BD2878104261" name="X7AC0BD2878104261"></a></p>
+<p><a id="X7ED42E4578F775FC" name="X7ED42E4578F775FC"></a></p>
 
-<h5>3.2-1 SkeletalCategoryOfTransitiveGSets</h5>
+<h5>3.2-1 SkeletalCategoryOfTransitiveLeftGSets</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SkeletalCategoryOfTransitiveGSets</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SkeletalCategoryOfTransitiveLeftGSets</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a category</p>
 
 <p>The argument is a group <span class="SimpleMath">\(G\)</span>. The output is the skeletal category of transitive <span class="SimpleMath">\(G\)</span>-Sets.</p>
@@ -200,10 +203,10 @@ true
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S3 := SymmetricGroup( 3 );; StructureDescription( S3 );</span>
 "S3"
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TS3 := SkeletalCategoryOfTransitiveGSets( S3 );</span>
-SkeletalCategoryOfTransitiveGSets( S3 ) with 4 objects
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TS3 := SkeletalCategoryOfTransitiveLeftGSets( S3 );</span>
+SkeletalCategoryOfTransitiveLeftGSets( S3 ) with 4 objects
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( TS3 );</span>
-A CAP category with name SkeletalCategoryOfTransitiveGSets( S3 ) \
+A CAP category with name SkeletalCategoryOfTransitiveLeftGSets( S3 ) \
 with 4 objects:
 
 24 primitive operations were used to derive 71 operations for this category \
@@ -304,38 +307,42 @@ true
 
 <h4>3.3 <span class="Heading">GAP Categories</span></h4>
 
-<p><a id="X839FEF5F853A6718" name="X839FEF5F853A6718"></a></p>
+<p><a id="X7D03633A7D98026B" name="X7D03633A7D98026B"></a></p>
 
-<h5>3.3-1 IsSkeletalCategoryOfTransitiveGSets</h5>
+<h4>3.4 <span class="Heading">GAP categories</span></h4>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsSkeletalCategoryOfTransitiveGSets</code>( <var class="Arg">object</var> )</td><td class="tdright">(&nbsp;filter&nbsp;)</td></tr></table></div>
+<p><a id="X86DDE0848452FA43" name="X86DDE0848452FA43"></a></p>
+
+<h5>3.4-1 IsSkeletalCategoryOfTransitiveLeftGSets</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsSkeletalCategoryOfTransitiveLeftGSets</code>( <var class="Arg">object</var> )</td><td class="tdright">(&nbsp;filter&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code></p>
 
-<p>The GAP category of the skeletal category of transitive <span class="SimpleMath">\(G\)</span>-sets.</p>
+<p>The GAP category of the skeletal category of transitive left <span class="SimpleMath">\(G\)</span>-sets.</p>
 
-<p><a id="X7DE9BA858411BBC8" name="X7DE9BA858411BBC8"></a></p>
+<p><a id="X8256C5C383E0EED1" name="X8256C5C383E0EED1"></a></p>
 
-<h5>3.3-2 IsObjectInSkeletalCategoryOfTransitiveGSets</h5>
+<h5>3.4-2 IsObjectInSkeletalCategoryOfTransitiveLeftGSets</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsObjectInSkeletalCategoryOfTransitiveGSets</code>( <var class="Arg">object</var> )</td><td class="tdright">(&nbsp;filter&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsObjectInSkeletalCategoryOfTransitiveLeftGSets</code>( <var class="Arg">object</var> )</td><td class="tdright">(&nbsp;filter&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code></p>
 
-<p>The GAP category of objects in the skeletal category of transitive <span class="SimpleMath">\(G\)</span>-sets.</p>
+<p>The GAP category of objects in the skeletal category of transitive left <span class="SimpleMath">\(G\)</span>-sets.</p>
 
-<p><a id="X8579720B7AEF707A" name="X8579720B7AEF707A"></a></p>
+<p><a id="X87BD2C88787DD2BE" name="X87BD2C88787DD2BE"></a></p>
 
-<h5>3.3-3 IsMorphismInSkeletalCategoryOfTransitiveGSets</h5>
+<h5>3.4-3 IsMorphismInSkeletalCategoryOfTransitiveLeftGSets</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsMorphismInSkeletalCategoryOfTransitiveGSets</code>( <var class="Arg">object</var> )</td><td class="tdright">(&nbsp;filter&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsMorphismInSkeletalCategoryOfTransitiveLeftGSets</code>( <var class="Arg">object</var> )</td><td class="tdright">(&nbsp;filter&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code></p>
 
-<p>The GAP category of morphisms in the skeletal category of transitive <span class="SimpleMath">\(G\)</span>-sets.</p>
+<p>The GAP category of morphisms in the skeletal category of transitive left <span class="SimpleMath">\(G\)</span>-sets.</p>
 
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap4_mj.html">[Next Chapter]</a>&nbsp;  </div>
 
 
-<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chap7_mj.html">7</a>  <a href="chapInd_mj.html">Ind</a>  </div>
 
 <hr />
 <p class="foot">generated by <a href="https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
