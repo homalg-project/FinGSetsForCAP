@@ -31,14 +31,14 @@
     [4X[25Xgap>[125X [27Xminimal_generating_set := [ ];;[127X[104X
     [4X[25Xgap>[125X [27Xfor i in [ 1 .. k ] do[127X[104X
     [4X[25X>[125X [27X    M := ListWithIdenticalEntries( k, 0 )[127X[104X
-    [4X[25X>[125X [27X    ; M[ i ] := 1; Add( minimal_generating_set, FinGSet( G, M ) ); od;[127X[104X
+    [4X[25X>[125X [27X    ; M[ i ] := 1; Add( minimal_generating_set, FinRightGSet( G, M ) ); od;[127X[104X
     [4X[25Xgap>[125X [27XDecompose := function( Omega, minimal_generating_set )[127X[104X
     [4X[25X>[125X [27X    return List( [ 1 .. k ], i ->[127X[104X
     [4X[25X>[125X [27X        AsList( Omega )[Position( AsList( minimal_generating_set[i] ), 1 )][127X[104X
     [4X[25X>[125X [27X    ); end;;[127X[104X
     [4X[28X#@if IsPackageMarkedForLoading( "FinSetsForCAP", ">= 2018.09.17" )[128X[104X
     [4X[25Xgap>[125X [27Xcomputed_ToM := ReconstructTableOfMarks([127X[104X
-    [4X[25X>[125X [27X    SkeletalFinGSets( G ),[127X[104X
+    [4X[25X>[125X [27X    SkeletalCategoryOfFiniteRightGSets( G ),[127X[104X
     [4X[25X>[125X [27X    minimal_generating_set,[127X[104X
     [4X[25X>[125X [27X    Decompose[127X[104X
     [4X[25X>[125X [27X);;[127X[104X
@@ -61,12 +61,12 @@
     [4X[25Xgap>[125X [27XCapCategorySwitchLogicOff( SkeletalFinSets );[127X[104X
     [4X[25Xgap>[125X [27XDisableSanityChecks( SkeletalFinSets );[127X[104X
     [4X[28X#@fi[128X[104X
-    [4X[25Xgap>[125X [27XCapCategorySwitchLogicOff( SkeletalFinGSets( G_1 ) );[127X[104X
-    [4X[25Xgap>[125X [27XDeactivateCachingOfCategory( SkeletalFinGSets( G_1 ) );[127X[104X
-    [4X[25Xgap>[125X [27XDisableSanityChecks( SkeletalFinGSets( G_1 ) );[127X[104X
-    [4X[25Xgap>[125X [27XCapCategorySwitchLogicOff( SkeletalFinGSets( G_2 ) );[127X[104X
-    [4X[25Xgap>[125X [27XDeactivateCachingOfCategory( SkeletalFinGSets( G_2 ) );[127X[104X
-    [4X[25Xgap>[125X [27XDisableSanityChecks( SkeletalFinGSets( G_2 ) );[127X[104X
+    [4X[25Xgap>[125X [27XCapCategorySwitchLogicOff( SkeletalCategoryOfFiniteRightGSets( G_1 ) );[127X[104X
+    [4X[25Xgap>[125X [27XDeactivateCachingOfCategory( SkeletalCategoryOfFiniteRightGSets( G_1 ) );[127X[104X
+    [4X[25Xgap>[125X [27XDisableSanityChecks( SkeletalCategoryOfFiniteRightGSets( G_1 ) );[127X[104X
+    [4X[25Xgap>[125X [27XCapCategorySwitchLogicOff( SkeletalCategoryOfFiniteRightGSets( G_2 ) );[127X[104X
+    [4X[25Xgap>[125X [27XDeactivateCachingOfCategory( SkeletalCategoryOfFiniteRightGSets( G_2 ) );[127X[104X
+    [4X[25Xgap>[125X [27XDisableSanityChecks( SkeletalCategoryOfFiniteRightGSets( G_2 ) );[127X[104X
     [4X[25Xgap>[125X [27XDeactivateToDoList();[127X[104X
     [4X[25Xgap>[125X [27XToM_1 := MatTom( TableOfMarks( G_1 ) );[127X[104X
     [4X[28X[ [ 5, 0 ], [ 1, 1 ] ][128X[104X
@@ -75,7 +75,7 @@
     [4X[25Xgap>[125X [27Xgenerating_set_1 := [ ];;[127X[104X
     [4X[25Xgap>[125X [27Xfor i in [ 1 .. k_1 ] do[127X[104X
     [4X[25X>[125X [27X    M := ListWithIdenticalEntries( k_1, 0 )[127X[104X
-    [4X[25X>[125X [27X    ; M[i] := 1; Add( generating_set_1, FinGSet( G_1, M ) ); od;[127X[104X
+    [4X[25X>[125X [27X    ; M[i] := 1; Add( generating_set_1, FinRightGSet( G_1, M ) ); od;[127X[104X
     [4X[25Xgap>[125X [27XToM_2 := MatTom( TableOfMarks( G_2 ) );[127X[104X
     [4X[28X[ [ 20, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [128X[104X
     [4X[28X  [ 10, 10, 0, 0, 0, 0, 0, 0, 0, 0 ], [128X[104X
@@ -92,13 +92,13 @@
     [4X[25Xgap>[125X [27Xgenerating_set_2 := [ ];;[127X[104X
     [4X[25Xgap>[125X [27Xfor i in [ 1 .. k_2 ] do[127X[104X
     [4X[25X>[125X [27X    M := ListWithIdenticalEntries( k_2, 0 )[127X[104X
-    [4X[25X>[125X [27X    ; M[i] := 1; Add( generating_set_2, FinGSet( G_2, M ) ); od;[127X[104X
+    [4X[25X>[125X [27X    ; M[i] := 1; Add( generating_set_2, FinRightGSet( G_2, M ) ); od;[127X[104X
     [4X[25Xgap>[125X [27XSetInfoLevel( InfoWarning, 0 );[127X[104X
     [4X[28X#@if IsPackageMarkedForLoading( "FinSetsForCAP", ">= 2018.09.17" )[128X[104X
     [4X[25Xgap>[125X [27Xcomputed_group := ReconstructGroup([127X[104X
-    [4X[25X>[125X [27X    SkeletalFinGSets( G_1 ),[127X[104X
-    [4X[25X>[125X [27X    HomSkeletalFinGSets,[127X[104X
-    [4X[25X>[125X [27X    ForgetfulFunctorSkeletalFinGSets( G_1 ),[127X[104X
+    [4X[25X>[125X [27X    SkeletalCategoryOfFiniteRightGSets( G_1 ),[127X[104X
+    [4X[25X>[125X [27X    HomSkeletalFinRightGSets,[127X[104X
+    [4X[25X>[125X [27X    ForgetfulFunctorSkeletalCategoryOfFiniteRightGSets( G_1 ),[127X[104X
     [4X[25X>[125X [27X    generating_set_1,[127X[104X
     [4X[25X>[125X [27X    EndAsEqualizer[127X[104X
     [4X[25X>[125X [27X);;[127X[104X
@@ -106,9 +106,9 @@
     [4X[25Xgap>[125X [27XIsomorphismGroups( computed_group, G_1 ) <> fail;[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xcomputed_group := ReconstructGroup([127X[104X
-    [4X[25X>[125X [27X    SkeletalFinGSets( G_1 ),[127X[104X
-    [4X[25X>[125X [27X    HomSkeletalFinGSets,[127X[104X
-    [4X[25X>[125X [27X    ForgetfulFunctorSkeletalFinGSets( G_1 ),[127X[104X
+    [4X[25X>[125X [27X    SkeletalCategoryOfFiniteRightGSets( G_1 ),[127X[104X
+    [4X[25X>[125X [27X    HomSkeletalFinRightGSets,[127X[104X
+    [4X[25X>[125X [27X    ForgetfulFunctorSkeletalCategoryOfFiniteRightGSets( G_1 ),[127X[104X
     [4X[25X>[125X [27X    generating_set_1,[127X[104X
     [4X[25X>[125X [27X    EndByLifts[127X[104X
     [4X[25X>[125X [27X);;[127X[104X
@@ -116,9 +116,9 @@
     [4X[25Xgap>[125X [27XIsomorphismGroups( computed_group, G_1 ) <> fail;[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xcomputed_group := ReconstructGroup([127X[104X
-    [4X[25X>[125X [27X    SkeletalFinGSets( G_2 ),[127X[104X
-    [4X[25X>[125X [27X    HomSkeletalFinGSets,[127X[104X
-    [4X[25X>[125X [27X    ForgetfulFunctorSkeletalFinGSets( G_2 ),[127X[104X
+    [4X[25X>[125X [27X    SkeletalCategoryOfFiniteRightGSets( G_2 ),[127X[104X
+    [4X[25X>[125X [27X    HomSkeletalFinRightGSets,[127X[104X
+    [4X[25X>[125X [27X    ForgetfulFunctorSkeletalCategoryOfFiniteRightGSets( G_2 ),[127X[104X
     [4X[25X>[125X [27X    generating_set_2,[127X[104X
     [4X[25X>[125X [27X    EndByLifts[127X[104X
     [4X[25X>[125X [27X);;[127X[104X

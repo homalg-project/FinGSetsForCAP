@@ -67,14 +67,14 @@
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">minimal_generating_set := [ ];;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">for i in [ 1 .. k ] do</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    M := ListWithIdenticalEntries( k, 0 )</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    ; M[ i ] := 1; Add( minimal_generating_set, FinGSet( G, M ) ); od;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    ; M[ i ] := 1; Add( minimal_generating_set, FinRightGSet( G, M ) ); od;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Decompose := function( Omega, minimal_generating_set )</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    return List( [ 1 .. k ], i -&gt;</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">        AsList( Omega )[Position( AsList( minimal_generating_set[i] ), 1 )]</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    ); end;;</span>
 #@if IsPackageMarkedForLoading( "FinSetsForCAP", "&gt;= 2018.09.17" )
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">computed_ToM := ReconstructTableOfMarks(</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    SkeletalFinGSets( G ),</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    SkeletalCategoryOfFiniteRightGSets( G ),</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    minimal_generating_set,</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    Decompose</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">);;</span>
@@ -99,12 +99,12 @@ true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CapCategorySwitchLogicOff( SkeletalFinSets );</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DisableSanityChecks( SkeletalFinSets );</span>
 #@fi
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CapCategorySwitchLogicOff( SkeletalFinGSets( G_1 ) );</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DeactivateCachingOfCategory( SkeletalFinGSets( G_1 ) );</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DisableSanityChecks( SkeletalFinGSets( G_1 ) );</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CapCategorySwitchLogicOff( SkeletalFinGSets( G_2 ) );</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DeactivateCachingOfCategory( SkeletalFinGSets( G_2 ) );</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DisableSanityChecks( SkeletalFinGSets( G_2 ) );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CapCategorySwitchLogicOff( SkeletalCategoryOfFiniteRightGSets( G_1 ) );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DeactivateCachingOfCategory( SkeletalCategoryOfFiniteRightGSets( G_1 ) );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DisableSanityChecks( SkeletalCategoryOfFiniteRightGSets( G_1 ) );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CapCategorySwitchLogicOff( SkeletalCategoryOfFiniteRightGSets( G_2 ) );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DeactivateCachingOfCategory( SkeletalCategoryOfFiniteRightGSets( G_2 ) );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DisableSanityChecks( SkeletalCategoryOfFiniteRightGSets( G_2 ) );</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DeactivateToDoList();</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ToM_1 := MatTom( TableOfMarks( G_1 ) );</span>
 [ [ 5, 0 ], [ 1, 1 ] ]
@@ -113,7 +113,7 @@ true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">generating_set_1 := [ ];;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">for i in [ 1 .. k_1 ] do</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    M := ListWithIdenticalEntries( k_1, 0 )</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    ; M[i] := 1; Add( generating_set_1, FinGSet( G_1, M ) ); od;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    ; M[i] := 1; Add( generating_set_1, FinRightGSet( G_1, M ) ); od;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ToM_2 := MatTom( TableOfMarks( G_2 ) );</span>
 [ [ 20, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
   [ 10, 10, 0, 0, 0, 0, 0, 0, 0, 0 ], 
@@ -130,13 +130,13 @@ true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">generating_set_2 := [ ];;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">for i in [ 1 .. k_2 ] do</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    M := ListWithIdenticalEntries( k_2, 0 )</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    ; M[i] := 1; Add( generating_set_2, FinGSet( G_2, M ) ); od;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    ; M[i] := 1; Add( generating_set_2, FinRightGSet( G_2, M ) ); od;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetInfoLevel( InfoWarning, 0 );</span>
 #@if IsPackageMarkedForLoading( "FinSetsForCAP", "&gt;= 2018.09.17" )
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">computed_group := ReconstructGroup(</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    SkeletalFinGSets( G_1 ),</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    HomSkeletalFinGSets,</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    ForgetfulFunctorSkeletalFinGSets( G_1 ),</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    SkeletalCategoryOfFiniteRightGSets( G_1 ),</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    HomSkeletalFinRightGSets,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    ForgetfulFunctorSkeletalCategoryOfFiniteRightGSets( G_1 ),</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    generating_set_1,</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    EndAsEqualizer</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">);;</span>
@@ -144,9 +144,9 @@ true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsomorphismGroups( computed_group, G_1 ) &lt;&gt; fail;</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">computed_group := ReconstructGroup(</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    SkeletalFinGSets( G_1 ),</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    HomSkeletalFinGSets,</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    ForgetfulFunctorSkeletalFinGSets( G_1 ),</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    SkeletalCategoryOfFiniteRightGSets( G_1 ),</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    HomSkeletalFinRightGSets,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    ForgetfulFunctorSkeletalCategoryOfFiniteRightGSets( G_1 ),</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    generating_set_1,</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    EndByLifts</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">);;</span>
@@ -154,9 +154,9 @@ true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsomorphismGroups( computed_group, G_1 ) &lt;&gt; fail;</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">computed_group := ReconstructGroup(</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    SkeletalFinGSets( G_2 ),</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    HomSkeletalFinGSets,</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    ForgetfulFunctorSkeletalFinGSets( G_2 ),</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    SkeletalCategoryOfFiniteRightGSets( G_2 ),</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    HomSkeletalFinRightGSets,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    ForgetfulFunctorSkeletalCategoryOfFiniteRightGSets( G_2 ),</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    generating_set_2,</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    EndByLifts</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">);;</span>

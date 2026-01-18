@@ -16,16 +16,16 @@
   
   [33X[1;0Y[29X[2XReconstructTableOfMarks[102X( [3XC[103X, [3XMinimalGeneratingSet[103X, [3XDecompose[103X ) [32X function[133X
   
-  [1X5.1-4 HomSkeletalFinGSets[101X
+  [1X5.1-4 HomSkeletalFinRightGSets[101X
   
-  [33X[1;0Y[29X[2XHomSkeletalFinGSets[102X( [3XS[103X, [3XT[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XHomSkeletalFinRightGSets[102X( [3XS[103X, [3XT[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya finite set (see [10XFinSetsForCAP[110X)[133X
   
   [33X[0;0YThe finite set [23X\mathrm{Hom}_{\mathrm{SkeletalFinGSets}}( S, T )[123X.[133X
   
-  [1X5.1-5 ForgetfulFunctorSkeletalFinGSets[101X
+  [1X5.1-5 ForgetfulFunctorSkeletalCategoryOfFiniteRightGSets[101X
   
-  [33X[1;0Y[29X[2XForgetfulFunctorSkeletalFinGSets[102X( [3XG[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XForgetfulFunctorSkeletalCategoryOfFiniteRightGSets[102X( [3XG[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya functor SkeletalFinGSets [23X\rightarrow[123X SkeletalFinSets[133X
   
   [33X[0;0YThe forgetful functor SkeletalFinGSets [23X\rightarrow[123X SkeletalFinSets.[133X
@@ -37,9 +37,9 @@
   
   [33X[0;0YThe  input  is a CAP category [10XC[110X which is equivalent to the skeletal category
   of finite right [23XG[123X-sets for some group [23XG[123X, a function [10XHomC[110X computing homs in [10XC[110X
-  (e.g.  [10XHomSkeletalFinGSets[110X), a generating set of [10XC[110X, and a function computing
-  ends  (e.g.  [10XEndAsEqualizer[110X or [10XEndByLifts[110X). The output is a group isomorphic
-  to [23XG[123X.[133X
+  (e.g.  [10XHomSkeletalFinRightGSets[110X),  a  generating  set  of  [10XC[110X, and a function
+  computing  ends  (e.g.  [10XEndAsEqualizer[110X or [10XEndByLifts[110X). The output is a group
+  isomorphic to [23XG[123X.[133X
   
   
   [1X5.2 [33X[0;0YExamples[133X[101X

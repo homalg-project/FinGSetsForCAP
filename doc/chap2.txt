@@ -9,92 +9,97 @@
   [33X[1;0Y[29X[2XAsList[102X( [3XOmega[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya [5XGAP[105X set[133X
   
-  [33X[0;0YThe  [5XGAP[105X  set  of  the  list  used  to construct a finite [23XG[123X-set [3XOmega[103X, i.e.,
-  [10XAsList( FinGSet( G, [3XL[103X[10X ) ) = [3XL[103X[10X[110X.[133X
+  [33X[0;0YThe  [5XGAP[105X set of the list used to construct a finite right [23XG[123X-set [3XOmega[103X, i.e.,
+  [10XAsList( FinRightGSet( G, [3XL[103X[10X ) ) = [3XL[103X[10X[110X.[133X
   
   [1X2.1-2 UnderlyingGroup[101X
   
   [33X[1;0Y[29X[2XUnderlyingGroup[102X( [3XOmega[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya group[133X
   
-  [33X[0;0YThe group [23XG[123X underlying the finite [23XG[123X-set [3XOmega[103X.[133X
+  [33X[0;0YThe group [23XG[123X underlying the finite right [23XG[123X-set [3XOmega[103X.[133X
   
   
   [1X2.2 [33X[0;0YConstructors[133X[101X
   
-  [1X2.2-1 FinGSet[101X
+  [1X2.2-1 FinRightGSet[101X
   
-  [33X[1;0Y[29X[2XFinGSet[102X( [3XG[103X, [3XL[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XFinRightGSet[102X( [3XG[103X, [3XL[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10Ya CAP object[133X
   
-  [33X[0;0YConstruct  a skeletal finite [23XG[123X-set out of the group [3XG[103X and a list [3XL[103X, i.e., an
-  object in the CAP category [10XSkeletalFinGSets[110X.[133X
+  [33X[0;0YConstruct  a  skeletal  finite  right [23XG[123X-set out of the group [3XG[103X and a list [3XL[103X,
+  i.e., an object in the CAP category [10XSkeletalCategoryOfFiniteRightGSets[110X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );[127X[104X
-    [4X[28XSym( [ 1 .. 3 ] )[128X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP" );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );; StructureDescription( S3 );; S3;[127X[104X
+    [4X[28XS3[128X[104X
     [4X[25Xgap>[125X [27XSetName( S3, "S3" );[127X[104X
-    [4X[25Xgap>[125X [27Xw1 := FinGSet( S3, [ 1, 2, 3, 1 ] );[127X[104X
-    [4X[28X<An object in SkeletalFin-S3-Sets>[128X[104X
+    [4X[25Xgap>[125X [27Xw1 := FinRightGSet( S3, [ 1, 2, 3, 1 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( w1 );[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27Xw2 := FinGSet( S3, [ 1, 2, 3, 1 ] );[127X[104X
-    [4X[28X<An object in SkeletalFin-S3-Sets>[128X[104X
+    [4X[25Xgap>[125X [27Xw2 := FinRightGSet( S3, [ 1, 2, 3, 1 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( w2 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xw1 = w2;[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XS := FinGSet( S3, [ 1 ] );[127X[104X
-    [4X[28X<An object in SkeletalFin-S3-Sets>[128X[104X
+    [4X[25Xgap>[125X [27XS := FinRightGSet( S3, [ 1 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( S );[127X[104X
     [4X[28Xfalse[128X[104X
-    [4X[25Xgap>[125X [27XS := FinGSet( S3, [ "a", 0, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFin-S3-Sets>[128X[104X
+    [4X[25Xgap>[125X [27XS := FinRightGSet( S3, [ "a", 0, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( S );[127X[104X
     [4X[28Xfalse[128X[104X
-    [4X[25Xgap>[125X [27XS := FinGSet( S3, [ -1, 0, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFin-S3-Sets>[128X[104X
+    [4X[25Xgap>[125X [27XS := FinRightGSet( S3, [ -1, 0, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( S );[127X[104X
     [4X[28Xfalse[128X[104X
   [4X[32X[104X
   
   [1X2.2-2 MapOfFinGSets[101X
   
-  [33X[1;0Y[29X[2XMapOfFinGSets[102X( [3Xs[103X, [3XG[103X, [3Xt[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XMapOfFinGSets[102X( [3Xs[103X, [3Ximages[103X, [3Xt[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10Ya CAP morphism[133X
   
   [33X[0;0YConstruct  a  map [23X\phi \colon[123X[3Xs[103X[23X\to[123X[3Xt[103X of the skeletal finite right [23XG[123X-sets [3Xs[103X and
-  [3Xt[103X,  i.e., a morphism in the CAP category [10XSkeletalFinGSets[110X, where [3XG[103X is a list
-  of lists describing the graph of [23X\phi[123X.[133X
+  [3Xt[103X,  i.e., a morphism in the CAP category [10XSkeletalCategoryOfFiniteRightGSets[110X,
+  where [3Ximages[103X is a list of lists describing the graph of [23X\phi[123X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );[127X[104X
-    [4X[28XSym( [ 1 .. 3 ] )[128X[104X
-    [4X[25Xgap>[125X [27Xw1 := FinGSet( S3, [ 1, 2, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27Xw2 := FinGSet( S3, [ 0, 1, 0, 1 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP" );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );; StructureDescription( S3 );; S3;[127X[104X
+    [4X[28XS3[128X[104X
+    [4X[25Xgap>[125X [27Xw1 := FinRightGSet( S3, [ 1, 2, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
+    [4X[25Xgap>[125X [27Xw2 := FinRightGSet( S3, [ 0, 1, 0, 1 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs1 := [ [ [ 1, (2,3), 2 ] ],[127X[104X
     [4X[25X>[125X [27X           [ [ 1, (), 4 ], [ 1, (), 2 ] ],[127X[104X
     [4X[25X>[125X [27X           [],[127X[104X
     [4X[25X>[125X [27X           [] ];;[127X[104X
     [4X[25Xgap>[125X [27Xpi1 := MapOfFinGSets( w1, imgs1, w2 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs2 := [ [ [ 1, (), 2 ] ],[127X[104X
     [4X[25X>[125X [27X           [ [ 1, (), 4 ], [ 1, (2,3), 2 ] ],[127X[104X
     [4X[25X>[125X [27X           [],[127X[104X
     [4X[25X>[125X [27X           [] ];;[127X[104X
     [4X[25Xgap>[125X [27Xpi2 := MapOfFinGSets( w1, imgs2, w2 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xpi1 = pi2;[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27X# BUT[127X[104X
     [4X[25X>[125X [27Ximgs1 = imgs2;[127X[104X
     [4X[28Xfalse[128X[104X
-    [4X[25Xgap>[125X [27XM := FinGSet( S3, [ 2, 1, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XN := FinGSet( SymmetricGroup( 3 ), [ 2, 1, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XM := FinRightGSet( S3, [ 2, 1, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
+    [4X[25Xgap>[125X [27XN := FinRightGSet( SymmetricGroup( 3 ), [ 2, 1, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( SymmetricGroup( [ 1 .. 3 ] )\[128X[104X
+    [4X[28X )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, (), 2 ], [ 1, (), 2 ] ],[127X[104X
     [4X[25X>[125X [27X          [ [ 1, (), 2 ] ],[127X[104X
     [4X[25X>[125X [27X          [],[127X[104X
@@ -114,32 +119,32 @@
     [4X[28XError, last entry of an image must be an integer j with 1 <= j <= 4[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, (), 2 ], [ 1, (), 2 ] ], [ [ 1, (), 2 ] ], [] ];;[127X[104X
     [4X[25Xgap>[125X [27Xphi := MapOfFinGSets( M, imgs, M );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( phi );[127X[104X
     [4X[28Xfalse[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, (), 2 ] ], [ [ 1, (), 2 ] ], [], [] ];;[127X[104X
     [4X[25Xgap>[125X [27Xphi := MapOfFinGSets( M, imgs, M );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( phi );[127X[104X
     [4X[28Xfalse[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 0, (), 2 ], [ 1, (), 2 ] ], [ [ 1, (), 2 ] ], [], [] ];;[127X[104X
     [4X[25Xgap>[125X [27Xphi := MapOfFinGSets( M, imgs, M );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( phi );[127X[104X
     [4X[28Xfalse[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 3, (), 2 ], [ 1, (), 2 ] ], [ [ 1, (), 2 ] ], [], [] ];;[127X[104X
     [4X[25Xgap>[125X [27Xphi := MapOfFinGSets( M, imgs, M );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( phi );[127X[104X
     [4X[28Xfalse[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, (), 2 ], [ 1, (), 2 ] ], [ [ 1, "", 2 ] ], [], [] ];;[127X[104X
     [4X[25Xgap>[125X [27Xphi := MapOfFinGSets( M, imgs, M );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( phi );[127X[104X
     [4X[28Xfalse[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, (), 2 ], [ 1, (), 2 ] ], [ [ 1, (), 3 ] ], [], [] ];;[127X[104X
     [4X[25Xgap>[125X [27Xphi := MapOfFinGSets( M, imgs, M );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( phi );[127X[104X
     [4X[28Xfalse[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, (), 2 ], [ 1, (), 2 ] ],[127X[104X
@@ -147,14 +152,14 @@
     [4X[25X>[125X [27X          [],[127X[104X
     [4X[25X>[125X [27X          [] ];;[127X[104X
     [4X[25Xgap>[125X [27Xphi := MapOfFinGSets( M, imgs, M );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( phi );[127X[104X
     [4X[28Xfalse[128X[104X
   [4X[32X[104X
   
-  [1X2.2-3 SkeletalFinGSets[101X
+  [1X2.2-3 SkeletalCategoryOfFiniteRightGSets[101X
   
-  [33X[1;0Y[29X[2XSkeletalFinGSets[102X( [3XG[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XSkeletalCategoryOfFiniteRightGSets[102X( [3XG[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya category[133X
   
   [33X[0;0YThe  argument  is  a  group [23XG[123X. The output is the skeletal category of finite
@@ -167,66 +172,69 @@
   [1X2.3-1 [33X[0;0YSkeletal IsEqualForObjects[133X[101X
   
   [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
+    [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27X# Groups have to be the same with respect to IsIdenticalObj[127X[104X
-    [4X[25X>[125X [27XC6 := CyclicGroup( 6 );[127X[104X
-    [4X[28X<pc group of size 6 with 2 generators>[128X[104X
-    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );[127X[104X
-    [4X[28XSym( [ 1 .. 3 ] )[128X[104X
-    [4X[25Xgap>[125X [27Xw1 := FinGSet( C6, [1, 2, 3, 1]);[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25X>[125X [27XC6 := CyclicGroup( 6 );; StructureDescription( C6 );; C6;[127X[104X
+    [4X[28XC6[128X[104X
+    [4X[25Xgap>[125X [27Xw1 := FinRightGSet( C6, [ 1, 2, 3, 1 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( C6 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( w1 );[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27Xw2 := FinGSet( S3, [1, 2, 3, 1]);[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );; StructureDescription( S3 );; S3;[127X[104X
+    [4X[28XS3[128X[104X
+    [4X[25Xgap>[125X [27Xw2 := FinRightGSet( S3, [ 1, 2, 3, 1 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( w2 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xw1 = w2;[127X[104X
-    [4X[28XError, the object "An object in SkeletalFinGSets" and the object "An o\[128X[104X
-    [4X[28Xbject in SkeletalFinGSets" do not belong to the same CAP category[128X[104X
+    [4X[28XError, the object "An object in SkeletalCategoryOfFiniteRightGSets( C6 )" and \[128X[104X
+    [4X[28Xthe object "An object in SkeletalCategoryOfFiniteRightGSets( S3 )" do not belo\[128X[104X
+    [4X[28Xng to the same CAP category[128X[104X
   [4X[32X[104X
   
   
   [1X2.3-2 [33X[0;0YSkeletal PreCompose[133X[101X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );[127X[104X
-    [4X[28XSym( [ 1 .. 3 ] )[128X[104X
-    [4X[25Xgap>[125X [27XS := FinGSet( S3, [ 1, 0, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XR := FinGSet( S3, [ 1, 0, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XT := FinGSet( S3, [ 1, 0, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );; StructureDescription( S3 );; S3;[127X[104X
+    [4X[28XS3[128X[104X
+    [4X[25Xgap>[125X [27XS := FinRightGSet( S3, [ 1, 0, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
+    [4X[25Xgap>[125X [27XR := FinRightGSet( S3, [ 1, 0, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
+    [4X[25Xgap>[125X [27XT := FinRightGSet( S3, [ 1, 0, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xpsi1 := MapOfFinGSets( S, [ [ [ 1, (1,2), 1 ] ], [], [], [] ], R );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( psi1 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xpsi2 := MapOfFinGSets( R, [ [ [ 1, (1,2,3), 1 ] ] , [], [], [] ] , T );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( psi2 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XPreCompose( psi1, psi2 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xphi := PreCompose( psi1, psi2 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( phi );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XDisplay( phi );[127X[104X
     [4X[28X[ [ [ 1, (2,3), 1 ] ], [  ], [  ], [  ] ][128X[104X
-    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );[127X[104X
-    [4X[28XSym( [ 1 .. 3 ] )[128X[104X
-    [4X[25Xgap>[125X [27XS := FinGSet( S3, [ 2, 2, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XR := FinGSet( S3, [ 2, 1, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XT := FinGSet( S3,  [ 2, 1, 1, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XS := FinRightGSet( S3, [ 2, 2, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
+    [4X[25Xgap>[125X [27XR := FinRightGSet( S3, [ 2, 1, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
+    [4X[25Xgap>[125X [27XT := FinRightGSet( S3,  [ 2, 1, 1, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 2, (1,2), 1 ], [ 1, (1,2,3), 2 ] ],[127X[104X
     [4X[25X>[125X [27X          [ [ 1, (), 2 ], [ 1, (2,3), 2 ] ],[127X[104X
     [4X[25X>[125X [27X          [ ],[127X[104X
     [4X[25X>[125X [27X          [ ] ];;[127X[104X
     [4X[25Xgap>[125X [27Xpsi1 := MapOfFinGSets( S, imgs, R );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( psi1 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, (1,3), 1 ], [ 1, (1,2,3), 3 ] ],[127X[104X
@@ -234,35 +242,36 @@
     [4X[25X>[125X [27X          [ ],[127X[104X
     [4X[25X>[125X [27X          [ ] ];;[127X[104X
     [4X[25Xgap>[125X [27Xpsi2 := MapOfFinGSets( R, imgs, T );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( psi2 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xpi := PreCompose( psi1, psi2 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( pi );[127X[104X
     [4X[28X[ [ [ 1, (2,3), 3 ], [ 1, (1,2,3), 2 ] ],[128X[104X
     [4X[28X  [ [ 1, (), 2 ], [ 1, (2,3), 2 ] ],[128X[104X
     [4X[28X  [  ],[128X[104X
     [4X[28X  [  ] ][128X[104X
-    [4X[25Xgap>[125X [27XG := SymmetricGroup( 0 );;[127X[104X
-    [4X[25Xgap>[125X [27Xm := FinGSet( G, [ 3 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27Xn := FinGSet( G, [ 5 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27Xp := FinGSet( G, [ 7 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XS0 := SymmetricGroup( 0 );; StructureDescription( S0 );; S0;[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27Xm := FinRightGSet( S0, [ 3 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
+    [4X[25Xgap>[125X [27Xn := FinRightGSet( S0, [ 5 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
+    [4X[25Xgap>[125X [27Xp := FinRightGSet( S0, [ 7 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 2, (), 1 ], [ 5, (), 1 ], [ 3, (), 1 ] ] ];;[127X[104X
     [4X[25Xgap>[125X [27Xpsi := MapOfFinGSets( m, imgs, n );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 4, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 6, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 6, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 3, (), 1 ] ] ];;[127X[104X
     [4X[25Xgap>[125X [27Xphi := MapOfFinGSets( n, imgs, p );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27Xalpha := PreCompose( psi, phi );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( alpha );[127X[104X
     [4X[28X[ [ [ 4, (), 1 ], [ 3, (), 1 ], [ 6, (), 1 ] ] ][128X[104X
   [4X[32X[104X
@@ -271,12 +280,14 @@
   [1X2.3-3 [33X[0;0YSkeletal IdentityMorphism[133X[101X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );[127X[104X
-    [4X[28XSym( [ 1 .. 3 ] )[128X[104X
-    [4X[25Xgap>[125X [27XM := FinGSet( S3, [ 1, 2, 1, 2 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );; StructureDescription( S3 );; S3;[127X[104X
+    [4X[28XS3[128X[104X
+    [4X[25Xgap>[125X [27XM := FinRightGSet( S3, [ 1, 2, 1, 2 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xiota := IdentityMorphism( M );[127X[104X
-    [4X[28X<An identity morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<An identity morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( iota );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XIsEpimorphism( iota );[127X[104X
@@ -292,39 +303,42 @@
   [1X2.3-4 [33X[0;0YSkeletal Initial and Terminal Objects[133X[101X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );[127X[104X
-    [4X[28XSym( [ 1 .. 3 ] )[128X[104X
-    [4X[25Xgap>[125X [27XS := FinGSet( S3, [ 2, 2, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );; StructureDescription( S3 );; S3;[127X[104X
+    [4X[28XS3[128X[104X
+    [4X[25Xgap>[125X [27XS := FinRightGSet( S3, [ 2, 2, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xu := UniversalMorphismFromInitialObject( S );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( u );[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XS := FinGSet( S3, [ 2, 2, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XS := FinRightGSet( S3, [ 2, 2, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xu := UniversalMorphismIntoTerminalObject( S );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( u );[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XG := SymmetricGroup( 0 );;[127X[104X
-    [4X[25Xgap>[125X [27Xm := FinGSet( G, [ 8 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XS0 := SymmetricGroup( 0 );; StructureDescription( S0 );; S0;[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27Xm := FinRightGSet( S0, [ 8 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27Xi := InitialObject( CapCategory( m ) );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27Xiota := UniversalMorphismFromInitialObject( m );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XAsList( i );[127X[104X
     [4X[28X[ 0 ][128X[104X
     [4X[25Xgap>[125X [27Xt := TerminalObject( CapCategory( m ) );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XAsList( t );[127X[104X
     [4X[28X[ 1 ][128X[104X
     [4X[25Xgap>[125X [27Xpi := UniversalMorphismIntoTerminalObject( m );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XIsIdenticalObj( Range( pi ), t );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xpi_t := UniversalMorphismIntoTerminalObject( m );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( pi_t );[127X[104X
     [4X[28X[ [ [ 1, (), 1 ], [ 1, (), 1 ], [ 1, (), 1 ], [ 1, (), 1 ], [128X[104X
     [4X[28X      [ 1, (), 1 ], [ 1, (), 1 ], [ 1, (), 1 ], [ 1, (), 1 ] ] ][128X[104X
@@ -336,27 +350,29 @@
   [1X2.3-5 [33X[0;0YSkeletal LiftAlongMonomorphism[133X[101X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );[127X[104X
-    [4X[28XSym( [ 1 .. 3 ] )[128X[104X
-    [4X[25Xgap>[125X [27XM := FinGSet( S3, [ 1, 0, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XN := FinGSet( S3, [ 2, 0, 2, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XO := FinGSet( S3, [ 2, 0, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );; StructureDescription( S3 );; S3;[127X[104X
+    [4X[28XS3[128X[104X
+    [4X[25Xgap>[125X [27XM := FinRightGSet( S3, [ 1, 0, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
+    [4X[25Xgap>[125X [27XN := FinRightGSet( S3, [ 2, 0, 2, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
+    [4X[25Xgap>[125X [27XO := FinRightGSet( S3, [ 2, 0, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xtau := MapOfFinGSets( M, [ [ [ 1, (1,2), 1 ] ], [], [], [] ], N );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( tau );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 2, (), 1 ], [ 1, (1,3,2), 1 ] ], [], [], [] ];;[127X[104X
     [4X[25Xgap>[125X [27Xiota := MapOfFinGSets( O, imgs, N );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( iota );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XIsMonomorphism( iota );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xu := LiftAlongMonomorphism( iota, tau );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( u );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xtau = PreCompose( u, iota );[127X[104X
@@ -367,28 +383,30 @@
   [1X2.3-6 [33X[0;0YSkeletal ColiftAlongEpimorphism[133X[101X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );[127X[104X
-    [4X[28XSym( [ 1 .. 3 ] )[128X[104X
-    [4X[25Xgap>[125X [27XM := FinGSet( S3, [ 2, 0, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XN := FinGSet( S3, [ 1, 0, 1, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XO := FinGSet( S3, [ 2, 0, 1, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );; StructureDescription( S3 );; S3;[127X[104X
+    [4X[28XS3[128X[104X
+    [4X[25Xgap>[125X [27XM := FinRightGSet( S3, [ 2, 0, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
+    [4X[25Xgap>[125X [27XN := FinRightGSet( S3, [ 1, 0, 1, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
+    [4X[25Xgap>[125X [27XO := FinRightGSet( S3, [ 2, 0, 1, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, (1,2), 1 ], [ 1, (), 3 ] ], [], [], [] ];;[127X[104X
     [4X[25Xgap>[125X [27Xtau := MapOfFinGSets( M, imgs, O );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( tau );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, (1,2,3), 1 ], [ 1, (1,2), 3 ] ], [], [], [] ];;[127X[104X
     [4X[25Xgap>[125X [27Xepsilon := MapOfFinGSets( M, imgs, N );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( epsilon );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XIsEpimorphism( epsilon );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xu := ColiftAlongEpimorphism( epsilon, tau );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( u );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xtau = PreCompose( epsilon, u );[127X[104X
@@ -399,84 +417,86 @@
   [1X2.3-7 [33X[0;0YSkeletal Product[133X[101X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );[127X[104X
-    [4X[28XSym( [ 1 .. 3 ] )[128X[104X
-    [4X[25Xgap>[125X [27XA := FinGSet( S3, [ 0, 1, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XB := FinGSet( S3, [ 0, 0, 1, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );; StructureDescription( S3 );; S3;[127X[104X
+    [4X[28XS3[128X[104X
+    [4X[25Xgap>[125X [27XA := FinRightGSet( S3, [ 0, 1, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
+    [4X[25Xgap>[125X [27XB := FinRightGSet( S3, [ 0, 0, 1, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( DirectProduct( A, B ) );[127X[104X
     [4X[28X[ SymmetricGroup( [ 1 .. 3 ] ), [ 1, 0, 0, 0 ] ][128X[104X
-    [4X[25Xgap>[125X [27XS4 := SymmetricGroup( 4 );[127X[104X
-    [4X[28XSym( [ 1 .. 4 ] )[128X[104X
-    [4X[25Xgap>[125X [27XA := FinGSet( S4, [ 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XB := FinGSet( S4, [ 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XS4 := SymmetricGroup( 4 );; StructureDescription( S4 );; S4;[127X[104X
+    [4X[28XS4[128X[104X
+    [4X[25Xgap>[125X [27XA := FinRightGSet( S4, [ 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S4 )>[128X[104X
+    [4X[25Xgap>[125X [27XB := FinRightGSet( S4, [ 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S4 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( DirectProduct( A, B ) );[127X[104X
     [4X[28X[ SymmetricGroup( [ 1 .. 4 ] ), [ 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ][128X[104X
     [4X[25Xgap>[125X [27Xpi := ProjectionInFactorOfDirectProduct( [ A, A ], 1 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S4 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( pi );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XDisplay( pi );[127X[104X
     [4X[28X[ [ [ 1, (), 3 ], [ 1, (), 3 ], [ 1, (), 3 ], [ 1, (), 3 ], [128X[104X
     [4X[28X      [ 1, (), 3 ] ], [  ], [ [ 1, (), 3 ], [ 1, (), 3 ] ], [  ], [128X[104X
     [4X[28X  [  ], [  ], [  ], [  ], [  ], [  ], [  ] ][128X[104X
-    [4X[25Xgap>[125X [27XS5 := SymmetricGroup( 5 );[127X[104X
-    [4X[28XSym( [ 1 .. 5 ] )[128X[104X
-    [4X[25Xgap>[125X [27XA := FinGSet( S5,[127X[104X
-    [4X[25X>[125X [27X              [ 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ][127X[104X
-    [4X[25X>[125X [27X            );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XB := FinGSet( S5,[127X[104X
-    [4X[25X>[125X [27X              [ 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ][127X[104X
-    [4X[25X>[125X [27X            );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XS5 := SymmetricGroup( 5 );; StructureDescription( S5 );; S5;[127X[104X
+    [4X[28XS5[128X[104X
+    [4X[25Xgap>[125X [27XA := FinRightGSet( S5,[127X[104X
+    [4X[25X>[125X [27X             [ 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
+    [4X[25Xgap>[125X [27XB := FinRightGSet( S5,[127X[104X
+    [4X[25X>[125X [27X             [ 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27XD := [ A, B ];[127X[104X
-    [4X[28X[ <An object in SkeletalFinGSets>, [128X[104X
-    [4X[28X  <An object in SkeletalFinGSets> ][128X[104X
+    [4X[28X[ <An object in SkeletalCategoryOfFiniteRightGSets( S5 )>, [128X[104X
+    [4X[28X  <An object in SkeletalCategoryOfFiniteRightGSets( S5 )> ][128X[104X
     [4X[25Xgap>[125X [27Xpi1 := ProjectionInFactorOfDirectProduct( D, 1 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( pi1 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xpi2 := ProjectionInFactorOfDirectProduct( D, 2 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( pi2 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xtau := [ pi1, pi2 ];[127X[104X
-    [4X[28X[ <A morphism in SkeletalFinGSets>, <A morphism in SkeletalFinGSets> ][128X[104X
+    [4X[28X[ <A morphism in SkeletalCategoryOfFiniteRightGSets( S5 )>,\[128X[104X
+    [4X[28X <A morphism in SkeletalCategoryOfFiniteRightGSets( S5 )> ][128X[104X
     [4X[25Xgap>[125X [27Xu := UniversalMorphismIntoDirectProduct( D, tau );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( u );[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XA := FinGSet( S3, [ 0, 1, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XB := FinGSet( S3, [ 0, 1, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XA := FinRightGSet( S3, [ 0, 1, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
+    [4X[25Xgap>[125X [27XB := FinRightGSet( S3, [ 0, 1, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xpi1 := ProjectionInFactorOfDirectProduct( [ A, B ], 1 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xpi2 := ProjectionInFactorOfDirectProduct( [ A, B ], 2 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( pi1 );[127X[104X
     [4X[28X[ [ [ 1, (), 2 ] ], [ [ 1, (), 2 ] ], [  ], [  ] ][128X[104X
     [4X[25Xgap>[125X [27XDisplay( pi2 );[127X[104X
     [4X[28X[ [ [ 1, (1,3), 2 ] ], [ [ 1, (), 2 ] ], [  ], [  ] ][128X[104X
-    [4X[25Xgap>[125X [27XM := FinGSet( S3, [ 1, 2, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XN := FinGSet( S3, [ 1, 0, 1, 2 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XM := FinRightGSet( S3, [ 1, 2, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
+    [4X[25Xgap>[125X [27XN := FinRightGSet( S3, [ 1, 0, 1, 2 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XD := [ M, N ];[127X[104X
-    [4X[28X[ <An object in SkeletalFinGSets>, [128X[104X
-    [4X[28X  <An object in SkeletalFinGSets> ][128X[104X
+    [4X[28X[ <An object in SkeletalCategoryOfFiniteRightGSets( S3 )>, [128X[104X
+    [4X[28X  <An object in SkeletalCategoryOfFiniteRightGSets( S3 )> ][128X[104X
     [4X[25Xgap>[125X [27Xtau1 := ProjectionInFactorOfDirectProduct( D, 1 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xtau2 := ProjectionInFactorOfDirectProduct( D, 2 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xtau := [ tau1, tau2 ];[127X[104X
-    [4X[28X[ <A morphism in SkeletalFinGSets>, <A morphism in SkeletalFinGSets> ][128X[104X
+    [4X[28X[ <A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>,\[128X[104X
+    [4X[28X <A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )> ][128X[104X
     [4X[25Xgap>[125X [27Xu := UniversalMorphismIntoDirectProduct( D, tau );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( u );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XDisplay( u );[127X[104X
@@ -487,29 +507,30 @@
     [4X[28X      [ 17, (), 1 ], [ 18, (), 1 ] ], [128X[104X
     [4X[28X  [ [ 1, (), 2 ], [ 2, (), 2 ], [ 3, (), 2 ], [ 4, (), 2 ] ], [  ], [128X[104X
     [4X[28X  [  ] ][128X[104X
-    [4X[25Xgap>[125X [27XL := FinGSet( S3, [ 2, 1, 0, 1 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XL := FinRightGSet( S3, [ 2, 1, 0, 1 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XD := [ M, N, L ];[127X[104X
-    [4X[28X[ <An object in SkeletalFinGSets>,[128X[104X
-    [4X[28X  <An object in SkeletalFinGSets>, [128X[104X
-    [4X[28X  <An object in SkeletalFinGSets> ][128X[104X
+    [4X[28X[ <An object in SkeletalCategoryOfFiniteRightGSets( S3 )>,[128X[104X
+    [4X[28X  <An object in SkeletalCategoryOfFiniteRightGSets( S3 )>, [128X[104X
+    [4X[28X  <An object in SkeletalCategoryOfFiniteRightGSets( S3 )> ][128X[104X
     [4X[25Xgap>[125X [27Xtau := ProjectionInFactorOfDirectProduct( D, 3 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( tau );[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XG := SymmetricGroup( 0 );;[127X[104X
-    [4X[25Xgap>[125X [27Xm := FinGSet( G, [ 7 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27Xn := FinGSet( G, [ 3 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27Xp := FinGSet( G, [ 4 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XS0 := SymmetricGroup( 0 );; StructureDescription( S0 );; S0;[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27Xm := FinRightGSet( S0, [ 7 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
+    [4X[25Xgap>[125X [27Xn := FinRightGSet( S0, [ 3 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
+    [4X[25Xgap>[125X [27Xp := FinRightGSet( S0, [ 4 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27Xd := DirectProduct( [ m, n, p ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XAsList( d );[127X[104X
     [4X[28X[ 84 ][128X[104X
     [4X[25Xgap>[125X [27Xpi1 := ProjectionInFactorOfDirectProduct( [ m, n, p ], 1 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( pi1 );[127X[104X
     [4X[28X[ [ [ 1, (), 1 ], [ 1, (), 1 ], [ 1, (), 1 ], [ 1, (), 1 ], [128X[104X
     [4X[28X      [ 1, (), 1 ], [ 1, (), 1 ], [ 1, (), 1 ], [ 1, (), 1 ], [128X[104X
@@ -533,7 +554,7 @@
     [4X[28X      [ 7, (), 1 ], [ 7, (), 1 ], [ 7, (), 1 ], [ 7, (), 1 ], [128X[104X
     [4X[28X      [ 7, (), 1 ], [ 7, (), 1 ], [ 7, (), 1 ], [ 7, (), 1 ] ] ][128X[104X
     [4X[25Xgap>[125X [27Xpi3 := ProjectionInFactorOfDirectProduct( [ m, n, p ], 3 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( pi3 );[127X[104X
     [4X[28X[ [ [ 1, (), 1 ], [ 2, (), 1 ], [ 3, (), 1 ], [ 4, (), 1 ], [128X[104X
     [4X[28X      [ 1, (), 1 ], [ 2, (), 1 ], [ 3, (), 1 ], [ 4, (), 1 ], [128X[104X
@@ -562,64 +583,67 @@
   [1X2.3-8 [33X[0;0YSkeletal Coproduct[133X[101X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );[127X[104X
-    [4X[28XSym( [ 1 .. 3 ] )[128X[104X
-    [4X[25Xgap>[125X [27XM1 := FinGSet( S3, [ 2, 1, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XM2 := FinGSet( S3, [ 1, 1, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XM3 := FinGSet( S3, [ 2, 1, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XM4 := FinGSet( S3, [ 2, 0, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );; StructureDescription( S3 );; S3;[127X[104X
+    [4X[28XS3[128X[104X
+    [4X[25Xgap>[125X [27XM1 := FinRightGSet( S3, [ 2, 1, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
+    [4X[25Xgap>[125X [27XM2 := FinRightGSet( S3, [ 1, 1, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
+    [4X[25Xgap>[125X [27XM3 := FinRightGSet( S3, [ 2, 1, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
+    [4X[25Xgap>[125X [27XM4 := FinRightGSet( S3, [ 2, 0, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XC := Coproduct( [ M1, M2, M3, M4 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xtau1 := InjectionOfCofactorOfCoproduct( [ M1, M2, M3, M4 ], 1 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xtau2 := InjectionOfCofactorOfCoproduct( [ M1, M2, M3, M4 ], 2 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xtau3 := InjectionOfCofactorOfCoproduct( [ M1, M2, M3, M4 ], 3 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xtau4 := InjectionOfCofactorOfCoproduct( [ M1, M2, M3, M4 ], 4 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xtau := [ tau1, tau2, tau3, tau4 ];;[127X[104X
     [4X[25Xgap>[125X [27XD := [ M1, M2, M3, M4 ];;[127X[104X
     [4X[25Xgap>[125X [27Xid_to_be := UniversalMorphismFromCoproduct( D, tau );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xid := IdentityMorphism( C );[127X[104X
-    [4X[28X<An identity morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<An identity morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xid_to_be = id;[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XT := TerminalObject( CapCategory( M1 ) );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xpi1 := UniversalMorphismIntoTerminalObject( M1 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xpi2 := UniversalMorphismIntoTerminalObject( M2 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xpi3 := UniversalMorphismIntoTerminalObject( M3 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xpi4 := UniversalMorphismIntoTerminalObject( M4 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xpi := [ pi1, pi2, pi3, pi4 ];;[127X[104X
     [4X[25Xgap>[125X [27Xpsi := UniversalMorphismFromCoproduct( D, pi );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xpsi = UniversalMorphismIntoTerminalObject( C );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XIsEpimorphism( psi );[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XG := SymmetricGroup( 0 );;[127X[104X
-    [4X[25Xgap>[125X [27Xm := FinGSet( G, [ 7 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27Xn := FinGSet( G, [ 3 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27Xp := FinGSet( G, [ 4 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XS0 := SymmetricGroup( 0 );; StructureDescription( S0 );; S0;[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27Xm := FinRightGSet( S0, [ 7 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
+    [4X[25Xgap>[125X [27Xn := FinRightGSet( S0, [ 3 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
+    [4X[25Xgap>[125X [27Xp := FinRightGSet( S0, [ 4 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27Xc := Coproduct( m, n, p );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XAsList( c );[127X[104X
     [4X[28X[ 14 ][128X[104X
     [4X[25Xgap>[125X [27Xiota1 := InjectionOfCofactorOfCoproduct( [ m, n, p ], 1 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( iota1 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XDisplay( iota1 );[127X[104X
@@ -631,7 +655,7 @@
     [4X[28X    [ 6, (), 1 ],[128X[104X
     [4X[28X    [ 7, (), 1 ] ] ][128X[104X
     [4X[25Xgap>[125X [27Xiota3 := InjectionOfCofactorOfCoproduct( [ m, n, p ], 3 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( iota3 );[127X[104X
     [4X[28X[ [ [ 11, (), 1 ], [ 12, (), 1 ], [ 13, (), 1 ], [ 14, (), 1 ] ] ][128X[104X
   [4X[32X[104X
@@ -640,26 +664,28 @@
   [1X2.3-9 [33X[0;0YSkeletal Image[133X[101X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );[127X[104X
-    [4X[28XSym( [ 1 .. 3 ] )[128X[104X
-    [4X[25Xgap>[125X [27XM := FinGSet( S3, [ 2, 1, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );; StructureDescription( S3 );; S3;[127X[104X
+    [4X[28XS3[128X[104X
+    [4X[25Xgap>[125X [27XM := FinRightGSet( S3, [ 2, 1, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, (), 2 ], [ 1, (), 2 ] ], [ [ 1, (), 2 ] ], [], [] ];;[127X[104X
     [4X[25Xgap>[125X [27Xphi := MapOfFinGSets( M, imgs, M );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( phi );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XIsEpimorphism( phi );[127X[104X
     [4X[28Xfalse[128X[104X
     [4X[25Xgap>[125X [27XI := ImageObject( phi );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xiota := ImageEmbedding( phi );[127X[104X
-    [4X[28X<A monomorphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A monomorphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xphi_res := CoastrictionToImage( phi );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xphi = PreCompose( phi_res, iota );[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XT := FinGSet( S3, [ 1, 1, 0, 0 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XT := FinRightGSet( S3, [ 1, 1, 0, 0 ] );;[127X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, (), 2 ], [ 1, (), 2 ] ], [ [ 1, (), 2 ] ], [], [] ];;[127X[104X
     [4X[25Xgap>[125X [27Xtau1 := MapOfFinGSets( M, imgs, T );;[127X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, (), 1 ] ], [ [ 1, (), 2 ] ], [], [] ];;[127X[104X
@@ -669,50 +695,49 @@
     [4X[25Xgap>[125X [27Xphi = PreCompose( tau1, tau2 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xu := UniversalMorphismFromImage( phi, [ tau1, tau2 ] );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xtau1 = PreCompose( phi_res, u );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xiota = PreCompose( u, tau2 );[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );[127X[104X
-    [4X[28XSym( [ 1 .. 3 ] )[128X[104X
-    [4X[25Xgap>[125X [27XM := FinGSet( S3, [ 2, 1, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XM := FinRightGSet( S3, [ 2, 1, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 2, (), 1 ], [ 1, (), 1 ] ], [ [ 1, (), 2 ] ], [], [] ];;[127X[104X
     [4X[25Xgap>[125X [27Xphi := MapOfFinGSets( M, imgs, M );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( phi );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XIsEpimorphism( phi );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XI := ImageObject( phi );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xpsi := ImageEmbedding( phi );[127X[104X
-    [4X[28X<A monomorphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A monomorphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xphi_res := CoastrictionToImage( phi );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xphi = PreCompose( phi_res, psi );[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XG := SymmetricGroup( 0 );;[127X[104X
-    [4X[25Xgap>[125X [27Xm := FinGSet( G, [ 7 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27Xn := FinGSet( G, [ 3 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XS0 := SymmetricGroup( 0 );; StructureDescription( S0 );; S0;[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27Xm := FinRightGSet( S0, [ 7 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
+    [4X[25Xgap>[125X [27Xn := FinRightGSet( S0, [ 3 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 7, (), 1 ], [ 5, (), 1 ], [ 5, (), 1 ] ] ];;[127X[104X
     [4X[25Xgap>[125X [27Xphi := MapOfFinGSets( n, imgs, m );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( phi );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XImageObject( phi );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XAsList( ImageObject( phi ) );[127X[104X
     [4X[28X[ 2 ][128X[104X
     [4X[25Xgap>[125X [27Xpi := ImageEmbedding( phi );[127X[104X
-    [4X[28X<A monomorphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A monomorphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( pi );[127X[104X
     [4X[28X[ [ [ 5, (), 1 ], [ 7, (), 1 ] ] ][128X[104X
     [4X[25Xgap>[125X [27Xphi_res := CoastrictionToImage( phi );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27Xphi = PreCompose( phi_res, pi );[127X[104X
     [4X[28Xtrue[128X[104X
   [4X[32X[104X
@@ -721,86 +746,89 @@
   [1X2.3-10 [33X[0;0YSkeletal Equalizer[133X[101X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );[127X[104X
-    [4X[28XSym( [ 1 .. 3 ] )[128X[104X
-    [4X[25Xgap>[125X [27Xs := FinGSet( S3, [ 1, 0, 2, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27Xr := FinGSet( S3, [ 1, 2, 1, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );; StructureDescription( S3 );; S3;[127X[104X
+    [4X[28XS3[128X[104X
+    [4X[25Xgap>[125X [27Xs := FinRightGSet( S3, [ 1, 0, 2, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
+    [4X[25Xgap>[125X [27Xr := FinRightGSet( S3, [ 1, 2, 1, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, (1,2), 1 ] ],[127X[104X
     [4X[25X>[125X [27X          [],[127X[104X
     [4X[25X>[125X [27X          [ [ 1, (), 3 ], [ 1, (1,2,3), 3 ] ],[127X[104X
     [4X[25X>[125X [27X          [] ];;[127X[104X
     [4X[25Xgap>[125X [27Xpsi1 := MapOfFinGSets( s, imgs, r );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( psi1 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [[ 1, (1,2), 3 ]], [], [[ 1, (), 3 ], [ 1, (), 3 ]], [] ];;[127X[104X
     [4X[25Xgap>[125X [27Xpsi2 := MapOfFinGSets( s, imgs, r );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( psi2 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XD := [ psi1, psi2 ];;[127X[104X
     [4X[25Xgap>[125X [27XEq := Equalizer( D );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XAsList( Eq );[127X[104X
     [4X[28X[ 0, 0, 2, 0 ][128X[104X
     [4X[25Xgap>[125X [27Xpsi := EmbeddingOfEqualizer( D );[127X[104X
-    [4X[28X<A monomorphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A monomorphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( psi );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XDisplay( psi );[127X[104X
     [4X[28X[ [  ], [  ], [ [ 1, (), 3 ], [ 2, (), 3 ] ], [  ] ][128X[104X
     [4X[25Xgap>[125X [27XPreCompose( psi, psi1 ) = PreCompose( psi, psi2 );[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27Xt := FinGSet( S3, [ 1, 0, 1, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27Xt := FinRightGSet( S3, [ 1, 0, 1, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 2, (1,2), 3 ] ], [], [ [ 1, (1,2,3), 3 ] ], [] ];;[127X[104X
     [4X[25Xgap>[125X [27Xtau := MapOfFinGSets( t, imgs , s );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( tau );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xphi := UniversalMorphismIntoEqualizer( D, tau );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( phi );[127X[104X
     [4X[28X[ [ [ 2, (1,2), 3 ] ], [  ], [ [ 1, (1,2,3), 3 ] ], [  ] ][128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( phi );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XPreCompose( phi, psi ) = tau;[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XG := SymmetricGroup( 0 );;[127X[104X
-    [4X[25Xgap>[125X [27XS := FinGSet( G, [ 5 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XT := FinGSet( G, [ 3 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XS0 := SymmetricGroup( 0 );; StructureDescription( S0 );; S0;[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XS := FinRightGSet( S0, [ 5 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
+    [4X[25Xgap>[125X [27XT := FinRightGSet( S0, [ 3 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 3, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 3, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 1, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 2, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 2, (), 1 ] ] ];;[127X[104X
     [4X[25Xgap>[125X [27Xf1 := MapOfFinGSets( S, imgs, T );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 3, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 2, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 3, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 1, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 2, (), 1 ] ] ];;[127X[104X
     [4X[25Xgap>[125X [27Xf2 := MapOfFinGSets( S, imgs, T );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 3, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 1, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 2, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 1, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 2, (), 1 ] ] ];;[127X[104X
     [4X[25Xgap>[125X [27Xf3 := MapOfFinGSets( S, imgs, T );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XD := [ f1, f2, f3 ];;[127X[104X
     [4X[25Xgap>[125X [27XEq := Equalizer( D );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XAsList( Eq );[127X[104X
     [4X[28X[ 2 ][128X[104X
     [4X[25Xgap>[125X [27Xpsi := EmbeddingOfEqualizer( D );[127X[104X
-    [4X[28X<A monomorphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A monomorphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( psi );[127X[104X
     [4X[28X[ [ [ 1, (), 1 ], [ 5, (), 1 ] ] ][128X[104X
     [4X[25Xgap>[125X [27XPreCompose( psi, f1 ) = PreCompose( psi, f2 );[127X[104X
@@ -808,13 +836,14 @@
     [4X[25Xgap>[125X [27XPreCompose( psi, f1 ) = PreCompose( psi, f3 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XD := [ f2, f3 ];[127X[104X
-    [4X[28X[ <A morphism in SkeletalFinGSets>, <A morphism in SkeletalFinGSets> ][128X[104X
+    [4X[28X[ <A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>,\[128X[104X
+    [4X[28X <A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )> ][128X[104X
     [4X[25Xgap>[125X [27XEq := Equalizer( D );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XAsList( Eq );[127X[104X
     [4X[28X[ 3 ][128X[104X
     [4X[25Xgap>[125X [27Xpsi := EmbeddingOfEqualizer( D );[127X[104X
-    [4X[28X<A monomorphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A monomorphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( psi );[127X[104X
     [4X[28X[ [ [ 1, (), 1 ], [ 4, (), 1 ], [ 5, (), 1 ] ] ][128X[104X
   [4X[32X[104X
@@ -823,78 +852,82 @@
   [1X2.3-11 [33X[0;0YSkeletal Pullback[133X[101X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );[127X[104X
-    [4X[28XSym( [ 1 .. 3 ] )[128X[104X
-    [4X[25Xgap>[125X [27XA := FinGSet( S3, [ 1, 0, 1, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XB := FinGSet( S3, [ 2, 1, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XC := FinGSet( S3, [ 2, 1, 1, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );; StructureDescription( S3 );; S3;[127X[104X
+    [4X[28XS3[128X[104X
+    [4X[25Xgap>[125X [27XA := FinRightGSet( S3, [ 1, 0, 1, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
+    [4X[25Xgap>[125X [27XB := FinRightGSet( S3, [ 2, 1, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
+    [4X[25Xgap>[125X [27XC := FinRightGSet( S3, [ 2, 1, 1, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 2, (), 1 ] ], [], [ [ 1, (), 3 ] ], [] ];;[127X[104X
     [4X[25Xgap>[125X [27Xtau1 := MapOfFinGSets( A, imgs, C );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, (), 1 ], [ 2, (), 1 ] ], [ [ 1, (), 2 ] ], [], [] ];;[127X[104X
     [4X[25Xgap>[125X [27Xtau2 := MapOfFinGSets( B, imgs, C );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XD := [ tau1, tau2 ];[127X[104X
-    [4X[28X[ <A morphism in SkeletalFinGSets>, [128X[104X
-    [4X[28X <A morphism in SkeletalFinGSets> ][128X[104X
+    [4X[28X[ <A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>, [128X[104X
+    [4X[28X <A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )> ][128X[104X
     [4X[25Xgap>[125X [27XF := FiberProduct( D );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( F );[127X[104X
     [4X[28X[ SymmetricGroup( [ 1 .. 3 ] ), [ 1, 0, 0, 0 ] ][128X[104X
     [4X[25Xgap>[125X [27Xpi1 := ProjectionInFactorOfFiberProduct( D, 1 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( pi1 );[127X[104X
     [4X[28X[ [ [ 1, (), 1 ] ], [  ], [  ], [  ] ][128X[104X
     [4X[25Xgap>[125X [27Xpi2 := ProjectionInFactorOfFiberProduct( D, 2 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( pi2 );[127X[104X
     [4X[28X[ [ [ 2, (), 1 ] ], [  ], [  ], [  ] ][128X[104X
-    [4X[25Xgap>[125X [27XG := SymmetricGroup( 0 );;[127X[104X
-    [4X[25Xgap>[125X [27Xm := FinGSet( G, [ 5 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27Xn1 := FinGSet( G, [ 3 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XS0 := SymmetricGroup( 0 );; StructureDescription( S0 );; S0;[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27Xm := FinRightGSet( S0, [ 5 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
+    [4X[25Xgap>[125X [27Xn1 := FinRightGSet( S0, [ 3 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, (), 1 ], [ 2, (), 1 ], [ 3, (), 1 ] ] ];;[127X[104X
     [4X[25Xgap>[125X [27Xiota1 := MapOfFinGSets( n1, imgs, m );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XIsMonomorphism( iota1 );[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27Xn2 := FinGSet( G, [ 4 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27Xn2 := FinRightGSet( S0, [ 4 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, (), 1 ], [ 2, (), 1 ], [ 3, (), 1 ], [ 4, (), 1 ] ] ];;[127X[104X
     [4X[25Xgap>[125X [27Xiota2 := MapOfFinGSets( n2, imgs, m );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XIsMonomorphism( iota2 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XD := [ iota1, iota2 ];[127X[104X
-    [4X[28X[ <A monomorphism in SkeletalFinGSets>, <A monomorphism in SkeletalFinGSets> ][128X[104X
+    [4X[28X[ <A monomorphism in SkeletalCategoryOfFiniteRightGSets( 1 )>,\[128X[104X
+    [4X[28X <A monomorphism in SkeletalCategoryOfFiniteRightGSets( 1 )> ][128X[104X
     [4X[25Xgap>[125X [27XFib := FiberProduct( D );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XAsList( Fib );[127X[104X
     [4X[28X[ 3 ][128X[104X
     [4X[25Xgap>[125X [27Xpi1 := ProjectionInFactorOfFiberProduct( D, 1 );[127X[104X
-    [4X[28X<A monomorphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A monomorphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( pi1 );[127X[104X
     [4X[28X[ [ [ 1, (), 1 ], [ 2, (), 1 ], [ 3, (), 1 ] ] ][128X[104X
     [4X[25Xgap>[125X [27Xint1 := ImageObject( pi1 );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XAsList( int1 );[127X[104X
     [4X[28X[ 3 ][128X[104X
     [4X[25Xgap>[125X [27Xpi2 := ProjectionInFactorOfFiberProduct( D, 2 );[127X[104X
-    [4X[28X<A monomorphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A monomorphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( pi2 );[127X[104X
     [4X[28X[ [ [ 1, (), 1 ], [ 2, (), 1 ], [ 3, (), 1 ] ] ][128X[104X
     [4X[25Xgap>[125X [27Xint2 := ImageObject( pi2 );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XAsList( int2 );[127X[104X
     [4X[28X[ 3 ][128X[104X
     [4X[25Xgap>[125X [27Xomega1 := PreCompose( pi1, iota1 );[127X[104X
-    [4X[28X<A monomorphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A monomorphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27Xomega2 := PreCompose( pi2, iota2 );[127X[104X
-    [4X[28X<A monomorphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A monomorphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27Xomega1 = omega2;[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XDisplay( omega1 );[127X[104X
@@ -905,8 +938,10 @@
   [1X2.3-12 [33X[0;0YSkeletal Coequalizer[133X[101X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XS5 := SymmetricGroup( 5 );[127X[104X
-    [4X[28XSym( [ 1 .. 5 ] )[128X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XS5 := SymmetricGroup( 5 );; StructureDescription( S5 );; S5;[127X[104X
+    [4X[28XS5[128X[104X
     [4X[25Xgap>[125X [27Xg_1_1 := ();;[127X[104X
     [4X[25Xgap>[125X [27Xg_1_2 := (1,2);;[127X[104X
     [4X[25Xgap>[125X [27Xg_1_3 := (1,3);;[127X[104X
@@ -919,14 +954,12 @@
     [4X[25Xgap>[125X [27Xg_3_2 := (1,2);;[127X[104X
     [4X[25Xgap>[125X [27Xg_3_3 := (1,3);;[127X[104X
     [4X[25Xgap>[125X [27Xg_3_4 := (1,3);;[127X[104X
-    [4X[25Xgap>[125X [27XA := FinGSet( S5,[127X[104X
-    [4X[25X>[125X [27X              [ 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ][127X[104X
-    [4X[25X>[125X [27X            );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XB := FinGSet( S5,[127X[104X
-    [4X[25X>[125X [27X              [ 0, 3, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ][127X[104X
-    [4X[25X>[125X [27X            );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XA := FinRightGSet( S5,[127X[104X
+    [4X[25X>[125X [27X             [ 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
+    [4X[25Xgap>[125X [27XB := FinRightGSet( S5,[127X[104X
+    [4X[25X>[125X [27X             [ 0, 3, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, g_1_1, 2 ],[127X[104X
     [4X[25X>[125X [27X            [ 1, g_1_3, 2 ],[127X[104X
     [4X[25X>[125X [27X            [ 2, g_2_1, 2 ],[127X[104X
@@ -937,8 +970,8 @@
     [4X[25X>[125X [27X          [], [], [], [],[127X[104X
     [4X[25X>[125X [27X          [], [], [], [],[127X[104X
     [4X[25X>[125X [27X          [], [], [], [], [], [] ];;[127X[104X
-    [4X[25Xgap>[125X [27Xf_1 := MapOfFinGSets(A, imgs, B);[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27Xf_1 := MapOfFinGSets( A, imgs, B );[127X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, g_1_2, 4 ],[127X[104X
     [4X[25X>[125X [27X            [ 1, g_1_4, 4 ],[127X[104X
     [4X[25X>[125X [27X            [ 2, g_2_2, 4 ],[127X[104X
@@ -949,37 +982,35 @@
     [4X[25X>[125X [27X          [], [], [], [],[127X[104X
     [4X[25X>[125X [27X          [], [], [], [],[127X[104X
     [4X[25X>[125X [27X          [], [], [], [], [], [] ];;[127X[104X
-    [4X[25Xgap>[125X [27Xf_2 := MapOfFinGSets(A, imgs, B);[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27Xf_2 := MapOfFinGSets( A, imgs, B );[127X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( f_1 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( f_2 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XD := [ f_1, f_2 ];;[127X[104X
     [4X[25Xgap>[125X [27XCq := Coequalizer( D );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27XAsList( Cq );[127X[104X
     [4X[28X[ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1 ][128X[104X
     [4X[25Xgap>[125X [27Xpi := ProjectionOntoCoequalizer( D );[127X[104X
-    [4X[28X<An epimorphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<An epimorphism in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( pi );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xid_to_be := UniversalMorphismFromCoequalizer( D, pi );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( id_to_be );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xid := IdentityMorphism( Cq );[127X[104X
-    [4X[28X<An identity morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<An identity morphism in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27Xid = id_to_be;[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XA := FinGSet( S5,[127X[104X
-    [4X[25X>[125X [27X              [ 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ][127X[104X
-    [4X[25X>[125X [27X            );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XB := FinGSet( S5,[127X[104X
-    [4X[25X>[125X [27X              [ 0, 3, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ][127X[104X
-    [4X[25X>[125X [27X            );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XA := FinRightGSet( S5,[127X[104X
+    [4X[25X>[125X [27X             [ 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
+    [4X[25Xgap>[125X [27XB := FinRightGSet( S5,[127X[104X
+    [4X[25X>[125X [27X             [ 0, 3, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, g_1_1, 2 ],[127X[104X
     [4X[25X>[125X [27X            [ 1, g_1_3, 2 ],[127X[104X
     [4X[25X>[125X [27X            [ 2, g_2_1, 2 ],[127X[104X
@@ -990,8 +1021,8 @@
     [4X[25X>[125X [27X          [], [], [], [],[127X[104X
     [4X[25X>[125X [27X          [], [], [], [],[127X[104X
     [4X[25X>[125X [27X          [], [], [], [], [], [] ];;[127X[104X
-    [4X[25Xgap>[125X [27Xf_1 := MapOfFinGSets(A, imgs, B);[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27Xf_1 := MapOfFinGSets( A, imgs, B );[127X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, g_1_2, 4 ],[127X[104X
     [4X[25X>[125X [27X            [ 1, g_1_4, 4 ],[127X[104X
     [4X[25X>[125X [27X            [ 2, g_2_2, 4 ],[127X[104X
@@ -1002,113 +1033,112 @@
     [4X[25X>[125X [27X          [], [], [], [],[127X[104X
     [4X[25X>[125X [27X          [], [], [], [],[127X[104X
     [4X[25X>[125X [27X          [], [], [], [], [], [] ];;[127X[104X
-    [4X[25Xgap>[125X [27Xf_2 := MapOfFinGSets(A, imgs, B);[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27Xf_2 := MapOfFinGSets( A, imgs, B );[127X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( f_1 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( f_2 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XD := [ f_1, f_2 ];;[127X[104X
     [4X[25Xgap>[125X [27XCq := Coequalizer( D );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27XAsList( Cq );[127X[104X
     [4X[28X[ 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1 ][128X[104X
     [4X[25Xgap>[125X [27Xpi := ProjectionOntoCoequalizer( D );[127X[104X
-    [4X[28X<An epimorphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<An epimorphism in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( pi );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xid_to_be := UniversalMorphismFromCoequalizer( D, pi );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( id_to_be );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xid := IdentityMorphism( Cq );[127X[104X
-    [4X[28X<An identity morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<An identity morphism in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27Xid = id_to_be;[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XA := FinGSet( S5,[127X[104X
-    [4X[25X>[125X [27X              [ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ][127X[104X
-    [4X[25X>[125X [27X            );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XB := FinGSet( S5,[127X[104X
-    [4X[25X>[125X [27X              [ 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ][127X[104X
-    [4X[25X>[125X [27X            );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XA := FinRightGSet( S5,[127X[104X
+    [4X[25X>[125X [27X             [ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
+    [4X[25Xgap>[125X [27XB := FinRightGSet( S5,[127X[104X
+    [4X[25X>[125X [27X             [ 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, (), 3 ] ],[127X[104X
     [4X[25X>[125X [27X          [], [], [], [],[127X[104X
     [4X[25X>[125X [27X          [], [], [], [],[127X[104X
     [4X[25X>[125X [27X          [], [], [], [],[127X[104X
     [4X[25X>[125X [27X          [], [], [], [], [], [] ];;[127X[104X
-    [4X[25Xgap>[125X [27Xf_1 := MapOfFinGSets(A, imgs, B);[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27Xf_1 := MapOfFinGSets( A, imgs, B );[127X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, (1,2,3), 4] ],[127X[104X
     [4X[25X>[125X [27X          [], [], [], [],[127X[104X
     [4X[25X>[125X [27X          [], [], [], [],[127X[104X
     [4X[25X>[125X [27X          [], [], [], [],[127X[104X
     [4X[25X>[125X [27X          [], [], [], [], [], [] ];;[127X[104X
-    [4X[25Xgap>[125X [27Xf_2 := MapOfFinGSets(A, imgs, B);[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27Xf_2 := MapOfFinGSets( A, imgs, B );[127X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( f_1 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( f_2 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XD := [ f_1, f_2 ];;[127X[104X
     [4X[25Xgap>[125X [27XCq := Coequalizer( D );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27XAsList( Cq );[127X[104X
     [4X[28X[ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0 ][128X[104X
     [4X[25Xgap>[125X [27Xpi := ProjectionOntoCoequalizer( D );[127X[104X
-    [4X[28X<An epimorphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<An epimorphism in SkeletalCategoryOfFiniteRightGSets( S5 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( pi );[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XG := SymmetricGroup( 0 );;[127X[104X
-    [4X[25Xgap>[125X [27Xs := FinGSet( G, [ 5 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27Xt := FinGSet( G, [ 4 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XS0 := SymmetricGroup( 0 );; StructureDescription( S0 );; S0;[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27Xs := FinRightGSet( S0, [ 5 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
+    [4X[25Xgap>[125X [27Xt := FinRightGSet( S0, [ 4 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 3, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 4, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 4, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 2, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 4, (), 1 ] ] ];;[127X[104X
     [4X[25Xgap>[125X [27Xf := MapOfFinGSets( s, imgs, t );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 3, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 3, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 4, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 2, (), 1 ],[127X[104X
     [4X[25X>[125X [27X            [ 4, (), 1 ] ] ];;[127X[104X
     [4X[25Xgap>[125X [27Xg := MapOfFinGSets( s, imgs, t );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XD := [ f, g ];[127X[104X
-    [4X[28X[ <A morphism in SkeletalFinGSets>, <A morphism in SkeletalFinGSets> ][128X[104X
+    [4X[28X[ <A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>,\[128X[104X
+    [4X[28X <A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )> ][128X[104X
     [4X[25Xgap>[125X [27XC := Coequalizer( D );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XAsList( C );[127X[104X
     [4X[28X[ 3 ][128X[104X
     [4X[25Xgap>[125X [27Xpi := ProjectionOntoCoequalizer( D );[127X[104X
-    [4X[28X<An epimorphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<An epimorphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( pi );[127X[104X
     [4X[28X[ [ [ 1, (), 1 ], [ 2, (), 1 ], [ 3, (), 1 ], [ 3, (), 1 ] ] ][128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 2, (), 1 ], [ 1, (), 1 ], [ 2, (), 1 ], [ 2, (), 1 ] ] ];;[127X[104X
-    [4X[25Xgap>[125X [27Xtau := MapOfFinGSets( t, imgs, FinGSet( G, [ 2 ] ) );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27Xtau := MapOfFinGSets( t, imgs, FinRightGSet( S0, [ 2 ] ) );[127X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27Xphi := UniversalMorphismFromCoequalizer( D, tau );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( phi );[127X[104X
     [4X[28X[ [ [ 2, (), 1 ], [ 1, (), 1 ], [ 2, (), 1 ] ] ][128X[104X
     [4X[25Xgap>[125X [27XPreCompose( pi, phi ) = tau;[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XG := SymmetricGroup( 0 );;[127X[104X
-    [4X[25Xgap>[125X [27XA := FinGSet( G, [ 2 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XB := FinGSet( G, [ 3 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XA := FinRightGSet( S0, [ 2 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
+    [4X[25Xgap>[125X [27XB := FinRightGSet( S0, [ 3 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27Xf := MapOfFinGSets( A, [ [ [ 1, (), 1 ], [ 2, (), 1 ] ] ], B );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( f );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xg := MapOfFinGSets( A, [ [ [ 2, (), 1 ], [ 3, (), 1 ] ] ], B );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( g );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XD := [ f, g ];;[127X[104X
@@ -1120,10 +1150,11 @@
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XPreCompose( f, pi ) = PreCompose( g, pi );[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XG := SymmetricGroup( 3 );;[127X[104X
-    [4X[25Xgap>[125X [27XA := FinGSet( G, [ 0, 0, 0, 0 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );; StructureDescription( S3 );; S3;[127X[104X
+    [4X[28XS3[128X[104X
+    [4X[25Xgap>[125X [27XA := FinRightGSet( S3, [ 0, 0, 0, 0 ] );;[127X[104X
     [4X[25Xgap>[125X [27Xid := IdentityMorphism( A );[127X[104X
-    [4X[28X<An identity morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<An identity morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XD := [ id, id ];;[127X[104X
     [4X[25Xgap>[125X [27XCq := Coequalizer( D );;[127X[104X
     [4X[25Xgap>[125X [27XDisplay( Cq );[127X[104X
@@ -1133,13 +1164,12 @@
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xpi = id;[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XG := SymmetricGroup( 3 );;[127X[104X
-    [4X[25Xgap>[125X [27XA := FinGSet( G, [ 0, 0, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XB := FinGSet( G, [ 1, 1, 1, 1 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XA := FinRightGSet( S3, [ 0, 0, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
+    [4X[25Xgap>[125X [27XB := FinRightGSet( S3, [ 1, 1, 1, 1 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xf := MapOfFinGSets( A, [ [ ], [ ], [ ], [ ] ], B );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( f );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XD := [ f, f ];;[127X[104X
@@ -1155,75 +1185,80 @@
   [1X2.3-13 [33X[0;0YSkeletal Pushout[133X[101X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );[127X[104X
-    [4X[28XSym( [ 1 .. 3 ] )[128X[104X
-    [4X[25Xgap>[125X [27XA := FinGSet( S3, [ 1, 0, 1, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XB := FinGSet( S3, [ 2, 1, 0, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XC := FinGSet( S3, [ 3, 1, 1, 0 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XS3 := SymmetricGroup( 3 );; StructureDescription( S3 );; S3;[127X[104X
+    [4X[28XS3[128X[104X
+    [4X[25Xgap>[125X [27XA := FinRightGSet( S3, [ 1, 0, 1, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
+    [4X[25Xgap>[125X [27XB := FinRightGSet( S3, [ 2, 1, 0, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
+    [4X[25Xgap>[125X [27XC := FinRightGSet( S3, [ 3, 1, 1, 0 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 3, (), 1 ] ], [], [ [ 1, (), 3 ] ], [] ];;[127X[104X
     [4X[25Xgap>[125X [27Xtau1 := MapOfFinGSets( A, imgs, C );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 2, (), 1 ], [ 3, (), 1 ] ], [ [ 1, (), 2 ] ], [], [] ];;[127X[104X
     [4X[25Xgap>[125X [27Xtau2 := MapOfFinGSets( B, imgs, C );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XD := [ tau1, tau2 ];[127X[104X
-    [4X[28X[ <A morphism in SkeletalFinGSets>, [128X[104X
-    [4X[28X <A morphism in SkeletalFinGSets> ][128X[104X
+    [4X[28X[ <A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>, [128X[104X
+    [4X[28X <A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )> ][128X[104X
     [4X[25Xgap>[125X [27XF := FiberProduct( D );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xpi1 := ProjectionInFactorOfFiberProduct( D, 1 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xpi2 := ProjectionInFactorOfFiberProduct( D, 2 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27Xiota := UniversalMorphismFromPushout( [ pi1, pi2 ], [ tau1, tau2 ] );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( S3 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( iota );[127X[104X
     [4X[28X[ [ [ 3, (), 1 ], [ 2, (), 1 ] ], [ [ 1, (), 2 ] ], [ [ 1, (), 3 ] ], [  ] ][128X[104X
-    [4X[25Xgap>[125X [27XG := SymmetricGroup( 0 );;[127X[104X
-    [4X[25Xgap>[125X [27XM := FinGSet( G, [ 5 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
-    [4X[25Xgap>[125X [27XN1 := FinGSet( G, [ 3 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XS0 := SymmetricGroup( 0 );; StructureDescription( S0 );; S0;[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XM := FinRightGSet( S0, [ 5 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
+    [4X[25Xgap>[125X [27XN1 := FinRightGSet( S0, [ 3 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27Ximgs := [ [ [ 1, (), 1 ], [ 2, (), 1 ], [ 3, (), 1 ] ] ];;[127X[104X
     [4X[25Xgap>[125X [27Xiota1 := MapOfFinGSets( N1, imgs, M );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XIsMonomorphism( iota1 );[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XN2 := FinGSet( G, [ 2 ] );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[25Xgap>[125X [27XN2 := FinRightGSet( S0, [ 2 ] );[127X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27Xiota2 := MapOfFinGSets( N2, [ [ [ 1, (), 1 ], [ 2, (), 1 ] ] ], M );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XIsMonomorphism( iota2 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XD := [ iota1, iota2 ];[127X[104X
-    [4X[28X[ <A monomorphism in SkeletalFinGSets>, <A monomorphism in SkeletalFinGSets> ][128X[104X
+    [4X[28X[ <A monomorphism in SkeletalCategoryOfFiniteRightGSets( 1 )>,\[128X[104X
+    [4X[28X <A monomorphism in SkeletalCategoryOfFiniteRightGSets( 1 )> ][128X[104X
     [4X[25Xgap>[125X [27XFib := FiberProduct( D );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XAsList( Fib );[127X[104X
     [4X[28X[ 2 ][128X[104X
     [4X[25Xgap>[125X [27Xpi1 := ProjectionInFactorOfFiberProduct( D, 1 );[127X[104X
-    [4X[28X<A monomorphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A monomorphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( pi1 );[127X[104X
     [4X[28X[ [ [ 1, (), 1 ], [ 2, (), 1 ] ] ][128X[104X
     [4X[25Xgap>[125X [27Xpi2 := ProjectionInFactorOfFiberProduct( D, 2 );[127X[104X
-    [4X[28X<A monomorphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A monomorphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( pi2 );[127X[104X
     [4X[28X[ [ [ 1, (), 1 ], [ 2, (), 1 ] ] ][128X[104X
     [4X[25Xgap>[125X [27XD := [ pi1, pi2 ];[127X[104X
-    [4X[28X[ <A monomorphism in SkeletalFinGSets>, <A monomorphism in SkeletalFinGSets> ][128X[104X
+    [4X[28X[ <A monomorphism in SkeletalCategoryOfFiniteRightGSets( 1 )>,\[128X[104X
+    [4X[28X <A monomorphism in SkeletalCategoryOfFiniteRightGSets( 1 )> ][128X[104X
     [4X[25Xgap>[125X [27XUU := Pushout( D );[127X[104X
-    [4X[28X<An object in SkeletalFinGSets>[128X[104X
+    [4X[28X<An object in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XAsList( UU );[127X[104X
     [4X[28X[ 3 ][128X[104X
     [4X[25Xgap>[125X [27Xkappa1 := InjectionOfCofactorOfPushout( D, 1 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( kappa1 );[127X[104X
     [4X[28X[ [ [ 1, (), 1 ], [ 2, (), 1 ], [ 3, (), 1 ] ] ][128X[104X
     [4X[25Xgap>[125X [27Xkappa2 := InjectionOfCofactorOfPushout( D, 2 );[127X[104X
-    [4X[28X<A morphism in SkeletalFinGSets>[128X[104X
+    [4X[28X<A morphism in SkeletalCategoryOfFiniteRightGSets( 1 )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( kappa2 );[127X[104X
     [4X[28X[ [ [ 1, (), 1 ], [ 2, (), 1 ] ] ][128X[104X
     [4X[25Xgap>[125X [27XPreCompose( pi1, kappa1 ) = PreCompose( pi2, kappa2 );[127X[104X
@@ -1233,23 +1268,23 @@
   
   [1X2.4 [33X[0;0YGAP categories[133X[101X
   
-  [1X2.4-1 IsSkeletalFinGSetCategory[101X
+  [1X2.4-1 IsSkeletalCategoryOfFiniteRightGSets[101X
   
-  [33X[1;0Y[29X[2XIsSkeletalFinGSetCategory[102X( [3Xobject[103X ) [32X filter[133X
+  [33X[1;0Y[29X[2XIsSkeletalCategoryOfFiniteRightGSets[102X( [3Xobject[103X ) [32X filter[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
   
   [33X[0;0YThe GAP category of the skeletal category of finite right [23XG[123X-sets.[133X
   
-  [1X2.4-2 IsSkeletalFinGSet[101X
+  [1X2.4-2 IsObjectInSkeletalCategoryOfFiniteRightGSets[101X
   
-  [33X[1;0Y[29X[2XIsSkeletalFinGSet[102X( [3Xobject[103X ) [32X filter[133X
+  [33X[1;0Y[29X[2XIsObjectInSkeletalCategoryOfFiniteRightGSets[102X( [3Xobject[103X ) [32X filter[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
   
   [33X[0;0YThe GAP category of objects in the skeletal category of finite right [23XG[123X-sets.[133X
   
-  [1X2.4-3 IsSkeletalFinGSetMap[101X
+  [1X2.4-3 IsMorphismInSkeletalCategoryOfFiniteRightGSets[101X
   
-  [33X[1;0Y[29X[2XIsSkeletalFinGSetMap[102X( [3Xobject[103X ) [32X filter[133X
+  [33X[1;0Y[29X[2XIsMorphismInSkeletalCategoryOfFiniteRightGSets[102X( [3Xobject[103X ) [32X filter[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
   
   [33X[0;0YThe  GAP  category  of  morphisms  in  the skeletal category of finite right

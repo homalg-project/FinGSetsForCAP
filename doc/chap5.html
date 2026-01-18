@@ -28,8 +28,8 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X8240A1437AE10FBC">5.1-1 EndAsEqualizer</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X806331E583E28E3A">5.1-2 EndByLifts</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X86E42250806DBA80">5.1-3 ReconstructTableOfMarks</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X7FA261A584B668AD">5.1-4 HomSkeletalFinGSets</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X7E36556087948568">5.1-5 ForgetfulFunctorSkeletalFinGSets</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X7C388CC58614D505">5.1-4 HomSkeletalFinRightGSets</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X86B849DD85812474">5.1-5 ForgetfulFunctorSkeletalCategoryOfFiniteRightGSets</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X8749C7CF7CC0DB5D">5.1-6 ReconstructGroup</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5.html#X7A489A5D79DA9E5C">5.2 <span class="Heading">Examples</span></a>
@@ -58,20 +58,20 @@
 <h5>5.1-3 ReconstructTableOfMarks</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ReconstructTableOfMarks</code>( <var class="Arg">C</var>, <var class="Arg">MinimalGeneratingSet</var>, <var class="Arg">Decompose</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
-<p><a id="X7FA261A584B668AD" name="X7FA261A584B668AD"></a></p>
+<p><a id="X7C388CC58614D505" name="X7C388CC58614D505"></a></p>
 
-<h5>5.1-4 HomSkeletalFinGSets</h5>
+<h5>5.1-4 HomSkeletalFinRightGSets</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HomSkeletalFinGSets</code>( <var class="Arg">S</var>, <var class="Arg">T</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HomSkeletalFinRightGSets</code>( <var class="Arg">S</var>, <var class="Arg">T</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a finite set (see <code class="code">FinSetsForCAP</code>)</p>
 
 <p>The finite set <span class="Math">\mathrm{Hom}_{\mathrm{SkeletalFinGSets}}( S, T )</span>.</p>
 
-<p><a id="X7E36556087948568" name="X7E36556087948568"></a></p>
+<p><a id="X86B849DD85812474" name="X86B849DD85812474"></a></p>
 
-<h5>5.1-5 ForgetfulFunctorSkeletalFinGSets</h5>
+<h5>5.1-5 ForgetfulFunctorSkeletalCategoryOfFiniteRightGSets</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ForgetfulFunctorSkeletalFinGSets</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ForgetfulFunctorSkeletalCategoryOfFiniteRightGSets</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a functor SkeletalFinGSets <span class="Math">\rightarrow</span> SkeletalFinSets</p>
 
 <p>The forgetful functor SkeletalFinGSets <span class="Math">\rightarrow</span> SkeletalFinSets.</p>
@@ -83,7 +83,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ReconstructGroup</code>( <var class="Arg">C</var>, <var class="Arg">HomC</var>, <var class="Arg">ForgetfulFunctor</var>, <var class="Arg">GeneratingSet</var>, <var class="Arg">EndImplementation</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a group</p>
 
-<p>The input is a CAP category <code class="code">C</code> which is equivalent to the skeletal category of finite right <span class="Math">G</span>-sets for some group <span class="Math">G</span>, a function <code class="code">HomC</code> computing homs in <code class="code">C</code> (e.g. <code class="code">HomSkeletalFinGSets</code>), a generating set of <code class="code">C</code>, and a function computing ends (e.g. <code class="code">EndAsEqualizer</code> or <code class="code">EndByLifts</code>). The output is a group isomorphic to <span class="Math">G</span>.</p>
+<p>The input is a CAP category <code class="code">C</code> which is equivalent to the skeletal category of finite right <span class="Math">G</span>-sets for some group <span class="Math">G</span>, a function <code class="code">HomC</code> computing homs in <code class="code">C</code> (e.g. <code class="code">HomSkeletalFinRightGSets</code>), a generating set of <code class="code">C</code>, and a function computing ends (e.g. <code class="code">EndAsEqualizer</code> or <code class="code">EndByLifts</code>). The output is a group isomorphic to <span class="Math">G</span>.</p>
 
 <p><a id="X7A489A5D79DA9E5C" name="X7A489A5D79DA9E5C"></a></p>
 
