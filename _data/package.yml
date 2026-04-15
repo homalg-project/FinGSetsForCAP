@@ -1,5 +1,5 @@
 name: FinGSetsForCAP
-version: "2026.04-02"
+version: "2026.04-04"
 license: "GPL-2.0-or-later"
 date: 2026-04-15
 description: |
@@ -31,7 +31,7 @@ needed-pkgs:
       version: ">= 2025.03-02"
       url: "https://homalg-project.github.io/pkg/CAP"
     - name: "GroupsAsCategoriesForCAP"
-      version: ">= 2025.11-03"
+      version: ">= 2026.04-02"
       url: "https://homalg-project.github.io/pkg/GroupsAsCategoriesForCAP"
     - name: "FinSetsForCAP"
       version: ">= 2022.05-01"
@@ -43,11 +43,11 @@ packageinfo: https://homalg-project.github.io/FinGSetsForCAP/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2026.04-02/FinGSetsForCAP-2026.04-02.tar.gz
+      url: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2026.04-04/FinGSetsForCAP-2026.04-04.tar.gz
     - name: .zip
-      url: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2026.04-02/FinGSetsForCAP-2026.04-02.zip
+      url: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2026.04-04/FinGSetsForCAP-2026.04-04.zip
 
-pdf: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2026.04-02/FinGSetsForCAP-2026.04-02-manual.pdf
+pdf: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2026.04-04/FinGSetsForCAP-2026.04-04-manual.pdf
 
 abstract: |
 
@@ -58,7 +58,7 @@ citeas: |
     <p class='BibEntry'>
     [<span class='BibKey'>BMZ15</span>]   <b class='BibAuthor'>Barakat, M., Mickisch, J. and Zickgraf, F.</b>,
      <i class='BibTitle'>FinGSetsForCAP, The (skeletal) elementary topos of finite G-sets,
-             Version 2026.04-02</i>
+             Version 2026.04-04</i>
      (<span class='BibYear'>4-15</span>)<br />
     (<span class='BibNote'>GAP package</span>),
     <span class='BibHowpublished'><a href="https://homalg-project.github.io/pkg/FinGSetsForCAP">https://homalg-project.github.io/pkg/FinGSetsForCAP</a></span>.
@@ -70,7 +70,7 @@ bibtex: |
       author =           {Barakat, M. and Mickisch, J. and Zickgraf, F.},
       title =            {{FinGSetsForCAP},  {The (skeletal) elementary topos of
                           finite      G\texttt{\symbol{45}}sets},      {V}ersion
-                          2026.04\texttt{\symbol{45}}02},
+                          2026.04\texttt{\symbol{45}}04},
       month =            {6\texttt{\symbol{45}}},
       year =             {4\texttt{\symbol{45}}15},
       note =             {GAP package},
