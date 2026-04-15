@@ -1,5 +1,5 @@
   
-  [1X3 [33X[0;0YThe skeletal category of transitive left $G$-sets[133X[101X
+  [1X3 [33X[0;0YThe skeletal category of transitive left G-sets[133X[101X
   
   
   [1X3.1 [33X[0;0YAttributes[133X[101X
@@ -220,34 +220,32 @@
     [4X[28X2 -> 4[128X[104X
     [4X[28X3 -> 4[128X[104X
     [4X[28X}[128X[104X
-    [4X[25Xgap>[125X [27XForAll( objs, o -> o = Coequalizer( Omega1, CoequalizerMorphisms( o ) ) );[127X[104X
+    [4X[25Xgap>[125X [27XForAll( objs, o -> o = Coequalizer( Omega1,[127X[104X
+    [4X[25X>[125X [27X        List( CoequalizerMorphisms( o ), g -> g / TS3 ) ) );[127X[104X
     [4X[28Xtrue[128X[104X
   [4X[32X[104X
   
   
-  [1X3.3 [33X[0;0YGAP Categories[133X[101X
+  [1X3.3 [33X[0;0YGAP categories[133X[101X
   
+  [1X3.3-1 IsSkeletalCategoryOfTransitiveLeftGSets[101X
   
-  [1X3.4 [33X[0;0YGAP categories[133X[101X
-  
-  [1X3.4-1 IsSkeletalCategoryOfTransitiveLeftGSets[101X
-  
-  [33X[1;0Y[29X[2XIsSkeletalCategoryOfTransitiveLeftGSets[102X( [3Xobject[103X ) [32X filter[133X
+  [33X[1;0Y[29X[2XIsSkeletalCategoryOfTransitiveLeftGSets[102X( [3Xobject[103X ) [32X Category[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
   
   [33X[0;0YThe GAP category of the skeletal category of transitive left [23XG[123X-sets.[133X
   
-  [1X3.4-2 IsObjectInSkeletalCategoryOfTransitiveLeftGSets[101X
+  [1X3.3-2 IsObjectInSkeletalCategoryOfTransitiveLeftGSets[101X
   
-  [33X[1;0Y[29X[2XIsObjectInSkeletalCategoryOfTransitiveLeftGSets[102X( [3Xobject[103X ) [32X filter[133X
+  [33X[1;0Y[29X[2XIsObjectInSkeletalCategoryOfTransitiveLeftGSets[102X( [3Xobject[103X ) [32X Category[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
   
   [33X[0;0YThe  GAP  category  of  objects  in the skeletal category of transitive left
   [23XG[123X-sets.[133X
   
-  [1X3.4-3 IsMorphismInSkeletalCategoryOfTransitiveLeftGSets[101X
+  [1X3.3-3 IsMorphismInSkeletalCategoryOfTransitiveLeftGSets[101X
   
-  [33X[1;0Y[29X[2XIsMorphismInSkeletalCategoryOfTransitiveLeftGSets[102X( [3Xobject[103X ) [32X filter[133X
+  [33X[1;0Y[29X[2XIsMorphismInSkeletalCategoryOfTransitiveLeftGSets[102X( [3Xobject[103X ) [32X Category[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
   
   [33X[0;0YThe  GAP  category  of morphisms in the skeletal category of transitive left

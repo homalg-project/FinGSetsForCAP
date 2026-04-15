@@ -6,10 +6,10 @@
                [1X The (skeletal) elementary topos of finite G-sets [101X
   
   
-                                   2026.02-02
+                                   2026.04-02
   
   
-                                24 February 2026
+                                 15 April 2026
   
   
                                 Mohamed Barakat
@@ -51,7 +51,7 @@
   [1XContents (FinGSetsForCAP)[101X
   
   1 [33X[0;0YMathematical background[133X
-  2 [33X[0;0YThe skeletal category of finite right $G$-sets[133X
+  2 [33X[0;0YThe skeletal category of finite right G-sets[133X
     2.1 [33X[0;0YAttributes[133X
       2.1-1 AsList
       2.1-2 UnderlyingGroup
@@ -59,25 +59,25 @@
       2.2-1 FinRightGSet
       2.2-2 MapOfFinGSets
       2.2-3 SkeletalCategoryOfFiniteRightGSets
-    2.3 [33X[0;0YExamples[133X
-      2.3-1 [33X[0;0YSkeletal IsEqualForObjects[133X
-      2.3-2 [33X[0;0YSkeletal PreCompose[133X
-      2.3-3 [33X[0;0YSkeletal IdentityMorphism[133X
-      2.3-4 [33X[0;0YSkeletal Initial and Terminal Objects[133X
-      2.3-5 [33X[0;0YSkeletal LiftAlongMonomorphism[133X
-      2.3-6 [33X[0;0YSkeletal ColiftAlongEpimorphism[133X
-      2.3-7 [33X[0;0YSkeletal Product[133X
-      2.3-8 [33X[0;0YSkeletal Coproduct[133X
-      2.3-9 [33X[0;0YSkeletal Image[133X
-      2.3-10 [33X[0;0YSkeletal Equalizer[133X
-      2.3-11 [33X[0;0YSkeletal Pullback[133X
-      2.3-12 [33X[0;0YSkeletal Coequalizer[133X
-      2.3-13 [33X[0;0YSkeletal Pushout[133X
-    2.4 [33X[0;0YGAP categories[133X
-      2.4-1 IsSkeletalCategoryOfFiniteRightGSets
-      2.4-2 IsObjectInSkeletalCategoryOfFiniteRightGSets
-      2.4-3 IsMorphismInSkeletalCategoryOfFiniteRightGSets
-  3 [33X[0;0YThe skeletal category of transitive left $G$-sets[133X
+    2.3 [33X[0;0YGAP categories[133X
+      2.3-1 IsSkeletalCategoryOfFiniteRightGSets
+      2.3-2 IsObjectInSkeletalCategoryOfFiniteRightGSets
+      2.3-3 IsMorphismInSkeletalCategoryOfFiniteRightGSets
+    2.4 [33X[0;0YExamples[133X
+      2.4-1 [33X[0;0YSkeletal IsEqualForObjects[133X
+      2.4-2 [33X[0;0YSkeletal PreCompose[133X
+      2.4-3 [33X[0;0YSkeletal IdentityMorphism[133X
+      2.4-4 [33X[0;0YSkeletal Initial and Terminal Objects[133X
+      2.4-5 [33X[0;0YSkeletal LiftAlongMonomorphism[133X
+      2.4-6 [33X[0;0YSkeletal ColiftAlongEpimorphism[133X
+      2.4-7 [33X[0;0YSkeletal Product[133X
+      2.4-8 [33X[0;0YSkeletal Coproduct[133X
+      2.4-9 [33X[0;0YSkeletal Image[133X
+      2.4-10 [33X[0;0YSkeletal Equalizer[133X
+      2.4-11 [33X[0;0YSkeletal Pullback[133X
+      2.4-12 [33X[0;0YSkeletal Coequalizer[133X
+      2.4-13 [33X[0;0YSkeletal Pushout[133X
+  3 [33X[0;0YThe skeletal category of transitive left G-sets[133X
     3.1 [33X[0;0YAttributes[133X
       3.1-1 UnderlyingGroup
       3.1-2 UnderlyingGroupAsCategory
@@ -94,15 +94,14 @@
       3.1-13 ExtendFunctorToSkeletalCategoryOfTransitiveLeftGSets
     3.2 [33X[0;0YConstructors[133X
       3.2-1 SkeletalCategoryOfTransitiveLeftGSets
-    3.3 [33X[0;0YGAP Categories[133X
-    3.4 [33X[0;0YGAP categories[133X
-      3.4-1 IsSkeletalCategoryOfTransitiveLeftGSets
-      3.4-2 IsObjectInSkeletalCategoryOfTransitiveLeftGSets
-      3.4-3 IsMorphismInSkeletalCategoryOfTransitiveLeftGSets
+    3.3 [33X[0;0YGAP categories[133X
+      3.3-1 IsSkeletalCategoryOfTransitiveLeftGSets
+      3.3-2 IsObjectInSkeletalCategoryOfTransitiveLeftGSets
+      3.3-3 IsMorphismInSkeletalCategoryOfTransitiveLeftGSets
   4 [33X[0;0YTools[133X
     4.1 [33X[0;0YHelper functions[133X
       4.1-1 PositionAndConjugatorOfStabilizer
-  5 [33X[0;0YReconstructing G from the skeletal category of finite right $G$-sets[133X
+  5 [33X[0;0YReconstructing G from the skeletal category of finite right G-sets[133X
     5.1 [33X[0;0YReconstruction Tools[133X
       5.1-1 EndAsEqualizer
       5.1-2 EndByLifts
@@ -111,11 +110,9 @@
       5.1-5 ForgetfulFunctorSkeletalCategoryOfFiniteRightGSets
       5.1-6 ReconstructGroup
     5.2 [33X[0;0YExamples[133X
+      5.2-1 [33X[0;0YReconstructing the Table of Marks[133X
+      5.2-2 [33X[0;0YReconstructing the Group[133X
   6 [33X[0;0YBibliography[133X
-  7 [33X[0;0YReconstructing G from the skeletal category of finite G-sets[133X
-    7.1 [33X[0;0YExamples[133X
-      7.1-1 [33X[0;0YReconstructing the Table of Marks[133X
-      7.1-2 [33X[0;0YReconstructing the Group[133X
   
   
   [32X

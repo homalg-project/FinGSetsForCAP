@@ -1,5 +1,5 @@
   
-  [1X2 [33X[0;0YThe skeletal category of finite right $G$-sets[133X[101X
+  [1X2 [33X[0;0YThe skeletal category of finite right G-sets[133X[101X
   
   
   [1X2.1 [33X[0;0YAttributes[133X[101X
@@ -166,10 +166,35 @@
   right [23XG[123X-sets.[133X
   
   
-  [1X2.3 [33X[0;0YExamples[133X[101X
+  [1X2.3 [33X[0;0YGAP categories[133X[101X
+  
+  [1X2.3-1 IsSkeletalCategoryOfFiniteRightGSets[101X
+  
+  [33X[1;0Y[29X[2XIsSkeletalCategoryOfFiniteRightGSets[102X( [3Xobject[103X ) [32X Category[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
+  
+  [33X[0;0YThe GAP category of the skeletal category of finite right [23XG[123X-sets.[133X
+  
+  [1X2.3-2 IsObjectInSkeletalCategoryOfFiniteRightGSets[101X
+  
+  [33X[1;0Y[29X[2XIsObjectInSkeletalCategoryOfFiniteRightGSets[102X( [3Xobject[103X ) [32X Category[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
+  
+  [33X[0;0YThe GAP category of objects in the skeletal category of finite right [23XG[123X-sets.[133X
+  
+  [1X2.3-3 IsMorphismInSkeletalCategoryOfFiniteRightGSets[101X
+  
+  [33X[1;0Y[29X[2XIsMorphismInSkeletalCategoryOfFiniteRightGSets[102X( [3Xobject[103X ) [32X Category[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
+  
+  [33X[0;0YThe  GAP  category  of  morphisms  in  the skeletal category of finite right
+  [23XG[123X-sets.[133X
   
   
-  [1X2.3-1 [33X[0;0YSkeletal IsEqualForObjects[133X[101X
+  [1X2.4 [33X[0;0YExamples[133X[101X
+  
+  
+  [1X2.4-1 [33X[0;0YSkeletal IsEqualForObjects[133X[101X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
@@ -194,7 +219,7 @@
   [4X[32X[104X
   
   
-  [1X2.3-2 [33X[0;0YSkeletal PreCompose[133X[101X
+  [1X2.4-2 [33X[0;0YSkeletal PreCompose[133X[101X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
@@ -277,7 +302,7 @@
   [4X[32X[104X
   
   
-  [1X2.3-3 [33X[0;0YSkeletal IdentityMorphism[133X[101X
+  [1X2.4-3 [33X[0;0YSkeletal IdentityMorphism[133X[101X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
@@ -300,7 +325,7 @@
   [4X[32X[104X
   
   
-  [1X2.3-4 [33X[0;0YSkeletal Initial and Terminal Objects[133X[101X
+  [1X2.4-4 [33X[0;0YSkeletal Initial and Terminal Objects[133X[101X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
@@ -347,7 +372,7 @@
   [4X[32X[104X
   
   
-  [1X2.3-5 [33X[0;0YSkeletal LiftAlongMonomorphism[133X[101X
+  [1X2.4-5 [33X[0;0YSkeletal LiftAlongMonomorphism[133X[101X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
@@ -380,7 +405,7 @@
   [4X[32X[104X
   
   
-  [1X2.3-6 [33X[0;0YSkeletal ColiftAlongEpimorphism[133X[101X
+  [1X2.4-6 [33X[0;0YSkeletal ColiftAlongEpimorphism[133X[101X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
@@ -414,7 +439,7 @@
   [4X[32X[104X
   
   
-  [1X2.3-7 [33X[0;0YSkeletal Product[133X[101X
+  [1X2.4-7 [33X[0;0YSkeletal Product[133X[101X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
@@ -580,7 +605,7 @@
   [4X[32X[104X
   
   
-  [1X2.3-8 [33X[0;0YSkeletal Coproduct[133X[101X
+  [1X2.4-8 [33X[0;0YSkeletal Coproduct[133X[101X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
@@ -661,7 +686,7 @@
   [4X[32X[104X
   
   
-  [1X2.3-9 [33X[0;0YSkeletal Image[133X[101X
+  [1X2.4-9 [33X[0;0YSkeletal Image[133X[101X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
@@ -743,7 +768,7 @@
   [4X[32X[104X
   
   
-  [1X2.3-10 [33X[0;0YSkeletal Equalizer[133X[101X
+  [1X2.4-10 [33X[0;0YSkeletal Equalizer[133X[101X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
@@ -849,7 +874,7 @@
   [4X[32X[104X
   
   
-  [1X2.3-11 [33X[0;0YSkeletal Pullback[133X[101X
+  [1X2.4-11 [33X[0;0YSkeletal Pullback[133X[101X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
@@ -935,7 +960,7 @@
   [4X[32X[104X
   
   
-  [1X2.3-12 [33X[0;0YSkeletal Coequalizer[133X[101X
+  [1X2.4-12 [33X[0;0YSkeletal Coequalizer[133X[101X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
@@ -1182,7 +1207,7 @@
   [4X[32X[104X
   
   
-  [1X2.3-13 [33X[0;0YSkeletal Pushout[133X[101X
+  [1X2.4-13 [33X[0;0YSkeletal Pushout[133X[101X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
@@ -1264,29 +1289,4 @@
     [4X[25Xgap>[125X [27XPreCompose( pi1, kappa1 ) = PreCompose( pi2, kappa2 );[127X[104X
     [4X[28Xtrue[128X[104X
   [4X[32X[104X
-  
-  
-  [1X2.4 [33X[0;0YGAP categories[133X[101X
-  
-  [1X2.4-1 IsSkeletalCategoryOfFiniteRightGSets[101X
-  
-  [33X[1;0Y[29X[2XIsSkeletalCategoryOfFiniteRightGSets[102X( [3Xobject[103X ) [32X filter[133X
-  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
-  
-  [33X[0;0YThe GAP category of the skeletal category of finite right [23XG[123X-sets.[133X
-  
-  [1X2.4-2 IsObjectInSkeletalCategoryOfFiniteRightGSets[101X
-  
-  [33X[1;0Y[29X[2XIsObjectInSkeletalCategoryOfFiniteRightGSets[102X( [3Xobject[103X ) [32X filter[133X
-  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
-  
-  [33X[0;0YThe GAP category of objects in the skeletal category of finite right [23XG[123X-sets.[133X
-  
-  [1X2.4-3 IsMorphismInSkeletalCategoryOfFiniteRightGSets[101X
-  
-  [33X[1;0Y[29X[2XIsMorphismInSkeletalCategoryOfFiniteRightGSets[102X( [3Xobject[103X ) [32X filter[133X
-  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
-  
-  [33X[0;0YThe  GAP  category  of  morphisms  in  the skeletal category of finite right
-  [23XG[123X-sets.[133X
   

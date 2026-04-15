@@ -13,12 +13,12 @@
   [2XFinRightGSet[102X, for IsGroup, IsList 2.2-1 
   [2XForgetfulFunctorSkeletalCategoryOfFiniteRightGSets[102X, for IsGroup 5.1-5 
   [2XHomSkeletalFinRightGSets[102X 5.1-4 
-  [2XIsMorphismInSkeletalCategoryOfFiniteRightGSets[102X, for IsCapCategoryMorphism 2.4-3 
-  [2XIsMorphismInSkeletalCategoryOfTransitiveLeftGSets[102X, for IsCapCategoryMorphism 3.4-3 
-  [2XIsObjectInSkeletalCategoryOfFiniteRightGSets[102X, for IsCapCategoryObject 2.4-2 
-  [2XIsObjectInSkeletalCategoryOfTransitiveLeftGSets[102X, for IsCapCategoryObject 3.4-2 
-  [2XIsSkeletalCategoryOfFiniteRightGSets[102X, for IsCapCategory and IsSkeletalCategory 2.4-1 
-  [2XIsSkeletalCategoryOfTransitiveLeftGSets[102X, for IsCapCategory and IsSkeletalCategory 3.4-1 
+  [2XIsMorphismInSkeletalCategoryOfFiniteRightGSets[102X, for IsCapCategoryMorphism 2.3-3 
+  [2XIsMorphismInSkeletalCategoryOfTransitiveLeftGSets[102X, for IsCapCategoryMorphism 3.3-3 
+  [2XIsObjectInSkeletalCategoryOfFiniteRightGSets[102X, for IsCapCategoryObject 2.3-2 
+  [2XIsObjectInSkeletalCategoryOfTransitiveLeftGSets[102X, for IsCapCategoryObject 3.3-2 
+  [2XIsSkeletalCategoryOfFiniteRightGSets[102X, for IsCapCategory and IsSkeletalCategory 2.3-1 
+  [2XIsSkeletalCategoryOfTransitiveLeftGSets[102X, for IsCapCategory and IsSkeletalCategory 3.3-1 
   [2XMapOfFinGSets[102X, for IsObjectInSkeletalCategoryOfFiniteRightGSets, IsList, IsObjectInSkeletalCategoryOfFiniteRightGSets 2.2-2 
   [2XNumberOfObjects[102X, for IsSkeletalCategoryOfTransitiveLeftGSets 3.1-4 
   [2XObjectNumber[102X, for IsObjectInSkeletalCategoryOfTransitiveLeftGSets 3.1-7 
