@@ -513,7 +513,7 @@ InstallMethod( Size,
 end );
 
 ##
-InstallOtherMethodForCompilerForCAP( CoequalizerMorphisms,
+InstallOtherMethodForCompilerForCAP( CoequalizerAutomorphisms,
         "for the skeletal category of transitive left G-sets and a transitive left G-set therein",
         [ IsSkeletalCategoryOfTransitiveLeftGSets, IsObjectInSkeletalCategoryOfTransitiveLeftGSets ],
         
@@ -526,7 +526,7 @@ InstallOtherMethodForCompilerForCAP( CoequalizerMorphisms,
     
     U := RepresentativesOfSubgroupsUpToConjugation( SkeletalTransitiveGSets );
     
-    gs := Concatenation( [ One( UnderlyingGroup( SkeletalTransitiveGSets ) ) ], GeneratorsOfGroup( U[ObjectNumber( Omega )] ) );
+    gs := GeneratorsOfGroup( U[ObjectNumber( Omega )] );
     
     return List( gs, g ->
                  MorphismConstructor( G_as_cat,
@@ -537,13 +537,13 @@ InstallOtherMethodForCompilerForCAP( CoequalizerMorphisms,
 end );
 
 ##
-InstallMethod( CoequalizerMorphisms,
+InstallMethod( CoequalizerAutomorphisms,
         "for a skeletal transitive left G-set",
         [ IsObjectInSkeletalCategoryOfTransitiveLeftGSets ],
         
   function ( Omega )
     
-    return CoequalizerMorphisms( CapCategory( Omega ), Omega );
+    return CoequalizerAutomorphisms( CapCategory( Omega ), Omega );
     
 end );
 
@@ -609,7 +609,7 @@ InstallMethodForCompilerForCAP( ExtendFunctorToSkeletalCategoryOfTransitiveLeftG
       function ( obj_in_SkeletalTransitiveGSets )
         local coeq_mors, diagram, coeq;
         
-        coeq_mors := CoequalizerMorphisms( SkeletalTransitiveGSets, obj_in_SkeletalTransitiveGSets );
+        coeq_mors := CoequalizerAutomorphisms( SkeletalTransitiveGSets, obj_in_SkeletalTransitiveGSets );
         
         diagram := List( coeq_mors, g ->
                          functor_on_morphisms(
@@ -617,7 +617,7 @@ InstallMethodForCompilerForCAP( ExtendFunctorToSkeletalCategoryOfTransitiveLeftG
                                  g,
                                  img_obj ) );
         
-        return Coequalizer( category_with_coequalizers, img_obj, diagram );
+        return CoequalizerOfIdentityAndAutomorphisms( category_with_coequalizers, img_obj, diagram );
         
     end;
     
@@ -625,9 +625,9 @@ InstallMethodForCompilerForCAP( ExtendFunctorToSkeletalCategoryOfTransitiveLeftG
       function ( source, mor_in_SkeletalTransitiveGSets, target )
         local coeq_mors_source, coeq_mors_target, diagram_source, diagram_target, g;
         
-        coeq_mors_source := CoequalizerMorphisms( SkeletalTransitiveGSets, Source( mor_in_SkeletalTransitiveGSets ) );
+        coeq_mors_source := CoequalizerAutomorphisms( SkeletalTransitiveGSets, Source( mor_in_SkeletalTransitiveGSets ) );
         
-        coeq_mors_target := CoequalizerMorphisms( SkeletalTransitiveGSets, Target( mor_in_SkeletalTransitiveGSets ) );
+        coeq_mors_target := CoequalizerAutomorphisms( SkeletalTransitiveGSets, Target( mor_in_SkeletalTransitiveGSets ) );
         
         diagram_source := List( coeq_mors_source, g ->
                                 functor_on_morphisms(
@@ -641,19 +641,19 @@ InstallMethodForCompilerForCAP( ExtendFunctorToSkeletalCategoryOfTransitiveLeftG
                                         g,
                                         img_obj ) );
         
-        if not IsEqualForObjects( category_with_coequalizers, source, Coequalizer( category_with_coequalizers, diagram_source ) ) then
+        if not IsEqualForObjects( category_with_coequalizers, source, CoequalizerOfIdentityAndAutomorphisms( category_with_coequalizers, img_obj, diagram_source ) ) then
             # COVERAGE_IGNORE_NEXT_LINE
             Error( "source and Coequalizer( diagram_source ) do not coincide\n" );
         fi;
         
-        if not IsEqualForObjects( category_with_coequalizers, target, Coequalizer( category_with_coequalizers, diagram_target ) ) then
+        if not IsEqualForObjects( category_with_coequalizers, target, CoequalizerOfIdentityAndAutomorphisms( category_with_coequalizers, img_obj, diagram_target ) ) then
             # COVERAGE_IGNORE_NEXT_LINE
             Error( "target and Coequalizer( diagram_target ) do not coincide\n" );
         fi;
         
         g := GroupAsCategoryMorphism( G_as_cat, UnderlyingGroupElement( mor_in_SkeletalTransitiveGSets ) );
         
-        return CoequalizerFunctorialWithGivenCoequalizers( category_with_coequalizers,
+        return CoequalizerOfIdentityAndAutomorphismsFunctorialWithGivenCoequalizers( category_with_coequalizers,
                        source,
                        diagram_source,
                        functor_on_morphisms(

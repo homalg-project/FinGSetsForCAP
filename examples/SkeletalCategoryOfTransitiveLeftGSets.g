@@ -104,8 +104,8 @@ Print( DotVertexLabelledDigraph( digraph ) );
 #! 2 -> 4
 #! 3 -> 4
 #! }
-ForAll( objs, o -> o = Coequalizer( Omega1,
-        List( CoequalizerMorphisms( o ), g -> g / TS3 ) ) );
+ForAll( objs, o -> o = CoequalizerOfIdentityAndAutomorphisms( Omega1,
+        List( CoequalizerAutomorphisms( o ), g -> g / TS3 ) ) );
 #! true
 
 #! @EndExample

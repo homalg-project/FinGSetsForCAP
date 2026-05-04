@@ -160,11 +160,11 @@ DeclareAttribute( "Size",
 
 #! @Description
 #!  The input is a transitive left $G$-set <A>Omega</A> $\cong G / U_i$.
-#!  The output is the list of endomorphisms of the principal $G$-set $G / U_1$ defined by the generators of $U_i$.
-#!  The coequalizers of these morphisms is the input object <A>Omega</A> $\cong G / U_i$.
+#!  The output is the list of automorphisms of the principal $G$-set $G / U_1$ defined by the generators of $U_i$.
+#!  The coequalizers of the identity and these automorphisms is the input object <A>Omega</A> $\cong G / U_i$.
 #! @Arguments Omega
 #! @Returns a list of morphisms
-DeclareAttribute( "CoequalizerMorphisms",
+DeclareAttribute( "CoequalizerAutomorphisms",
         IsObjectInSkeletalCategoryOfTransitiveLeftGSets );
 
 DeclareAttribute( "EmbeddingOfUnderlyingGroupAsCategoryData",

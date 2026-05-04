@@ -17,7 +17,7 @@ gap> Omega1 := TS5.1;
 S5 / U_1
 gap> Omega3 := TS5.3;
 S5 / U_3
-gap> ForAll( objs, o -> o = Coequalizer( Omega1, List( CoequalizerMorphisms( o ), g -> g / TS5 ) ) );
+gap> ForAll( objs, o -> o = CoequalizerOfIdentityAndAutomorphisms( Omega1, List( CoequalizerAutomorphisms( o ), g -> g / TS5 ) ) );
 true
 gap> mors := SetOfMorphisms( TS5 );; Length( mors );
 681
