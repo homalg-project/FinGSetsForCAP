@@ -14,7 +14,7 @@ Display( TS3 );
 #! A CAP category with name SkeletalCategoryOfTransitiveLeftGSets( S3 ) \
 #! with 4 objects:
 #! 
-#! 24 primitive operations were used to derive 71 operations for this category \
+#! 24 primitive operations were used to derive 80 operations for this category \
 #! which algorithmically
 #! * IsCategoryWithDecidableColifts
 #! * IsCategoryWithDecidableLifts
