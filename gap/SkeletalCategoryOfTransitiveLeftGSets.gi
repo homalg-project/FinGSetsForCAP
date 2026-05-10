@@ -297,10 +297,10 @@ InstallMethod( SkeletalCategoryOfTransitiveLeftGSets,
     end );
     
     ## for two parallel morphisms uniquely determined by their images of the standard left coset
-    ## phi: G/U[s] → G/U[t], U[s] ↦ a U[t], psi: G/U[s] → G/U[t], U[s] ↦ b U[t],
-    ## the projection onto the coequalizer is given by a morphism pi: G/U[t] → G/U[p], U[t] ↦ a U[p],
-    ## which has to satisfy U[t] ⊆ ᵍU[p] and (a g) U[p] = (b g) U[p] ⟺ g⁻¹ a⁻¹ b g ∈ U[p],
-    ## which simplify to ⟨ U[t], a⁻¹ b ⟩ ⊆ ᵍU[p], and hence ⟨ U[t], a⁻¹ b ⟩ = ᵍU[p].
+    ## φ: G/U[s] → G/U[t], U[s] ↦ a U[t], ψ: G/U[s] → G/U[t], U[s] ↦ b U[t],
+    ## the projection onto the coequalizer is given by a morphism π: G/U[t] → G/U[c], U[t] ↦ g U[c],
+    ## which has to satisfy U[t]ᵍ ⊆ U[c] and (a g) U[c] = (b g) U[c] ⟺ g⁻¹ a⁻¹ b g ∈ U[c],
+    ## which simplify to ⟨ U[t], a⁻¹ b ⟩ᵍ ⊆ U[c], and hence ⟨ U[t], a⁻¹ b ⟩ᵍ = U[c].
     AddProjectionOntoCoequalizer( SkeletalTransitiveGSets,
       function ( SkeletalTransitiveGSets, target, diagram )
         local G, U, objects, t, l, gs, C, Ucoeq, index, cards, positions, pos, g, coeq;
@@ -317,7 +317,7 @@ InstallMethod( SkeletalCategoryOfTransitiveLeftGSets,
         
         gs := List( [ 1 .. l ], i -> UnderlyingGroupElement( diagram[i] ) );
         
-        C := List( [ 1 .. l - 1 ], i -> Inverse( gs[i] ) * gs[i + 1] ); ## gs[1] is taken 1 in CoequalizerMorphisms
+        C := List( [ 1 .. l - 1 ], i -> Inverse( gs[i] ) * gs[i + 1] );
         
         Ucoeq := Subgroup( G, Concatenation( GeneratorsOfGroup( U[t] ), C ) );
         
@@ -327,9 +327,9 @@ InstallMethod( SkeletalCategoryOfTransitiveLeftGSets,
         
         positions := Filtered( [ 1 .. NumberOfObjects( SkeletalTransitiveGSets ) ], i -> cards[i] = index );
         
-        ## pos := SafeUniqueEntry( positions, p -> IsConjugate( G, Ucoeq, U[p] ) );
+        ## pos := SafeUniqueEntry( positions, c -> IsConjugate( G, Ucoeq, U[c] ) );
         ## but for performance we use:
-        pos := SafeFirst( positions, p -> IsConjugate( G, Ucoeq, U[p] ) );
+        pos := SafeFirst( positions, c -> IsConjugate( G, Ucoeq, U[c] ) );
         
         g := RepresentativeAction( G, Ucoeq, U[pos] );
         
