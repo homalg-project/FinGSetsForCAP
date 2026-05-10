@@ -14,14 +14,14 @@ Display( TS3 );
 #! A CAP category with name SkeletalCategoryOfTransitiveLeftGSets( S3 ) \
 #! with 4 objects:
 #! 
-#! 24 primitive operations were used to derive 71 operations for this category \
+#! 25 primitive operations were used to derive 80 operations for this category \
 #! which algorithmically
 #! * IsCategoryWithDecidableColifts
 #! * IsCategoryWithDecidableLifts
 #! * IsCategoryWithTerminalObject
 #! * IsFiniteCategory
-#! * IsCategoryWithCoequalizers
 #! * IsEquippedWithHomomorphismStructure
+#! * IsCategoryWithCoequalizers
 #! and not yet algorithmically
 #! * IsFinitelyPresentedCategory
 #! and furthermore mathematically
@@ -104,8 +104,8 @@ Print( DotVertexLabelledDigraph( digraph ) );
 #! 2 -> 4
 #! 3 -> 4
 #! }
-ForAll( objs, o -> o = Coequalizer( Omega1,
-        List( CoequalizerMorphisms( o ), g -> g / TS3 ) ) );
+ForAll( objs, o -> o = CoequalizerOfIdentityAndAutomorphisms( Omega1,
+        List( CoequalizerAutomorphisms( o ), g -> g / TS3 ) ) );
 #! true
 
 #! @EndExample

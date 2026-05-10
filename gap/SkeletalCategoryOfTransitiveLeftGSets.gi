@@ -297,10 +297,10 @@ InstallMethod( SkeletalCategoryOfTransitiveLeftGSets,
     end );
     
     ## for two parallel morphisms uniquely determined by their images of the standard left coset
-    ## phi: G/U[s] → G/U[t], U[s] ↦ a U[t], psi: G/U[s] → G/U[t], U[s] ↦ b U[t],
-    ## the projection onto the coequalizer is given by a morphism pi: G/U[t] → G/U[p], U[t] ↦ a U[p],
-    ## which has to satisfy U[t] ⊆ ᵍU[p] and (a g) U[p] = (b g) U[p] ⟺ g⁻¹ a⁻¹ b g ∈ U[p],
-    ## which simplify to ⟨ U[t], a⁻¹ b ⟩ ⊆ ᵍU[p], and hence ⟨ U[t], a⁻¹ b ⟩ = ᵍU[p].
+    ## φ: G/U[s] → G/U[t], U[s] ↦ a U[t], ψ: G/U[s] → G/U[t], U[s] ↦ b U[t],
+    ## the projection onto the coequalizer is given by a morphism π: G/U[t] → G/U[c], U[t] ↦ g U[c],
+    ## which has to satisfy U[t]ᵍ ⊆ U[c] and (a g) U[c] = (b g) U[c] ⟺ g⁻¹ a⁻¹ b g ∈ U[c],
+    ## which simplify to ⟨ U[t], a⁻¹ b ⟩ᵍ ⊆ U[c], and hence ⟨ U[t], a⁻¹ b ⟩ᵍ = U[c].
     AddProjectionOntoCoequalizer( SkeletalTransitiveGSets,
       function ( SkeletalTransitiveGSets, target, diagram )
         local G, U, objects, t, l, gs, C, Ucoeq, index, cards, positions, pos, g, coeq;
@@ -317,7 +317,7 @@ InstallMethod( SkeletalCategoryOfTransitiveLeftGSets,
         
         gs := List( [ 1 .. l ], i -> UnderlyingGroupElement( diagram[i] ) );
         
-        C := List( [ 1 .. l - 1 ], i -> Inverse( gs[i] ) * gs[i + 1] ); ## gs[1] is taken 1 in CoequalizerMorphisms
+        C := List( [ 1 .. l - 1 ], i -> Inverse( gs[i] ) * gs[i + 1] );
         
         Ucoeq := Subgroup( G, Concatenation( GeneratorsOfGroup( U[t] ), C ) );
         
@@ -327,9 +327,49 @@ InstallMethod( SkeletalCategoryOfTransitiveLeftGSets,
         
         positions := Filtered( [ 1 .. NumberOfObjects( SkeletalTransitiveGSets ) ], i -> cards[i] = index );
         
-        ## pos := SafeUniqueEntry( positions, p -> IsConjugate( G, Ucoeq, U[p] ) );
+        ## pos := SafeUniqueEntry( positions, c -> IsConjugate( G, Ucoeq, U[c] ) );
         ## but for performance we use:
-        pos := SafeFirst( positions, p -> IsConjugate( G, Ucoeq, U[p] ) );
+        pos := SafeFirst( positions, c -> IsConjugate( G, Ucoeq, U[c] ) );
+        
+        g := RepresentativeAction( G, Ucoeq, U[pos] );
+        
+        coeq := objects[pos];
+        
+        return MorphismConstructor( SkeletalTransitiveGSets,
+                       target,
+                       g,
+                       coeq );
+        
+    end );
+    
+    ##
+    AddProjectionOntoCoequalizerOfIdentityAndAutomorphisms( SkeletalTransitiveGSets,
+      function ( SkeletalTransitiveGSets, target, diagram )
+        local G, U, objects, t, l, gs, Ucoeq, index, cards, positions, pos, g, coeq;
+        
+        G := UnderlyingGroup( SkeletalTransitiveGSets );
+        
+        U := RepresentativesOfSubgroupsUpToConjugation( SkeletalTransitiveGSets );
+        
+        objects := SetOfObjects( SkeletalTransitiveGSets );
+        
+        t := ObjectNumber( target );
+        
+        l := Length( diagram );
+        
+        gs := List( [ 1 .. l ], i -> UnderlyingGroupElement( diagram[i] ) );
+        
+        Ucoeq := Subgroup( G, Concatenation( GeneratorsOfGroup( U[t] ), gs ) );
+        
+        index := Index( G, Ucoeq );
+        
+        cards := CardinalitiesOfObjects( SkeletalTransitiveGSets );
+        
+        positions := Filtered( [ 1 .. NumberOfObjects( SkeletalTransitiveGSets ) ], i -> cards[i] = index );
+        
+        ## pos := SafeUniqueEntry( positions, c -> IsConjugate( G, Ucoeq, U[c] ) );
+        ## but for performance we use:
+        pos := SafeFirst( positions, c -> IsConjugate( G, Ucoeq, U[c] ) );
         
         g := RepresentativeAction( G, Ucoeq, U[pos] );
         
@@ -513,7 +553,7 @@ InstallMethod( Size,
 end );
 
 ##
-InstallOtherMethodForCompilerForCAP( CoequalizerMorphisms,
+InstallOtherMethodForCompilerForCAP( CoequalizerAutomorphisms,
         "for the skeletal category of transitive left G-sets and a transitive left G-set therein",
         [ IsSkeletalCategoryOfTransitiveLeftGSets, IsObjectInSkeletalCategoryOfTransitiveLeftGSets ],
         
@@ -526,7 +566,7 @@ InstallOtherMethodForCompilerForCAP( CoequalizerMorphisms,
     
     U := RepresentativesOfSubgroupsUpToConjugation( SkeletalTransitiveGSets );
     
-    gs := Concatenation( [ One( UnderlyingGroup( SkeletalTransitiveGSets ) ) ], GeneratorsOfGroup( U[ObjectNumber( Omega )] ) );
+    gs := GeneratorsOfGroup( U[ObjectNumber( Omega )] );
     
     return List( gs, g ->
                  MorphismConstructor( G_as_cat,
@@ -537,13 +577,13 @@ InstallOtherMethodForCompilerForCAP( CoequalizerMorphisms,
 end );
 
 ##
-InstallMethod( CoequalizerMorphisms,
+InstallMethod( CoequalizerAutomorphisms,
         "for a skeletal transitive left G-set",
         [ IsObjectInSkeletalCategoryOfTransitiveLeftGSets ],
         
   function ( Omega )
     
-    return CoequalizerMorphisms( CapCategory( Omega ), Omega );
+    return CoequalizerAutomorphisms( CapCategory( Omega ), Omega );
     
 end );
 
@@ -609,7 +649,7 @@ InstallMethodForCompilerForCAP( ExtendFunctorToSkeletalCategoryOfTransitiveLeftG
       function ( obj_in_SkeletalTransitiveGSets )
         local coeq_mors, diagram, coeq;
         
-        coeq_mors := CoequalizerMorphisms( SkeletalTransitiveGSets, obj_in_SkeletalTransitiveGSets );
+        coeq_mors := CoequalizerAutomorphisms( SkeletalTransitiveGSets, obj_in_SkeletalTransitiveGSets );
         
         diagram := List( coeq_mors, g ->
                          functor_on_morphisms(
@@ -617,7 +657,7 @@ InstallMethodForCompilerForCAP( ExtendFunctorToSkeletalCategoryOfTransitiveLeftG
                                  g,
                                  img_obj ) );
         
-        return Coequalizer( category_with_coequalizers, img_obj, diagram );
+        return CoequalizerOfIdentityAndAutomorphisms( category_with_coequalizers, img_obj, diagram );
         
     end;
     
@@ -625,9 +665,9 @@ InstallMethodForCompilerForCAP( ExtendFunctorToSkeletalCategoryOfTransitiveLeftG
       function ( source, mor_in_SkeletalTransitiveGSets, target )
         local coeq_mors_source, coeq_mors_target, diagram_source, diagram_target, g;
         
-        coeq_mors_source := CoequalizerMorphisms( SkeletalTransitiveGSets, Source( mor_in_SkeletalTransitiveGSets ) );
+        coeq_mors_source := CoequalizerAutomorphisms( SkeletalTransitiveGSets, Source( mor_in_SkeletalTransitiveGSets ) );
         
-        coeq_mors_target := CoequalizerMorphisms( SkeletalTransitiveGSets, Target( mor_in_SkeletalTransitiveGSets ) );
+        coeq_mors_target := CoequalizerAutomorphisms( SkeletalTransitiveGSets, Target( mor_in_SkeletalTransitiveGSets ) );
         
         diagram_source := List( coeq_mors_source, g ->
                                 functor_on_morphisms(
@@ -641,19 +681,19 @@ InstallMethodForCompilerForCAP( ExtendFunctorToSkeletalCategoryOfTransitiveLeftG
                                         g,
                                         img_obj ) );
         
-        if not IsEqualForObjects( category_with_coequalizers, source, Coequalizer( category_with_coequalizers, diagram_source ) ) then
+        if not IsEqualForObjects( category_with_coequalizers, source, CoequalizerOfIdentityAndAutomorphisms( category_with_coequalizers, img_obj, diagram_source ) ) then
             # COVERAGE_IGNORE_NEXT_LINE
             Error( "source and Coequalizer( diagram_source ) do not coincide\n" );
         fi;
         
-        if not IsEqualForObjects( category_with_coequalizers, target, Coequalizer( category_with_coequalizers, diagram_target ) ) then
+        if not IsEqualForObjects( category_with_coequalizers, target, CoequalizerOfIdentityAndAutomorphisms( category_with_coequalizers, img_obj, diagram_target ) ) then
             # COVERAGE_IGNORE_NEXT_LINE
             Error( "target and Coequalizer( diagram_target ) do not coincide\n" );
         fi;
         
         g := GroupAsCategoryMorphism( G_as_cat, UnderlyingGroupElement( mor_in_SkeletalTransitiveGSets ) );
         
-        return CoequalizerFunctorialWithGivenCoequalizers( category_with_coequalizers,
+        return CoequalizerOfIdentityAndAutomorphismsFunctorialWithGivenCoequalizers( category_with_coequalizers,
                        source,
                        diagram_source,
                        functor_on_morphisms(
