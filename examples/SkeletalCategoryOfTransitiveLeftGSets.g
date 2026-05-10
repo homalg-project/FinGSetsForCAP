@@ -14,14 +14,14 @@ Display( TS3 );
 #! A CAP category with name SkeletalCategoryOfTransitiveLeftGSets( S3 ) \
 #! with 4 objects:
 #! 
-#! 24 primitive operations were used to derive 80 operations for this category \
+#! 25 primitive operations were used to derive 80 operations for this category \
 #! which algorithmically
 #! * IsCategoryWithDecidableColifts
 #! * IsCategoryWithDecidableLifts
 #! * IsCategoryWithTerminalObject
 #! * IsFiniteCategory
-#! * IsCategoryWithCoequalizers
 #! * IsEquippedWithHomomorphismStructure
+#! * IsCategoryWithCoequalizers
 #! and not yet algorithmically
 #! * IsFinitelyPresentedCategory
 #! and furthermore mathematically

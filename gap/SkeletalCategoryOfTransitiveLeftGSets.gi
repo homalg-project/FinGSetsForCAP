@@ -343,6 +343,46 @@ InstallMethod( SkeletalCategoryOfTransitiveLeftGSets,
     end );
     
     ##
+    AddProjectionOntoCoequalizerOfIdentityAndAutomorphisms( SkeletalTransitiveGSets,
+      function ( SkeletalTransitiveGSets, target, diagram )
+        local G, U, objects, t, l, gs, Ucoeq, index, cards, positions, pos, g, coeq;
+        
+        G := UnderlyingGroup( SkeletalTransitiveGSets );
+        
+        U := RepresentativesOfSubgroupsUpToConjugation( SkeletalTransitiveGSets );
+        
+        objects := SetOfObjects( SkeletalTransitiveGSets );
+        
+        t := ObjectNumber( target );
+        
+        l := Length( diagram );
+        
+        gs := List( [ 1 .. l ], i -> UnderlyingGroupElement( diagram[i] ) );
+        
+        Ucoeq := Subgroup( G, Concatenation( GeneratorsOfGroup( U[t] ), gs ) );
+        
+        index := Index( G, Ucoeq );
+        
+        cards := CardinalitiesOfObjects( SkeletalTransitiveGSets );
+        
+        positions := Filtered( [ 1 .. NumberOfObjects( SkeletalTransitiveGSets ) ], i -> cards[i] = index );
+        
+        ## pos := SafeUniqueEntry( positions, c -> IsConjugate( G, Ucoeq, U[c] ) );
+        ## but for performance we use:
+        pos := SafeFirst( positions, c -> IsConjugate( G, Ucoeq, U[c] ) );
+        
+        g := RepresentativeAction( G, Ucoeq, U[pos] );
+        
+        coeq := objects[pos];
+        
+        return MorphismConstructor( SkeletalTransitiveGSets,
+                       target,
+                       g,
+                       coeq );
+        
+    end );
+    
+    ##
     AddIsHomSetInhabited( SkeletalTransitiveGSets,
       function ( SkeletalTransitiveGSets, source, target )
         local G, U, s, t, L;
