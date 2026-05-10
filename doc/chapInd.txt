@@ -5,7 +5,7 @@
   [2XAsList[102X, for IsObjectInSkeletalCategoryOfFiniteRightGSets 2.1-1 
   [2XCardinalitiesOfObjects[102X, for IsSkeletalCategoryOfTransitiveLeftGSets 3.1-5 
   [2XCardinality[102X, for IsObjectInSkeletalCategoryOfTransitiveLeftGSets 3.1-9 
-  [2XCoequalizerMorphisms[102X, for IsObjectInSkeletalCategoryOfTransitiveLeftGSets 3.1-11 
+  [2XCoequalizerAutomorphisms[102X, for IsObjectInSkeletalCategoryOfTransitiveLeftGSets 3.1-11 
   [2XEmbeddingOfUnderlyingGroupAsCategory[102X, for IsSkeletalCategoryOfTransitiveLeftGSets 3.1-12 
   [2XEndAsEqualizer[102X 5.1-1 
   [2XEndByLifts[102X 5.1-2 

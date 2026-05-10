@@ -80,15 +80,15 @@
   
   [33X[0;0YThe cardinality of the transitive left [23XG[123X-set [3XOmega[103X.[133X
   
-  [1X3.1-11 CoequalizerMorphisms[101X
+  [1X3.1-11 CoequalizerAutomorphisms[101X
   
-  [33X[1;0Y[29X[2XCoequalizerMorphisms[102X( [3XOmega[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XCoequalizerAutomorphisms[102X( [3XOmega[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya list of morphisms[133X
   
   [33X[0;0YThe  input is a transitive left [23XG[123X-set [3XOmega[103X [23X\cong G / U_i[123X. The output is the
-  list  of  endomorphisms  of  the  principal  [23XG[123X-set  [23XG  /  U_1[123X defined by the
-  generators  of  [23XU_i[123X. The coequalizers of these morphisms is the input object
-  [3XOmega[103X [23X\cong G / U_i[123X.[133X
+  list  of  automorphisms  of  the  principal  [23XG[123X-set  [23XG  /  U_1[123X defined by the
+  generators  of [23XU_i[123X. The coequalizers of the identity and these automorphisms
+  is the input object [3XOmega[103X [23X\cong G / U_i[123X.[133X
   
   [1X3.1-12 EmbeddingOfUnderlyingGroupAsCategory[101X
   
@@ -130,14 +130,14 @@
     [4X[28XA CAP category with name SkeletalCategoryOfTransitiveLeftGSets( S3 ) \[128X[104X
     [4X[28Xwith 4 objects:[128X[104X
     [4X[28X[128X[104X
-    [4X[28X24 primitive operations were used to derive 71 operations for this category \[128X[104X
+    [4X[28X25 primitive operations were used to derive 80 operations for this category \[128X[104X
     [4X[28Xwhich algorithmically[128X[104X
     [4X[28X* IsCategoryWithDecidableColifts[128X[104X
     [4X[28X* IsCategoryWithDecidableLifts[128X[104X
     [4X[28X* IsCategoryWithTerminalObject[128X[104X
     [4X[28X* IsFiniteCategory[128X[104X
-    [4X[28X* IsCategoryWithCoequalizers[128X[104X
     [4X[28X* IsEquippedWithHomomorphismStructure[128X[104X
+    [4X[28X* IsCategoryWithCoequalizers[128X[104X
     [4X[28Xand not yet algorithmically[128X[104X
     [4X[28X* IsFinitelyPresentedCategory[128X[104X
     [4X[28Xand furthermore mathematically[128X[104X
@@ -220,8 +220,8 @@
     [4X[28X2 -> 4[128X[104X
     [4X[28X3 -> 4[128X[104X
     [4X[28X}[128X[104X
-    [4X[25Xgap>[125X [27XForAll( objs, o -> o = Coequalizer( Omega1,[127X[104X
-    [4X[25X>[125X [27X        List( CoequalizerMorphisms( o ), g -> g / TS3 ) ) );[127X[104X
+    [4X[25Xgap>[125X [27XForAll( objs, o -> o = CoequalizerOfIdentityAndAutomorphisms( Omega1,[127X[104X
+    [4X[25X>[125X [27X        List( CoequalizerAutomorphisms( o ), g -> g / TS3 ) ) );[127X[104X
     [4X[28Xtrue[128X[104X
   [4X[32X[104X
   

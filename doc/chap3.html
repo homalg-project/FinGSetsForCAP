@@ -35,7 +35,7 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X79A5E66487CFB363">3.1-8 UnderlyingGroupElement</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X80488D857EA76422">3.1-9 Cardinality</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X81FA25DB808C283D">3.1-10 Size</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X7F69D389840AC089">3.1-11 CoequalizerMorphisms</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X78CBB677839052CE">3.1-11 CoequalizerAutomorphisms</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X86CBF7C27A955A81">3.1-12 EmbeddingOfUnderlyingGroupAsCategory</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X8282DB87834DFF0A">3.1-13 ExtendFunctorToSkeletalCategoryOfTransitiveLeftGSets</a></span>
 </div></div>
@@ -149,14 +149,14 @@
 
 <p>The cardinality of the transitive left <span class="Math">G</span>-set <var class="Arg">Omega</var>.</p>
 
-<p><a id="X7F69D389840AC089" name="X7F69D389840AC089"></a></p>
+<p><a id="X78CBB677839052CE" name="X78CBB677839052CE"></a></p>
 
-<h5>3.1-11 CoequalizerMorphisms</h5>
+<h5>3.1-11 CoequalizerAutomorphisms</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CoequalizerMorphisms</code>( <var class="Arg">Omega</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CoequalizerAutomorphisms</code>( <var class="Arg">Omega</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a list of morphisms</p>
 
-<p>The input is a transitive left <span class="Math">G</span>-set <var class="Arg">Omega</var> <span class="Math">\cong G / U_i</span>. The output is the list of endomorphisms of the principal <span class="Math">G</span>-set <span class="Math">G / U_1</span> defined by the generators of <span class="Math">U_i</span>. The coequalizers of these morphisms is the input object <var class="Arg">Omega</var> <span class="Math">\cong G / U_i</span>.</p>
+<p>The input is a transitive left <span class="Math">G</span>-set <var class="Arg">Omega</var> <span class="Math">\cong G / U_i</span>. The output is the list of automorphisms of the principal <span class="Math">G</span>-set <span class="Math">G / U_1</span> defined by the generators of <span class="Math">U_i</span>. The coequalizers of the identity and these automorphisms is the input object <var class="Arg">Omega</var> <span class="Math">\cong G / U_i</span>.</p>
 
 <p><a id="X86CBF7C27A955A81" name="X86CBF7C27A955A81"></a></p>
 
@@ -203,14 +203,14 @@ SkeletalCategoryOfTransitiveLeftGSets( S3 ) with 4 objects
 A CAP category with name SkeletalCategoryOfTransitiveLeftGSets( S3 ) \
 with 4 objects:
 
-24 primitive operations were used to derive 71 operations for this category \
+25 primitive operations were used to derive 80 operations for this category \
 which algorithmically
 * IsCategoryWithDecidableColifts
 * IsCategoryWithDecidableLifts
 * IsCategoryWithTerminalObject
 * IsFiniteCategory
-* IsCategoryWithCoequalizers
 * IsEquippedWithHomomorphismStructure
+* IsCategoryWithCoequalizers
 and not yet algorithmically
 * IsFinitelyPresentedCategory
 and furthermore mathematically
@@ -293,8 +293,8 @@ edge [arrowsize=0.5]
 2 -&gt; 4
 3 -&gt; 4
 }
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ForAll( objs, o -&gt; o = Coequalizer( Omega1,</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">        List( CoequalizerMorphisms( o ), g -&gt; g / TS3 ) ) );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ForAll( objs, o -&gt; o = CoequalizerOfIdentityAndAutomorphisms( Omega1,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">        List( CoequalizerAutomorphisms( o ), g -&gt; g / TS3 ) ) );</span>
 true
 </pre></div>
 
