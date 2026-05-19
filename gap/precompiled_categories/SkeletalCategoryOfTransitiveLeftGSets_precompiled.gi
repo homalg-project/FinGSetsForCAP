@@ -40,6 +40,20 @@ end
         
     , 100 );
     
+    ##
+    AddIsWellDefinedForMorphisms( cat,
+        
+########
+function ( cat_1, alpha_1 )
+    local deduped_1_1, deduped_2_1;
+    deduped_2_1 := RepresentativesOfSubgroupsUpToConjugation( cat_1 );
+    deduped_1_1 := UnderlyingGroupElement( alpha_1 );
+    return deduped_1_1 in UnderlyingGroup( cat_1 ) and IsSubset( deduped_2_1[ObjectNumber( Target( alpha_1 ) )], ConjugateSubgroup( deduped_2_1[ObjectNumber( Source( alpha_1 ) )], deduped_1_1 ) );
+end
+########
+        
+    , 100 );
+    
     if IsBound( cat!.precompiled_functions_added ) then
         
         # COVERAGE_IGNORE_NEXT_LINE

@@ -31,7 +31,7 @@ list_of_operations :=
           [ "SetOfObjectsOfCategory",
             "IsEqualForObjects",
             "IsWellDefinedForObjects",
-            #"IsWellDefinedForMorphisms",
+            "IsWellDefinedForMorphisms",
             ];;
   #) );;
 
