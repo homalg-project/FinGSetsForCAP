@@ -6,10 +6,10 @@
                [1X The (skeletal) elementary topos of finite G-sets [101X
   
   
-                                   2026.05-04
+                                   2026.05-05
   
   
-                                  10 May 2026
+                                  19 May 2026
   
   
                                 Mohamed Barakat
@@ -112,7 +112,9 @@
     5.2 [33X[0;0YExamples[133X
       5.2-1 [33X[0;0YReconstructing the Table of Marks[133X
       5.2-2 [33X[0;0YReconstructing the Group[133X
-  6 [33X[0;0YBibliography[133X
+  6 [33X[0;0YPrecompilation[133X
+    6.1 [33X[0;0YPrecompiling the skeletal category of finite left G-sets[133X
+  7 [33X[0;0YBibliography[133X
   
   
   [32X

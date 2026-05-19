@@ -1,5 +1,55 @@
   
-  [1X6 [33X[0;0YBibliography[133X[101X
+  [1X6 [33X[0;0YPrecompilation[133X[101X
   
-  [33X[0;0YSee the PDF version of this manual.[133X
+  
+  [1X6.1 [33X[0;0YPrecompiling the skeletal category of finite left G-sets[133X[101X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X#@if ValueOption( "no_precompiled_code" ) <> true[128X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FinGSetsForCAP", false );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "CompilerForCAP", ">= 2026.05-01", false );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XReadPackageOnce( "FinSetsForCAP", "gap/CompilerLogic.gi" );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xcategory_constructor :=[127X[104X
+    [4X[25X>[125X [27X  G -> SkeletalCategoryOfTransitiveLeftGSets([127X[104X
+    [4X[25X>[125X [27X          GROUP_AS_CATEGORY( G : FinalizeCategory := true ) );;[127X[104X
+    [4X[25Xgap>[125X [27XC2 := CyclicGroup( 2 );; StructureDescription( C2 );; C2;[127X[104X
+    [4X[28XC2[128X[104X
+    [4X[25Xgap>[125X [27Xgiven_arguments := [ C2 ];;[127X[104X
+    [4X[25Xgap>[125X [27Xcompiled_category_name :=[127X[104X
+    [4X[25X>[125X [27X  "SkeletalCategoryOfTransitiveLeftGSets_precompiled";;[127X[104X
+    [4X[25Xgap>[125X [27Xpackage_name := "FinGSetsForCAP";;[127X[104X
+    [4X[25Xgap>[125X [27X#primitive_operations :=[127X[104X
+    [4X[25X>[125X [27X#  ListPrimitivelyInstalledOperationsOfCategory([127X[104X
+    [4X[25X>[125X [27X#          category_constructor( given_arguments[1][127X[104X
+    [4X[25X>[125X [27X#          : no_precompiled_code := true ) );;[127X[104X
+    [4X[25Xgap>[125X [27Xlist_of_operations :=[127X[104X
+    [4X[25X>[125X [27X  #SortedList( Concatenation( primitive_operations,[127X[104X
+    [4X[25X>[125X [27X          [ "SetOfObjectsOfCategory",[127X[104X
+    [4X[25X>[125X [27X            "IsEqualForObjects",[127X[104X
+    [4X[25X>[125X [27X            "IsWellDefinedForObjects",[127X[104X
+    [4X[25X>[125X [27X            #"IsWellDefinedForMorphisms",[127X[104X
+    [4X[25X>[125X [27X            ];;[127X[104X
+    [4X[25Xgap>[125X [27X  #) );;[127X[104X
+    [4X[25Xgap>[125X [27XCapJitPrecompileCategoryAndCompareResult([127X[104X
+    [4X[25X>[125X [27X        category_constructor,[127X[104X
+    [4X[25X>[125X [27X        given_arguments,[127X[104X
+    [4X[25X>[125X [27X        package_name,[127X[104X
+    [4X[25X>[125X [27X        compiled_category_name[127X[104X
+    [4X[25X>[125X [27X        : operations := list_of_operations,[127X[104X
+    [4X[25X>[125X [27X        number_of_objectified_objects_in_data_structure_of_object := 1,[127X[104X
+    [4X[25X>[125X [27X        number_of_objectified_morphisms_in_data_structure_of_object := 0,[127X[104X
+    [4X[25X>[125X [27X        number_of_objectified_objects_in_data_structure_of_morphism := 2,[127X[104X
+    [4X[25X>[125X [27X        number_of_objectified_morphisms_in_data_structure_of_morphism := 1[127X[104X
+    [4X[25X>[125X [27X);;[127X[104X
+    [4X[25Xgap>[125X [27XSkeletalCategoryOfTransitiveLeftGSets_precompiled( C2 );[127X[104X
+    [4X[28XSkeletalCategoryOfTransitiveLeftGSets( C2 ) with 2 objects[128X[104X
+    [4X[25Xgap>[125X [27Xcat := SkeletalCategoryOfTransitiveLeftGSets( C2 );[127X[104X
+    [4X[28XSkeletalCategoryOfTransitiveLeftGSets( C2 ) with 2 objects[128X[104X
+    [4X[25Xgap>[125X [27Xcat!.precompiled_functions_added;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28X#@fi[128X[104X
+  [4X[32X[104X
   

@@ -47,7 +47,7 @@
   [33X[1;0Y[29X[2XRepresentativesOfSubgroupsUpToConjugation[102X( [3XC[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya positive integer[133X
   
-  [33X[0;0YThe number of objects of the skeletal category [3XC[103X of transitive left [23XG[123X-set.[133X
+  [33X[0;0YThe list of subgroups up to conjugation of the underlying group.[133X
   
   [1X3.1-7 ObjectNumber[101X
   
