@@ -215,7 +215,7 @@ InstallMethod( SkeletalCategoryOfTransitiveLeftGSets,
       function ( SkeletalTransitiveGSets, mor_pre, mor_post )
         
         ## we choose the left cosets in order for the embedding G ↪ SkeletalCategoryOfTransitiveLeftGSets( G ) to be covariant:
-        ## g: G/U → G/V, h: G/V → G/W, translates to U ⊆ ᵍV, V ⊆ ʰW ⟹ U ⊆ ᵍV ⊆ ᵍʰW
+        ## g: G/U → G/V, h: G/V → G/W, translates to Uᵍ ⊆ V, Vʰ ⊆ W ⟹ Uᵍʰ ⊆ Vʰ ⊆ W
         return MorphismConstructor( SkeletalTransitiveGSets,
                        Source( mor_pre ),
                        UnderlyingGroupElement( mor_pre ) * UnderlyingGroupElement( mor_post ),
