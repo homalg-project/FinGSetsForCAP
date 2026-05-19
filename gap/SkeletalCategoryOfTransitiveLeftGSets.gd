@@ -110,7 +110,7 @@ DeclareAttribute( "CardinalitiesOfObjects",
 #end );
 
 #! @Description
-#!  The number of objects of the skeletal category <A>C</A> of transitive left $G$-set.
+#!  The list of subgroups up to conjugation of the underlying group.
 #! @Arguments C
 #! @Returns a positive integer
 DeclareAttribute( "RepresentativesOfSubgroupsUpToConjugation",
