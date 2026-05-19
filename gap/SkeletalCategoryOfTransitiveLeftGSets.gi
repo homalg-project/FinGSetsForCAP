@@ -15,7 +15,10 @@ InstallMethod( SkeletalCategoryOfTransitiveLeftGSets,
     [ "overhead", true ],
   ],
   function ( CAP_NAMED_ARGUMENTS, group_as_category )
-    local group, name_of_group, tom, u, name, SkeletalTransitiveGSets;
+    local group, name_of_group, tom, u,
+          name, category_filter, category_object_filter, category_morphism_filter,
+          object_datum_type, morphism_datum_type,
+          SkeletalTransitiveGSets;
     
     group := UnderlyingGroup( group_as_category );
     
@@ -34,14 +37,26 @@ InstallMethod( SkeletalCategoryOfTransitiveLeftGSets,
     
     name := Concatenation( "SkeletalCategoryOfTransitiveLeftGSets( ", name_of_group, " ) with ", String( u ), " objects" );
     
+    ##
+    category_filter := IsSkeletalCategoryOfTransitiveLeftGSets;
+    category_object_filter := IsObjectInSkeletalCategoryOfTransitiveLeftGSets;
+    category_morphism_filter := IsMorphismInSkeletalCategoryOfTransitiveLeftGSets;
+    
+    ##
+    object_datum_type := IsBigInt;
+    
+    ##
+    morphism_datum_type := CapJitDataTypeOfElementOfGroup( group );
+    
     SkeletalTransitiveGSets :=
-      CreateCapCategoryWithDataTypes( name,
-              IsSkeletalCategoryOfTransitiveLeftGSets,
-              IsObjectInSkeletalCategoryOfTransitiveLeftGSets,
-              IsMorphismInSkeletalCategoryOfTransitiveLeftGSets,
+      CreateCapCategoryWithDataTypes(
+              name,
+              category_filter,
+              category_object_filter,
+              category_morphism_filter,
               IsCapCategoryTwoCell,
-              IsBigInt,
-              IsMultiplicativeElementWithInverse,
+              object_datum_type,
+              morphism_datum_type,
               fail :
               overhead := CAP_NAMED_ARGUMENTS.overhead );
     
@@ -215,7 +230,7 @@ InstallMethod( SkeletalCategoryOfTransitiveLeftGSets,
       function ( SkeletalTransitiveGSets, mor_pre, mor_post )
         
         ## we choose the left cosets in order for the embedding G ↪ SkeletalCategoryOfTransitiveLeftGSets( G ) to be covariant:
-        ## g: G/U → G/V, h: G/V → G/W, translates to U ⊆ ᵍV, V ⊆ ʰW ⟹ U ⊆ ᵍV ⊆ ᵍʰW
+        ## g: G/U → G/V, h: G/V → G/W, translates to Uᵍ ⊆ V, Vʰ ⊆ W ⟹ Uᵍʰ ⊆ Vʰ ⊆ W
         return MorphismConstructor( SkeletalTransitiveGSets,
                        Source( mor_pre ),
                        UnderlyingGroupElement( mor_pre ) * UnderlyingGroupElement( mor_post ),
@@ -450,6 +465,12 @@ InstallMethod( SkeletalCategoryOfTransitiveLeftGSets,
         
     end );
     
+    if CAP_NAMED_ARGUMENTS.no_precompiled_code <> true then
+        
+        ADD_FUNCTIONS_FOR_SkeletalCategoryOfTransitiveLeftGSets_precompiled( SkeletalTransitiveGSets );
+        
+    fi;
+    
     if CAP_NAMED_ARGUMENTS.FinalizeCategory then
         Finalize( SkeletalTransitiveGSets );
     fi;
@@ -494,13 +515,13 @@ InstallMethod( \.,
 end );
 
 ##
-InstallMethod( SetOfObjects,
+InstallMethodForCompilerForCAP( SetOfObjects,
         "for the skeletal category of transitive left G-sets",
         [ IsSkeletalCategoryOfTransitiveLeftGSets ],
         
   function ( SkeletalTransitiveGSets )
     
-    return SetOfObjectsOfCategory( SkeletalTransitiveGSets );
+    return SetOfObjectsAsUnresolvableAttribute( SkeletalTransitiveGSets );
     
 end );
 
