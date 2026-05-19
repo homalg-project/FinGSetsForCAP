@@ -49,7 +49,7 @@ InstallMethod( SkeletalCategoryOfTransitiveLeftGSets,
     morphism_datum_type := CapJitDataTypeOfElementOfGroup( group );
     
     SkeletalTransitiveGSets :=
-      CreateCapCategoryWithDataTypes( name,
+      CreateCapCategoryWithDataTypes(
               name,
               category_filter,
               category_object_filter,
@@ -465,6 +465,12 @@ InstallMethod( SkeletalCategoryOfTransitiveLeftGSets,
         
     end );
     
+    if CAP_NAMED_ARGUMENTS.no_precompiled_code <> true then
+        
+        ADD_FUNCTIONS_FOR_SkeletalCategoryOfTransitiveLeftGSets_precompiled( SkeletalTransitiveGSets );
+        
+    fi;
+    
     if CAP_NAMED_ARGUMENTS.FinalizeCategory then
         Finalize( SkeletalTransitiveGSets );
     fi;
@@ -509,13 +515,13 @@ InstallMethod( \.,
 end );
 
 ##
-InstallMethod( SetOfObjects,
+InstallMethodForCompilerForCAP( SetOfObjects,
         "for the skeletal category of transitive left G-sets",
         [ IsSkeletalCategoryOfTransitiveLeftGSets ],
         
   function ( SkeletalTransitiveGSets )
     
-    return SetOfObjectsOfCategory( SkeletalTransitiveGSets );
+    return SetOfObjectsAsUnresolvableAttribute( SkeletalTransitiveGSets );
     
 end );
 
