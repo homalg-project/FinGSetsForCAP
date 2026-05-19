@@ -15,7 +15,10 @@ InstallMethod( SkeletalCategoryOfTransitiveLeftGSets,
     [ "overhead", true ],
   ],
   function ( CAP_NAMED_ARGUMENTS, group_as_category )
-    local group, name_of_group, tom, u, name, SkeletalTransitiveGSets;
+    local group, name_of_group, tom, u,
+          name, category_filter, category_object_filter, category_morphism_filter,
+          object_datum_type, morphism_datum_type,
+          SkeletalTransitiveGSets;
     
     group := UnderlyingGroup( group_as_category );
     
@@ -34,14 +37,26 @@ InstallMethod( SkeletalCategoryOfTransitiveLeftGSets,
     
     name := Concatenation( "SkeletalCategoryOfTransitiveLeftGSets( ", name_of_group, " ) with ", String( u ), " objects" );
     
+    ##
+    category_filter := IsSkeletalCategoryOfTransitiveLeftGSets;
+    category_object_filter := IsObjectInSkeletalCategoryOfTransitiveLeftGSets;
+    category_morphism_filter := IsMorphismInSkeletalCategoryOfTransitiveLeftGSets;
+    
+    ##
+    object_datum_type := IsBigInt;
+    
+    ##
+    morphism_datum_type := CapJitDataTypeOfElementOfGroup( group );
+    
     SkeletalTransitiveGSets :=
       CreateCapCategoryWithDataTypes( name,
-              IsSkeletalCategoryOfTransitiveLeftGSets,
-              IsObjectInSkeletalCategoryOfTransitiveLeftGSets,
-              IsMorphismInSkeletalCategoryOfTransitiveLeftGSets,
+              name,
+              category_filter,
+              category_object_filter,
+              category_morphism_filter,
               IsCapCategoryTwoCell,
-              IsBigInt,
-              IsMultiplicativeElementWithInverse,
+              object_datum_type,
+              morphism_datum_type,
               fail :
               overhead := CAP_NAMED_ARGUMENTS.overhead );
     
