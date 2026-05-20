@@ -15,6 +15,24 @@
 #! @Description
 #! The GAP category of the skeletal category of transitive left $G$-sets.
 #! @Arguments object
+DeclareCategory( "IsCoequalizerCompletionOfGroupAsCategory",
+                 IsCapCategory and IsSkeletalCategory );
+
+#! @Description
+#! The GAP category of objects in the skeletal category of transitive left $G$-sets.
+#! @Arguments object
+DeclareCategory( "IsObjectInCoequalizerCompletionOfGroupAsCategory",
+                 IsCapCategoryObject );
+
+#! @Description
+#! The GAP category of morphisms in the skeletal category of transitive left $G$-sets.
+#! @Arguments object
+DeclareCategory( "IsMorphismInCoequalizerCompletionOfGroupAsCategory",
+                 FilterIntersection( IsCapCategoryMorphism, IsEpimorphism ) );
+
+#! @Description
+#! The GAP category of the skeletal category of transitive left $G$-sets.
+#! @Arguments object
 DeclareCategory( "IsSkeletalCategoryOfTransitiveLeftGSets",
                  IsCapCategory and IsSkeletalCategory );
 
@@ -41,6 +59,14 @@ DeclareCategory( "IsMorphismInSkeletalCategoryOfTransitiveLeftGSets",
 #! The output is the skeletal category of transitive $G$-Sets.
 #! @Returns a category
 #! @Arguments G
+DeclareAttribute( "CoequalizerCompletion",
+                  IsGroupAsCategory );
+
+#! @Description
+#! The argument is a group $G$.
+#! The output is the skeletal category of transitive $G$-Sets.
+#! @Returns a category
+#! @Arguments G
 DeclareAttribute( "SkeletalCategoryOfTransitiveLeftGSets",
                   IsGroupAsCategory );
 #! @InsertChunk SkeletalCategoryOfTransitiveLeftGSets
@@ -59,13 +85,112 @@ DeclareAttribute( "SkeletalCategoryOfTransitiveLeftGSets",
 #! @Arguments C
 #! @Returns a group
 DeclareAttribute( "UnderlyingGroup",
-        IsSkeletalCategoryOfTransitiveLeftGSets );
+        IsCoequalizerCompletionOfGroupAsCategory );
 
-CapJitAddTypeSignature( "UnderlyingGroup", [ IsSkeletalCategoryOfTransitiveLeftGSets ], function ( input_types )
+CapJitAddTypeSignature( "UnderlyingGroup", [ IsCoequalizerCompletionOfGroupAsCategory ], function ( input_types )
     
     return CapJitDataTypeOfGroup( UnderlyingGroup( input_types[1].category ) );
     
 end );
+
+#! @Description
+#!  The group $G$ underlying the skeletal category <A>C</A> of transitive left $G$-set, viewed as a category on one object.
+#! @Arguments C
+#! @Returns a group
+DeclareAttribute( "UnderlyingGroupAsCategory",
+        IsCoequalizerCompletionOfGroupAsCategory );
+
+CapJitAddTypeSignature( "UnderlyingGroupAsCategory", [ IsCoequalizerCompletionOfGroupAsCategory ], function ( input_types )
+    
+    return CapJitDataTypeOfCategory( UnderlyingGroupAsCategory( input_types[1].category ) );
+    
+end );
+
+#! @Description
+#!  The table of marks of the group $G$ underlying the skeletal category <A>C</A> of transitive left $G$-set.
+#! @Arguments C
+#! @Returns a table of marks
+DeclareAttribute( "UnderlyingTableOfMarks",
+        IsCoequalizerCompletionOfGroupAsCategory );
+
+#! @Description
+#!  The number of objects of the skeletal category <A>C</A> of transitive left $G$-set.
+#! @Arguments C
+#! @Returns a positive integer
+DeclareAttribute( "NumberOfObjects",
+        IsCoequalizerCompletionOfGroupAsCategory );
+
+CapJitAddTypeSignature( "NumberOfObjects", [ IsCoequalizerCompletionOfGroupAsCategory ], IsBigInt );
+
+#! @Description
+#!  The list of cardinalities of objects of the skeletal category <A>C</A> of transitive left $G$-set.
+#! @Arguments C
+#! @Returns a positive integer
+DeclareAttribute( "CardinalitiesOfObjects",
+        IsCoequalizerCompletionOfGroupAsCategory );
+
+CapJitAddTypeSignature( "CardinalitiesOfObjects", [ IsCoequalizerCompletionOfGroupAsCategory ], function ( input_types )
+    
+    return CapJitDataTypeOfListOf( IsBigInt );
+    
+end );
+
+#! @Description
+#!  The list of subgroups up to conjugation of the underlying group.
+#! @Arguments C
+#! @Returns a positive integer
+DeclareAttribute( "RepresentativesOfSubgroupsUpToConjugation",
+        IsCoequalizerCompletionOfGroupAsCategory );
+
+CapJitAddTypeSignature( "RepresentativesOfSubgroupsUpToConjugation", [ IsCoequalizerCompletionOfGroupAsCategory ], function ( input_types )
+    
+    return CapJitDataTypeOfListOf( CapJitDataTypeOfSubgroup( UnderlyingGroup( input_types[1].category ) ) );
+    
+end );
+
+#! @Description
+#!  The positive integer $i$ such that the transitive left $G$-set <A>Omega</A> $\cong U_i \backslash G$.
+#! @Arguments Omega
+#! @Returns a positive integer
+DeclareAttribute( "ObjectNumber",
+        IsObjectInCoequalizerCompletionOfGroupAsCategory );
+
+CapJitAddTypeSignature( "ObjectNumber", [ IsObjectInCoequalizerCompletionOfGroupAsCategory ], function ( input_types )
+    
+    Assert( 0, IsCoequalizerCompletionOfGroupAsCategory( input_types[1].category ) );
+    
+    return ObjectDatumType( input_types[1].category );
+    
+end );
+
+#! @Description
+#!  The isomorphism defined by the group element $g \in G$ defining the morphism <A>phi</A>: $\cong U_s \backslash G \to U_t \backslash G$
+#!  satisfying $g U_s g^{-1} \leq U_t$, or, equivalently, $g U_s \subseteq U_t g$.
+#! @Arguments phi
+#! @Returns a group element
+DeclareAttribute( "UnderlyingIsomorphism",
+        IsMorphismInCoequalizerCompletionOfGroupAsCategory );
+
+CapJitAddTypeSignature( "UnderlyingIsomorphism", [ IsMorphismInCoequalizerCompletionOfGroupAsCategory ], function ( input_types )
+    
+    Assert( 0, IsCoequalizerCompletionOfGroupAsCategory( input_types[1].category ) );
+    
+    return MorphismDatumType( input_types[1].category );
+    
+end );
+
+#! @Description
+#!  The group $G$ underlying the skeletal category <A>C</A> of transitive left $G$-set.
+#! @Arguments C
+#! @Returns a group
+DeclareAttribute( "UnderlyingGroup",
+        IsSkeletalCategoryOfTransitiveLeftGSets );
+
+#CapJitAddTypeSignature( "UnderlyingGroup", [ IsSkeletalCategoryOfTransitiveLeftGSets ], function ( input_types )
+#
+#    return CapJitDataTypeOfGroup( UnderlyingGroup( input_types[1].category ) );
+#
+#end );
 
 #! @Description
 #!  The group $G$ underlying the skeletal category <A>C</A> of transitive left $G$-set, viewed as a category on one object.
@@ -94,7 +219,7 @@ DeclareAttribute( "UnderlyingTableOfMarks",
 DeclareAttribute( "NumberOfObjects",
         IsSkeletalCategoryOfTransitiveLeftGSets );
 
-CapJitAddTypeSignature( "NumberOfObjects", [ IsSkeletalCategoryOfTransitiveLeftGSets ], IsBigInt );
+#CapJitAddTypeSignature( "NumberOfObjects", [ IsSkeletalCategoryOfTransitiveLeftGSets ], IsBigInt );
 
 #! @Description
 #!  The list of cardinalities of objects of the skeletal category <A>C</A> of transitive left $G$-set.
@@ -103,11 +228,11 @@ CapJitAddTypeSignature( "NumberOfObjects", [ IsSkeletalCategoryOfTransitiveLeftG
 DeclareAttribute( "CardinalitiesOfObjects",
         IsSkeletalCategoryOfTransitiveLeftGSets );
 
-CapJitAddTypeSignature( "CardinalitiesOfObjects", [ IsSkeletalCategoryOfTransitiveLeftGSets ], function ( input_types )
-    
-    return CapJitDataTypeOfListOf( IsBigInt );
-    
-end );
+#CapJitAddTypeSignature( "CardinalitiesOfObjects", [ IsSkeletalCategoryOfTransitiveLeftGSets ], function ( input_types )
+#
+#    return CapJitDataTypeOfListOf( IsBigInt );
+#
+#end );
 
 #! @Description
 #!  The list of subgroups up to conjugation of the underlying group.
@@ -116,15 +241,14 @@ end );
 DeclareAttribute( "RepresentativesOfSubgroupsUpToConjugation",
         IsSkeletalCategoryOfTransitiveLeftGSets );
 
-CapJitAddTypeSignature( "RepresentativesOfSubgroupsUpToConjugation", [ IsSkeletalCategoryOfTransitiveLeftGSets ], function ( input_types )
-    
-    return CapJitDataTypeOfListOf( CapJitDataTypeOfSubgroup( UnderlyingGroup( input_types[1].category ) ) );
-    
-end );
+#CapJitAddTypeSignature( "RepresentativesOfSubgroupsUpToConjugation", [ IsSkeletalCategoryOfTransitiveLeftGSets ], function ( input_types )
+#
+#    return CapJitDataTypeOfListOf( CapJitDataTypeOfSubgroup( UnderlyingGroup( input_types[1].category ) ) );
+#
+#end );
 
 #! @Description
-#!  The positive integer $i$ such that the transitive left $G$-set <A>Omega</A> $\cong U_i \backslash G$, i.e.,
-#!  <C>ObjectNumber( TransitiveGSet( G, i ) ) = i</C>.
+#!  The positive integer $i$ such that the transitive left $G$-set <A>Omega</A> $\cong U_i \backslash G$.
 #! @Arguments Omega
 #! @Returns a positive integer
 DeclareAttribute( "ObjectNumber",
@@ -161,7 +285,7 @@ end );
 DeclareAttribute( "Cardinality",
         IsObjectInSkeletalCategoryOfTransitiveLeftGSets );
 
-CapJitAddTypeSignature( "Cardinality", [ IsObjectInSkeletalCategoryOfTransitiveLeftGSets ], IsBigInt );
+#CapJitAddTypeSignature( "Cardinality", [ IsObjectInSkeletalCategoryOfTransitiveLeftGSets ], IsBigInt );
 
 #! @Description
 #!  The cardinality of the transitive left $G$-set <A>Omega</A>.
