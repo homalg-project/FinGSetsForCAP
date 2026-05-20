@@ -654,74 +654,77 @@ InstallMethodForCompilerForCAP( ExtendFunctorToSkeletalCategoryOfTransitiveLeftG
         [ IsSkeletalCategoryOfTransitiveLeftGSets, IsList, IsCategoryWithCoequalizers ],
         
   function ( SkeletalTransitiveLeftGSets, pair_of_funcs, category_with_coequalizers )
-    local G_as_cat, functor_on_objects, functor_on_morphisms, img_obj,
+    local group_as_category, functor_on_objects, functor_on_morphisms, img_obj,
           extended_functor_on_objects, extended_functor_on_morphisms;
     
-    G_as_cat := UnderlyingGroupAsCategory( SkeletalTransitiveLeftGSets );
+    group_as_category := UnderlyingGroupAsCategory( SkeletalTransitiveLeftGSets );
     
     functor_on_objects := pair_of_funcs[1];
     functor_on_morphisms := pair_of_funcs[2];
     
-    img_obj := functor_on_objects( GroupAsCategoryUniqueObject( G_as_cat ) );
+    img_obj := functor_on_objects( GroupAsCategoryUniqueObject( group_as_category ) );
     
     ## the code below is the doctrine-specific ur-algorithm for the coequalizer completion
     
     extended_functor_on_objects :=
       function ( obj_in_SkeletalTransitiveLeftGSets )
-        local coeq_mors, diagram, coeq;
+        local coeq_mors, automorphisms;
         
         coeq_mors := CoequalizerAutomorphisms( SkeletalTransitiveLeftGSets, obj_in_SkeletalTransitiveLeftGSets );
         
-        diagram := List( coeq_mors, g ->
-                         functor_on_morphisms(
-                                 img_obj,
-                                 g,
-                                 img_obj ) );
+        automorphisms :=
+          List( coeq_mors, g ->
+                functor_on_morphisms(
+                        img_obj,
+                        g,
+                        img_obj ) );
         
-        return CoequalizerOfIdentityAndAutomorphisms( category_with_coequalizers, img_obj, diagram );
+        return CoequalizerOfIdentityAndAutomorphisms( category_with_coequalizers, img_obj, automorphisms );
         
     end;
     
     extended_functor_on_morphisms :=
       function ( source, mor_in_SkeletalTransitiveLeftGSets, target )
-        local coeq_mors_source, coeq_mors_target, diagram_source, diagram_target, g;
+        local coeq_mors_source, coeq_mors_target, automorphisms_source, automorphisms_target, g;
         
         coeq_mors_source := CoequalizerAutomorphisms( SkeletalTransitiveLeftGSets, Source( mor_in_SkeletalTransitiveLeftGSets ) );
         
         coeq_mors_target := CoequalizerAutomorphisms( SkeletalTransitiveLeftGSets, Target( mor_in_SkeletalTransitiveLeftGSets ) );
         
-        diagram_source := List( coeq_mors_source, g ->
-                                functor_on_morphisms(
-                                        img_obj,
-                                        g,
-                                        img_obj ) );
+        automorphisms_source :=
+          List( coeq_mors_source, g ->
+                functor_on_morphisms(
+                        img_obj,
+                        g,
+                        img_obj ) );
         
-        diagram_target := List( coeq_mors_target, g ->
-                                functor_on_morphisms(
-                                        img_obj,
-                                        g,
-                                        img_obj ) );
+        automorphisms_target :=
+          List( coeq_mors_target, g ->
+                functor_on_morphisms(
+                        img_obj,
+                        g,
+                        img_obj ) );
         
-        if not IsEqualForObjects( category_with_coequalizers, source, CoequalizerOfIdentityAndAutomorphisms( category_with_coequalizers, img_obj, diagram_source ) ) then
+        if not IsEqualForObjects( category_with_coequalizers, source, CoequalizerOfIdentityAndAutomorphisms( category_with_coequalizers, img_obj, automorphisms_source ) ) then
             # COVERAGE_IGNORE_NEXT_LINE
-            Error( "source and Coequalizer( diagram_source ) do not coincide\n" );
+            Error( "source and CoequalizerOfIdentityAndAutomorphisms( automorphisms_source ) do not coincide\n" );
         fi;
         
-        if not IsEqualForObjects( category_with_coequalizers, target, CoequalizerOfIdentityAndAutomorphisms( category_with_coequalizers, img_obj, diagram_target ) ) then
+        if not IsEqualForObjects( category_with_coequalizers, target, CoequalizerOfIdentityAndAutomorphisms( category_with_coequalizers, img_obj, automorphisms_target ) ) then
             # COVERAGE_IGNORE_NEXT_LINE
-            Error( "target and Coequalizer( diagram_target ) do not coincide\n" );
+            Error( "target and CoequalizerOfIdentityAndAutomorphisms( automorphisms_target ) do not coincide\n" );
         fi;
         
-        g := GroupAsCategoryMorphism( G_as_cat, UnderlyingGroupElement( mor_in_SkeletalTransitiveLeftGSets ) );
+        g := GroupAsCategoryMorphism( group_as_category, UnderlyingGroupElement( mor_in_SkeletalTransitiveLeftGSets ) );
         
         return CoequalizerOfIdentityAndAutomorphismsFunctorialWithGivenCoequalizers( category_with_coequalizers,
                        source,
-                       diagram_source,
+                       automorphisms_source,
                        functor_on_morphisms(
                                img_obj,
                                g,
                                img_obj ),
-                       diagram_target,
+                       automorphisms_target,
                        target );
         
     end;
