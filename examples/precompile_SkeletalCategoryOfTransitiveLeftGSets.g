@@ -10,8 +10,6 @@ LoadPackage( "FinGSetsForCAP", false );
 #! true
 LoadPackage( "CompilerForCAP", ">= 2026.05-01", false );
 #! true
-ReadPackageOnce( "FinSetsForCAP", "gap/CompilerLogic.gi" );
-#! true
 
 category_constructor :=
   G -> SkeletalCategoryOfTransitiveLeftGSets(
