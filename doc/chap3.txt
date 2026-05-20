@@ -55,9 +55,71 @@
   [6XReturns:[106X  [33X[0;10Ya positive integer[133X
   
   [33X[0;0YThe  positive  integer [23Xi[123X such that the transitive left [23XG[123X-set [3XOmega[103X [23X\cong U_i
-  \backslash G[123X, i.e., [10XObjectNumber( TransitiveGSet( G, i ) ) = i[110X.[133X
+  \backslash G[123X.[133X
   
-  [1X3.1-8 UnderlyingGroupElement[101X
+  [1X3.1-8 UnderlyingIsomorphism[101X
+  
+  [33X[1;0Y[29X[2XUnderlyingIsomorphism[102X( [3Xphi[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya group element[133X
+  
+  [33X[0;0YThe  isomorphism  defined by the group element [23Xg \in G[123X defining the morphism
+  [3Xphi[103X:  [23X\cong  U_s  \backslash  G \to U_t \backslash G[123X satisfying [23Xg U_s g^{-1}
+  \leq U_t[123X, or, equivalently, [23Xg U_s \subseteq U_t g[123X.[133X
+  
+  [1X3.1-9 UnderlyingGroup[101X
+  
+  [33X[1;0Y[29X[2XUnderlyingGroup[102X( [3XC[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya group[133X
+  
+  [33X[0;0YThe group [23XG[123X underlying the skeletal category [3XC[103X of transitive left [23XG[123X-set.[133X
+  
+  [1X3.1-10 UnderlyingGroupAsCategory[101X
+  
+  [33X[1;0Y[29X[2XUnderlyingGroupAsCategory[102X( [3XC[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya group[133X
+  
+  [33X[0;0YThe  group  [23XG[123X  underlying  the skeletal category [3XC[103X of transitive left [23XG[123X-set,
+  viewed as a category on one object.[133X
+  
+  [1X3.1-11 UnderlyingTableOfMarks[101X
+  
+  [33X[1;0Y[29X[2XUnderlyingTableOfMarks[102X( [3XC[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya table of marks[133X
+  
+  [33X[0;0YThe  table  of  marks  of  the group [23XG[123X underlying the skeletal category [3XC[103X of
+  transitive left [23XG[123X-set.[133X
+  
+  [1X3.1-12 NumberOfObjects[101X
+  
+  [33X[1;0Y[29X[2XNumberOfObjects[102X( [3XC[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya positive integer[133X
+  
+  [33X[0;0YThe number of objects of the skeletal category [3XC[103X of transitive left [23XG[123X-set.[133X
+  
+  [1X3.1-13 CardinalitiesOfObjects[101X
+  
+  [33X[1;0Y[29X[2XCardinalitiesOfObjects[102X( [3XC[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya positive integer[133X
+  
+  [33X[0;0YThe  list  of  cardinalities  of  objects  of  the  skeletal  category  [3XC[103X of
+  transitive left [23XG[123X-set.[133X
+  
+  [1X3.1-14 RepresentativesOfSubgroupsUpToConjugation[101X
+  
+  [33X[1;0Y[29X[2XRepresentativesOfSubgroupsUpToConjugation[102X( [3XC[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya positive integer[133X
+  
+  [33X[0;0YThe list of subgroups up to conjugation of the underlying group.[133X
+  
+  [1X3.1-15 ObjectNumber[101X
+  
+  [33X[1;0Y[29X[2XObjectNumber[102X( [3XOmega[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya positive integer[133X
+  
+  [33X[0;0YThe  positive  integer [23Xi[123X such that the transitive left [23XG[123X-set [3XOmega[103X [23X\cong U_i
+  \backslash G[123X.[133X
+  
+  [1X3.1-16 UnderlyingGroupElement[101X
   
   [33X[1;0Y[29X[2XUnderlyingGroupElement[102X( [3Xphi[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya group element[133X
@@ -66,21 +128,21 @@
   \to  U_t  \backslash G[123X satisfying [23Xg U_s g^{-1} \leq U_t[123X, or, equivalently, [23Xg
   U_s \subseteq U_t g[123X.[133X
   
-  [1X3.1-9 Cardinality[101X
+  [1X3.1-17 Cardinality[101X
   
   [33X[1;0Y[29X[2XCardinality[102X( [3XOmega[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya positive integer[133X
   
   [33X[0;0YThe cardinality of the transitive left [23XG[123X-set [3XOmega[103X.[133X
   
-  [1X3.1-10 Size[101X
+  [1X3.1-18 Size[101X
   
   [33X[1;0Y[29X[2XSize[102X( [3XOmega[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya positive integer[133X
   
   [33X[0;0YThe cardinality of the transitive left [23XG[123X-set [3XOmega[103X.[133X
   
-  [1X3.1-11 CoequalizerAutomorphisms[101X
+  [1X3.1-19 CoequalizerAutomorphisms[101X
   
   [33X[1;0Y[29X[2XCoequalizerAutomorphisms[102X( [3XOmega[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya list of morphisms[133X
@@ -90,7 +152,7 @@
   generators  of [23XU_i[123X. The coequalizers of the identity and these automorphisms
   is the input object [3XOmega[103X [23X\cong G / U_i[123X.[133X
   
-  [1X3.1-12 EmbeddingOfUnderlyingGroupAsCategory[101X
+  [1X3.1-20 EmbeddingOfUnderlyingGroupAsCategory[101X
   
   [33X[1;0Y[29X[2XEmbeddingOfUnderlyingGroupAsCategory[102X( [3XUC[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya CAP functor[133X
@@ -98,7 +160,7 @@
   [33X[0;0YThe   full  embedding  functor  from  the  group  [23XG[123X  underlying  the  finite
   coequalizer completion [3XTG[103X into [3XTG[103X.[133X
   
-  [1X3.1-13 ExtendFunctorToSkeletalCategoryOfTransitiveLeftGSets[101X
+  [1X3.1-21 ExtendFunctorToSkeletalCategoryOfTransitiveLeftGSets[101X
   
   [33X[1;0Y[29X[2XExtendFunctorToSkeletalCategoryOfTransitiveLeftGSets[102X( [3XUC[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya CAP functor[133X
@@ -109,7 +171,15 @@
   
   [1X3.2 [33X[0;0YConstructors[133X[101X
   
-  [1X3.2-1 SkeletalCategoryOfTransitiveLeftGSets[101X
+  [1X3.2-1 CoequalizerCompletion[101X
+  
+  [33X[1;0Y[29X[2XCoequalizerCompletion[102X( [3XG[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya category[133X
+  
+  [33X[0;0YThe argument is a group [23XG[123X. The output is the skeletal category of transitive
+  [23XG[123X-Sets.[133X
+  
+  [1X3.2-2 SkeletalCategoryOfTransitiveLeftGSets[101X
   
   [33X[1;0Y[29X[2XSkeletalCategoryOfTransitiveLeftGSets[102X( [3XG[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya category[133X
@@ -228,14 +298,37 @@
   
   [1X3.3 [33X[0;0YGAP categories[133X[101X
   
-  [1X3.3-1 IsSkeletalCategoryOfTransitiveLeftGSets[101X
+  [1X3.3-1 IsCoequalizerCompletionOfGroupAsCategory[101X
+  
+  [33X[1;0Y[29X[2XIsCoequalizerCompletionOfGroupAsCategory[102X( [3Xobject[103X ) [32X Category[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
+  
+  [33X[0;0YThe GAP category of the skeletal category of transitive left [23XG[123X-sets.[133X
+  
+  [1X3.3-2 IsObjectInCoequalizerCompletionOfGroupAsCategory[101X
+  
+  [33X[1;0Y[29X[2XIsObjectInCoequalizerCompletionOfGroupAsCategory[102X( [3Xobject[103X ) [32X Category[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
+  
+  [33X[0;0YThe  GAP  category  of  objects  in the skeletal category of transitive left
+  [23XG[123X-sets.[133X
+  
+  [1X3.3-3 IsMorphismInCoequalizerCompletionOfGroupAsCategory[101X
+  
+  [33X[1;0Y[29X[2XIsMorphismInCoequalizerCompletionOfGroupAsCategory[102X( [3Xobject[103X ) [32X Category[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
+  
+  [33X[0;0YThe  GAP  category  of morphisms in the skeletal category of transitive left
+  [23XG[123X-sets.[133X
+  
+  [1X3.3-4 IsSkeletalCategoryOfTransitiveLeftGSets[101X
   
   [33X[1;0Y[29X[2XIsSkeletalCategoryOfTransitiveLeftGSets[102X( [3Xobject[103X ) [32X Category[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
   
   [33X[0;0YThe GAP category of the skeletal category of transitive left [23XG[123X-sets.[133X
   
-  [1X3.3-2 IsObjectInSkeletalCategoryOfTransitiveLeftGSets[101X
+  [1X3.3-5 IsObjectInSkeletalCategoryOfTransitiveLeftGSets[101X
   
   [33X[1;0Y[29X[2XIsObjectInSkeletalCategoryOfTransitiveLeftGSets[102X( [3Xobject[103X ) [32X Category[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
@@ -243,7 +336,7 @@
   [33X[0;0YThe  GAP  category  of  objects  in the skeletal category of transitive left
   [23XG[123X-sets.[133X
   
-  [1X3.3-3 IsMorphismInSkeletalCategoryOfTransitiveLeftGSets[101X
+  [1X3.3-6 IsMorphismInSkeletalCategoryOfTransitiveLeftGSets[101X
   
   [33X[1;0Y[29X[2XIsMorphismInSkeletalCategoryOfTransitiveLeftGSets[102X( [3Xobject[103X ) [32X Category[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
