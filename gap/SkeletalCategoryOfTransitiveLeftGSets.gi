@@ -505,12 +505,12 @@ InstallMethod( \.,
         "for the skeletal category of transitive left G-sets and a positive integer",
         [ IsSkeletalCategoryOfTransitiveLeftGSets, IsPosInt ],
 
-  function ( SkeletalTransitiveGSets, string_as_int )
+  function ( SkeletalTransitiveLeftGSets, string_as_int )
     local name;
     
     name := NameRNam( string_as_int );
     
-    return EvalString( name ) / SkeletalTransitiveGSets;
+    return EvalString( name ) / SkeletalTransitiveLeftGSets;
     
 end );
 
@@ -519,9 +519,9 @@ InstallMethodForCompilerForCAP( SetOfObjects,
         "for the skeletal category of transitive left G-sets",
         [ IsSkeletalCategoryOfTransitiveLeftGSets ],
         
-  function ( SkeletalTransitiveGSets )
+  function ( SkeletalTransitiveLeftGSets )
     
-    return SetOfObjectsAsUnresolvableAttribute( SkeletalTransitiveGSets );
+    return SetOfObjectsAsUnresolvableAttribute( SkeletalTransitiveLeftGSets );
     
 end );
 
@@ -552,13 +552,13 @@ InstallMethod( Cardinality,
         [ IsObjectInSkeletalCategoryOfTransitiveLeftGSets ],
         
   function ( Omega )
-    local SkeletalTransitiveGSets, U;
+    local SkeletalTransitiveLeftGSets, U;
     
-    SkeletalTransitiveGSets := CapCategory( Omega );
+    SkeletalTransitiveLeftGSets := CapCategory( Omega );
     
-    U := RepresentativesOfSubgroupsUpToConjugation( SkeletalTransitiveGSets );
+    U := RepresentativesOfSubgroupsUpToConjugation( SkeletalTransitiveLeftGSets );
     
-    return Index( UnderlyingGroup( SkeletalTransitiveGSets ), U[ObjectNumber( Omega )] );
+    return Index( UnderlyingGroup( SkeletalTransitiveLeftGSets ), U[ObjectNumber( Omega )] );
     
 end );
 
@@ -578,14 +578,14 @@ InstallOtherMethodForCompilerForCAP( CoequalizerAutomorphisms,
         "for the skeletal category of transitive left G-sets and a transitive left G-set therein",
         [ IsSkeletalCategoryOfTransitiveLeftGSets, IsObjectInSkeletalCategoryOfTransitiveLeftGSets ],
         
-  function ( SkeletalTransitiveGSets, Omega )
+  function ( SkeletalTransitiveLeftGSets, Omega )
     local G_as_cat, P, U, gs;
 
-    G_as_cat := UnderlyingGroupAsCategory( SkeletalTransitiveGSets );
+    G_as_cat := UnderlyingGroupAsCategory( SkeletalTransitiveLeftGSets );
     
     P := GroupAsCategoryUniqueObject( G_as_cat );
     
-    U := RepresentativesOfSubgroupsUpToConjugation( SkeletalTransitiveGSets );
+    U := RepresentativesOfSubgroupsUpToConjugation( SkeletalTransitiveLeftGSets );
     
     gs := GeneratorsOfGroup( U[ObjectNumber( Omega )] );
     
@@ -613,18 +613,18 @@ InstallMethodForCompilerForCAP( EmbeddingOfUnderlyingGroupAsCategoryData,
         "for a skeletal category of transitive left G-sets",
         [ IsSkeletalCategoryOfTransitiveLeftGSets ],
         
-  function ( SkeletalTransitiveGSets )
+  function ( SkeletalTransitiveLeftGSets )
     local embedding_on_objects, embedding_on_morphisms;
     
     embedding_on_objects :=
-      uniq_object -> SetOfObjectsOfCategory( SkeletalTransitiveGSets )[1];
+      uniq_object -> SetOfObjects( SkeletalTransitiveLeftGSets )[1];
     
     embedding_on_morphisms :=
-      { source, morG, target } -> MorphismConstructor( SkeletalTransitiveGSets, source, UnderlyingGroupElement( morG ), target );
+      { source, morG, target } -> MorphismConstructor( SkeletalTransitiveLeftGSets, source, UnderlyingGroupElement( morG ), target );
     
-    return Triple( UnderlyingGroupAsCategory( SkeletalTransitiveGSets ),
+    return Triple( UnderlyingGroupAsCategory( SkeletalTransitiveLeftGSets ),
                    Pair( embedding_on_objects, embedding_on_morphisms ),
-                   SkeletalTransitiveGSets );
+                   SkeletalTransitiveLeftGSets );
     
 end );
 
@@ -633,12 +633,12 @@ InstallMethod( EmbeddingOfUnderlyingGroupAsCategory,
         "for a skeletal category of transitive left G-sets",
         [ IsSkeletalCategoryOfTransitiveLeftGSets ],
         
-  function ( SkeletalTransitiveGSets )
+  function ( SkeletalTransitiveLeftGSets )
     local data, Y;
     
-    data := EmbeddingOfUnderlyingGroupAsCategoryData( SkeletalTransitiveGSets );
+    data := EmbeddingOfUnderlyingGroupAsCategoryData( SkeletalTransitiveLeftGSets );
     
-    Y := CapFunctor( "Embedding functor into the skeletal category of transitive left G-sets", data[1], SkeletalTransitiveGSets );
+    Y := CapFunctor( "Embedding functor into the skeletal category of transitive left G-sets", data[1], SkeletalTransitiveLeftGSets );
     
     AddObjectFunction( Y, data[2][1] );
     
@@ -653,11 +653,11 @@ InstallMethodForCompilerForCAP( ExtendFunctorToSkeletalCategoryOfTransitiveLeftG
         "for a two categories and a pair of functions",
         [ IsSkeletalCategoryOfTransitiveLeftGSets, IsList, IsCategoryWithCoequalizers ],
         
-  function ( SkeletalTransitiveGSets, pair_of_funcs, category_with_coequalizers )
+  function ( SkeletalTransitiveLeftGSets, pair_of_funcs, category_with_coequalizers )
     local G_as_cat, functor_on_objects, functor_on_morphisms, img_obj,
           extended_functor_on_objects, extended_functor_on_morphisms;
     
-    G_as_cat := UnderlyingGroupAsCategory( SkeletalTransitiveGSets );
+    G_as_cat := UnderlyingGroupAsCategory( SkeletalTransitiveLeftGSets );
     
     functor_on_objects := pair_of_funcs[1];
     functor_on_morphisms := pair_of_funcs[2];
@@ -667,10 +667,10 @@ InstallMethodForCompilerForCAP( ExtendFunctorToSkeletalCategoryOfTransitiveLeftG
     ## the code below is the doctrine-specific ur-algorithm for the coequalizer completion
     
     extended_functor_on_objects :=
-      function ( obj_in_SkeletalTransitiveGSets )
+      function ( obj_in_SkeletalTransitiveLeftGSets )
         local coeq_mors, diagram, coeq;
         
-        coeq_mors := CoequalizerAutomorphisms( SkeletalTransitiveGSets, obj_in_SkeletalTransitiveGSets );
+        coeq_mors := CoequalizerAutomorphisms( SkeletalTransitiveLeftGSets, obj_in_SkeletalTransitiveLeftGSets );
         
         diagram := List( coeq_mors, g ->
                          functor_on_morphisms(
@@ -683,12 +683,12 @@ InstallMethodForCompilerForCAP( ExtendFunctorToSkeletalCategoryOfTransitiveLeftG
     end;
     
     extended_functor_on_morphisms :=
-      function ( source, mor_in_SkeletalTransitiveGSets, target )
+      function ( source, mor_in_SkeletalTransitiveLeftGSets, target )
         local coeq_mors_source, coeq_mors_target, diagram_source, diagram_target, g;
         
-        coeq_mors_source := CoequalizerAutomorphisms( SkeletalTransitiveGSets, Source( mor_in_SkeletalTransitiveGSets ) );
+        coeq_mors_source := CoequalizerAutomorphisms( SkeletalTransitiveLeftGSets, Source( mor_in_SkeletalTransitiveLeftGSets ) );
         
-        coeq_mors_target := CoequalizerAutomorphisms( SkeletalTransitiveGSets, Target( mor_in_SkeletalTransitiveGSets ) );
+        coeq_mors_target := CoequalizerAutomorphisms( SkeletalTransitiveLeftGSets, Target( mor_in_SkeletalTransitiveLeftGSets ) );
         
         diagram_source := List( coeq_mors_source, g ->
                                 functor_on_morphisms(
@@ -712,7 +712,7 @@ InstallMethodForCompilerForCAP( ExtendFunctorToSkeletalCategoryOfTransitiveLeftG
             Error( "target and Coequalizer( diagram_target ) do not coincide\n" );
         fi;
         
-        g := GroupAsCategoryMorphism( G_as_cat, UnderlyingGroupElement( mor_in_SkeletalTransitiveGSets ) );
+        g := GroupAsCategoryMorphism( G_as_cat, UnderlyingGroupElement( mor_in_SkeletalTransitiveLeftGSets ) );
         
         return CoequalizerOfIdentityAndAutomorphismsFunctorialWithGivenCoequalizers( category_with_coequalizers,
                        source,
@@ -726,7 +726,7 @@ InstallMethodForCompilerForCAP( ExtendFunctorToSkeletalCategoryOfTransitiveLeftG
         
     end;
     
-    return Triple( SkeletalTransitiveGSets,
+    return Triple( SkeletalTransitiveLeftGSets,
                    Pair( extended_functor_on_objects, extended_functor_on_morphisms ),
                    category_with_coequalizers );
     
@@ -738,19 +738,19 @@ InstallMethod( ExtendFunctorToSkeletalCategoryOfTransitiveLeftGSets,
         [ IsCapFunctor ],
         
   function ( F )
-    local C, D, SkeletalTransitiveGSets, data, UF;
+    local C, D, SkeletalTransitiveLeftGSets, data, UF;
     
     C := SourceOfFunctor( F );
     D := RangeOfFunctor( F );
     
-    SkeletalTransitiveGSets := SkeletalCategoryOfTransitiveLeftGSets( C );
+    SkeletalTransitiveLeftGSets := SkeletalCategoryOfTransitiveLeftGSets( C );
     
     data := ExtendFunctorToSkeletalCategoryOfTransitiveLeftGSetsData(
-                    SkeletalTransitiveGSets,
+                    SkeletalTransitiveLeftGSets,
                     Pair( FunctorObjectOperation( F ), FunctorMorphismOperation( F ) ),
                     D );
     
-    UF := CapFunctor( Concatenation( "Extension to SkeletalCategoryOfTransitiveLeftGSets( Source( ", Name( F ), " ) )" ), SkeletalTransitiveGSets, D );
+    UF := CapFunctor( Concatenation( "Extension to SkeletalCategoryOfTransitiveLeftGSets( Source( ", Name( F ), " ) )" ), SkeletalTransitiveLeftGSets, D );
     
     AddObjectFunction( UF,
             data[2][1] );
