@@ -186,11 +186,11 @@ end );
 DeclareAttribute( "UnderlyingGroup",
         IsSkeletalCategoryOfTransitiveLeftGSets );
 
-#CapJitAddTypeSignature( "UnderlyingGroup", [ IsSkeletalCategoryOfTransitiveLeftGSets ], function ( input_types )
-#
-#    return CapJitDataTypeOfGroup( UnderlyingGroup( input_types[1].category ) );
-#
-#end );
+CapJitAddTypeSignature( "UnderlyingGroup", [ IsSkeletalCategoryOfTransitiveLeftGSets ], function ( input_types )
+    
+    return CapJitDataTypeOfGroup( UnderlyingGroup( input_types[1].category ) );
+    
+end );
 
 #! @Description
 #!  The group $G$ underlying the skeletal category <A>C</A> of transitive left $G$-set, viewed as a category on one object.
@@ -219,7 +219,7 @@ DeclareAttribute( "UnderlyingTableOfMarks",
 DeclareAttribute( "NumberOfObjects",
         IsSkeletalCategoryOfTransitiveLeftGSets );
 
-#CapJitAddTypeSignature( "NumberOfObjects", [ IsSkeletalCategoryOfTransitiveLeftGSets ], IsBigInt );
+CapJitAddTypeSignature( "NumberOfObjects", [ IsSkeletalCategoryOfTransitiveLeftGSets ], IsBigInt );
 
 #! @Description
 #!  The list of cardinalities of objects of the skeletal category <A>C</A> of transitive left $G$-set.
@@ -228,11 +228,11 @@ DeclareAttribute( "NumberOfObjects",
 DeclareAttribute( "CardinalitiesOfObjects",
         IsSkeletalCategoryOfTransitiveLeftGSets );
 
-#CapJitAddTypeSignature( "CardinalitiesOfObjects", [ IsSkeletalCategoryOfTransitiveLeftGSets ], function ( input_types )
-#
-#    return CapJitDataTypeOfListOf( IsBigInt );
-#
-#end );
+CapJitAddTypeSignature( "CardinalitiesOfObjects", [ IsSkeletalCategoryOfTransitiveLeftGSets ], function ( input_types )
+    
+    return CapJitDataTypeOfListOf( IsBigInt );
+    
+end );
 
 #! @Description
 #!  The list of subgroups up to conjugation of the underlying group.
@@ -241,11 +241,11 @@ DeclareAttribute( "CardinalitiesOfObjects",
 DeclareAttribute( "RepresentativesOfSubgroupsUpToConjugation",
         IsSkeletalCategoryOfTransitiveLeftGSets );
 
-#CapJitAddTypeSignature( "RepresentativesOfSubgroupsUpToConjugation", [ IsSkeletalCategoryOfTransitiveLeftGSets ], function ( input_types )
-#
-#    return CapJitDataTypeOfListOf( CapJitDataTypeOfSubgroup( UnderlyingGroup( input_types[1].category ) ) );
-#
-#end );
+CapJitAddTypeSignature( "RepresentativesOfSubgroupsUpToConjugation", [ IsSkeletalCategoryOfTransitiveLeftGSets ], function ( input_types )
+    
+    return CapJitDataTypeOfListOf( CapJitDataTypeOfSubgroup( UnderlyingGroup( input_types[1].category ) ) );
+    
+end );
 
 #! @Description
 #!  The positive integer $i$ such that the transitive left $G$-set <A>Omega</A> $\cong U_i \backslash G$.
