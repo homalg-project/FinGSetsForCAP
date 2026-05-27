@@ -6,24 +6,25 @@
 BindGlobal( "ADD_FUNCTIONS_FOR_SkeletalCategoryOfTransitiveLeftGSets_precompiled", function ( cat )
     
     ##
-    AddSetOfObjectsOfCategory( cat,
+    AddIsEqualForObjects( cat,
         
 ########
-function ( cat_1 )
-    return List( [ 1 .. NumberOfObjects( cat_1 ) ], function ( i_2 )
-            return CreateCapCategoryObjectWithAttributes( cat_1, ObjectNumber, i_2 );
-        end );
+function ( cat_1, arg2_1, arg3_1 )
+    return ObjectNumber( arg2_1 ) = ObjectNumber( arg3_1 );
 end
 ########
         
     , 100 );
     
     ##
-    AddIsEqualForObjects( cat,
+    AddIsWellDefinedForMorphisms( cat,
         
 ########
-function ( cat_1, arg2_1, arg3_1 )
-    return ObjectNumber( arg2_1 ) = ObjectNumber( arg3_1 );
+function ( cat_1, alpha_1 )
+    local deduped_1_1, deduped_2_1;
+    deduped_2_1 := RepresentativesOfSubgroupsUpToConjugation( cat_1 );
+    deduped_1_1 := UnderlyingGroupElement( alpha_1 );
+    return deduped_1_1 in UnderlyingGroup( cat_1 ) and IsSubset( deduped_2_1[ObjectNumber( Range( alpha_1 ) )], ConjugateSubgroup( deduped_2_1[ObjectNumber( Source( alpha_1 ) )], deduped_1_1 ) );
 end
 ########
         
@@ -41,14 +42,13 @@ end
     , 100 );
     
     ##
-    AddIsWellDefinedForMorphisms( cat,
+    AddSetOfObjectsOfCategory( cat,
         
 ########
-function ( cat_1, alpha_1 )
-    local deduped_1_1, deduped_2_1;
-    deduped_2_1 := RepresentativesOfSubgroupsUpToConjugation( cat_1 );
-    deduped_1_1 := UnderlyingGroupElement( alpha_1 );
-    return deduped_1_1 in UnderlyingGroup( cat_1 ) and IsSubset( deduped_2_1[ObjectNumber( Range( alpha_1 ) )], ConjugateSubgroup( deduped_2_1[ObjectNumber( Source( alpha_1 ) )], deduped_1_1 ) );
+function ( cat_1 )
+    return List( [ 1 .. NumberOfObjects( cat_1 ) ], function ( i_2 )
+            return CreateCapCategoryObjectWithAttributes( cat_1, ObjectNumber, i_2 );
+        end );
 end
 ########
         

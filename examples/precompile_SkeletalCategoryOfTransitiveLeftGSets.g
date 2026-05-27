@@ -25,12 +25,12 @@ package_name := "FinGSetsForCAP";;
 #          category_constructor( given_arguments[1]
 #          : no_precompiled_code := true ) );;
 list_of_operations :=
-  #SortedList( Concatenation( primitive_operations,
+  SortedList( #Concatenation( primitive_operations,
           [ "SetOfObjectsOfCategory",
             "IsEqualForObjects",
             "IsWellDefinedForObjects",
             "IsWellDefinedForMorphisms",
-            ];;
+            ] );;
   #) );;
 
 CapJitPrecompileCategoryAndCompareResult(
