@@ -658,11 +658,9 @@ InstallMethod( SkeletalCategoryOfTransitiveLeftGSets,
     
     Append( SkeletalTransitiveLeftGSets!.compiler_hints.category_attribute_names,
             [ "UnderlyingGroup",
-              "UnderlyingGroupAsCategory",
               "UnderlyingTableOfMarks",
               "NumberOfObjects",
               "CardinalitiesOfObjects",
-              "SetOfObjectsAsUnresolvableAttribute",
               "RepresentativesOfSubgroupsUpToConjugation",
               ] );
     
@@ -736,7 +734,7 @@ InstallMethodForCompilerForCAP( SetOfObjects,
         
   function ( SkeletalTransitiveLeftGSets )
     
-    return SetOfObjectsAsUnresolvableAttribute( SkeletalTransitiveLeftGSets );
+    return SetOfObjectsOfCategory( SkeletalTransitiveLeftGSets );
     
 end );
 

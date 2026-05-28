@@ -8,7 +8,11 @@
 
 LoadPackage( "FinGSetsForCAP", false );
 #! true
-LoadPackage( "CompilerForCAP", ">= 2026.05-01", false );
+LoadPackage( "CompilerForCAP", ">= 2026.05-03", false );
+#! true
+ReadPackageOnce( "FinSetsForCAP", "gap/CompilerLogic.gi" );
+#! true
+ReadPackageOnce( "FinGSetsForCAP", "gap/CompilerLogic.gi" );
 #! true
 
 category_constructor :=
@@ -20,18 +24,11 @@ given_arguments := [ C2 ];;
 compiled_category_name :=
   "SkeletalCategoryOfTransitiveLeftGSets_precompiled";;
 package_name := "FinGSetsForCAP";;
-#primitive_operations :=
-#  ListPrimitivelyInstalledOperationsOfCategory(
-#          category_constructor( given_arguments[1]
-#          : no_precompiled_code := true ) );;
-list_of_operations :=
-  #SortedList( Concatenation( primitive_operations,
-          [ "SetOfObjectsOfCategory",
-            "IsEqualForObjects",
-            "IsWellDefinedForObjects",
-            "IsWellDefinedForMorphisms",
-            ];;
-  #) );;
+all_operations :=
+  ListInstalledOperationsOfCategory(
+          category_constructor( given_arguments[1]
+                  : no_precompiled_code := true ) );;
+list_of_operations := SortedList( all_operations );;
 
 CapJitPrecompileCategoryAndCompareResult(
         category_constructor,
