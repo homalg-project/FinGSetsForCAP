@@ -1,7 +1,7 @@
 name: FinGSetsForCAP
-version: "2026.05-07"
+version: "2026.06-01"
 license: "GPL-2.0-or-later"
-date: 2026-05-20
+date: 2026-06-30
 description: |
     The (skeletal) elementary topos of finite G-sets
 
@@ -43,11 +43,11 @@ packageinfo: https://homalg-project.github.io/FinGSetsForCAP/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2026.05-07/FinGSetsForCAP-2026.05-07.tar.gz
+      url: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2026.06-01/FinGSetsForCAP-2026.06-01.tar.gz
     - name: .zip
-      url: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2026.05-07/FinGSetsForCAP-2026.05-07.zip
+      url: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2026.06-01/FinGSetsForCAP-2026.06-01.zip
 
-pdf: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2026.05-07/FinGSetsForCAP-2026.05-07-manual.pdf
+pdf: https://github.com/homalg-project/FinGSetsForCAP/releases/download/v2026.06-01/FinGSetsForCAP-2026.06-01-manual.pdf
 
 abstract: |
 
@@ -56,10 +56,10 @@ doc-html: doc/chap0.html
 doc-pdf: doc/manual.pdf
 citeas: |
     <p class='BibEntry'>
-    [<span class='BibKey'>BMZ20</span>]   <b class='BibAuthor'>Barakat, M., Mickisch, J. and Zickgraf, F.</b>,
+    [<span class='BibKey'>BMZ30</span>]   <b class='BibAuthor'>Barakat, M., Mickisch, J. and Zickgraf, F.</b>,
      <i class='BibTitle'>FinGSetsForCAP, The (skeletal) elementary topos of finite G-sets,
-             Version 2026.05-07</i>
-     (<span class='BibYear'>5-20</span>)<br />
+             Version 2026.06-01</i>
+     (<span class='BibYear'>6-30</span>)<br />
     (<span class='BibNote'>GAP package</span>),
     <span class='BibHowpublished'><a href="https://homalg-project.github.io/pkg/FinGSetsForCAP">https://homalg-project.github.io/pkg/FinGSetsForCAP</a></span>.
     </p>
@@ -70,15 +70,15 @@ bibtex: |
       author =           {Barakat, M. and Mickisch, J. and Zickgraf, F.},
       title =            {{FinGSetsForCAP},  {The (skeletal) elementary topos of
                           finite      G\texttt{\symbol{45}}sets},      {V}ersion
-                          2026.05\texttt{\symbol{45}}07},
+                          2026.06\texttt{\symbol{45}}01},
       month =            {6\texttt{\symbol{45}}},
-      year =             {5\texttt{\symbol{45}}20},
+      year =             {6\texttt{\symbol{45}}30},
       note =             {GAP package},
       howpublished =     {\href
                           {https://homalg-project.github.io/pkg/FinGSetsForCAP}
                           {\texttt{https://homalg\texttt{\symbol{45}}project.github.io/}\discretionary
                           {}{}{}\texttt{pkg/}\discretionary
                           {}{}{}\texttt{FinGSetsForCAP}}},
-      printedkey =       {BMZ20}
+      printedkey =       {BMZ30}
     }
 
